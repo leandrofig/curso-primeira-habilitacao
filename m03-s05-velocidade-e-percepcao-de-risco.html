@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -176,7 +189,15 @@
 <h3>Percurso de Veículos - Redução de Velocidade - Parte I</h3>
 <h2 class="slide-heading">Percurso de Veículos</h2>
 <h3 class="slide-subheading">Redução de Velocidade</h3>
-<ul class='list-element'></ul>
+<ol class='list-element'><li>Cuidado com os demais veículos ao reduzir a velocidade;</li>
+<li>Sua CNH poderá ser recolhida em caso de alta velocidade;</li>
+<li>Evite conduzir numa velocidade 50% menor da regulamentada;</li>
+<li>Reduza a velocidade nas interseções;</li>
+<li>Avistando um transporte coletivo parado, reduza a velocidade;</li>
+<li>Havendo aglomerações humanas a alta velocidade é CRIME;</li>
+<li>Reduza a velocidade ao aproximar-se da guia da calçada;</li>
+<li>Reduza a velocidade ao aproximar-se do acostamento;</li>
+</ol>
 </div>
 
 <div class="slide">
@@ -184,7 +205,13 @@
 <h2 class="slide-heading">Percurso de Veículos</h2>
 <h3 class="slide-subheading">Redução de Velocidade</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ol class='list-element'><li>Reduza a velocidade nas vias rurais sem cercas laterais;</li>
+<li>Reduza a velocidade  existindo obras ou trabalhadores    na pista;</li>
+<li>Reduza a velocidade sob chuva, neblina, cerração ou ventos fortes;</li>
+<li>Reduza a velocidade em declive;</li>
+<li>Reduza a velocidade ao ultrapassar ciclista;</li>
+<li>Veículos lentos devem manter a direita na pista.</li>
+</ol>
 </div>
 
 <div class="slide">
@@ -208,7 +235,7 @@
 <h2 class="slide-heading">Distância de Seguimento</h2>
 <h3 class="slide-subheading">Tempo de Percepção</h3>
 <p>O tempo de percepção do problema está diretamente relacionado à atenção que o  condutor está tendo na condução do veículo.</p>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>AÇÃO DO CONDUTOR</th><th>TEMPO GASTO</th><th>DISTÂNCIA (*)</th></tr></thead><tbody><tr class="alt-row"><td>Acender cigarro</td><td>3 segundos</td><td>91.5 m</td></tr><tr><td>Beber água</td><td>4 segundos</td><td>122 m</td></tr><tr class="alt-row"><td>Sintonizar rádio</td><td>4 segundos</td><td>122 m</td></tr><tr><td>Procurar objeto</td><td>Mais 3 seg</td><td>Mais de 91.5 m</td></tr><tr class="alt-row"><td>Consultar mapa</td><td>Mais 4 seg</td><td>Mais de122 m</td></tr><tr><td>Digitar no celular</td><td>5 segundos</td><td>152,5 m</td></tr></tbody></table></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>(*) As distâncias percorridas são referentes aos veículos com velocidade aproximada de 110 km/h.</p></div></details>
 </div>
 
@@ -239,7 +266,9 @@ Importante salientar que condutores embriagados, sonolentos e cansados por estar
 <p></p>
 <p>É a distância percorrida e o tempo gasto do momento que o condutor aciona os freios (caso seja esta sua ação) até o momento da parada total do veículo.
 Como já sabemos, a distância percorrida será maior quanto maior for a velocidade do veículo, porém outros fatores influenciam neste caso, sendo:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>O estado de conservação dos pneus;</li>
+<li>O tipo de cobertura da via, condições atmosféricas, tamanho e carga do veículo e o tipo de freio.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -256,7 +285,11 @@ Como já sabemos, a distância percorrida será maior quanto maior for a velocid
 <h3 class="slide-subheading">a Distância de Segurança</h3>
 <div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/U6z5Zd07vMw" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>INTERPRETANDO A DISTÂNCIA DE SEGUIMENTO:</p>
-<ul class='list-element'></ul></div></details>
+<ul class='list-element'><li>VEÍCULO PEQUENO PISTA SECA: Contagem até cinquenta e dois;</li>
+<li>VEÍCULO PEQUENO PISTA MOLHADA: Contagem até cinquenta e  três;</li>
+<li>VEÍCULO DE CARGA OU DE PASSAGEIROS PISTA SECA: Contagem  até cinquenta e três;</li>
+<li>VEÍCULO DE CARGA OU DE PASSAGEIROS  PISTA MOLHADA: Contagem até cinquenta e quatro.</li>
+</ul></div></details>
 </div>
 
 <div class="slide">
@@ -278,13 +311,16 @@ Regra do Carro</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-excesso-de-velocidade.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
 <p>O excesso de velocidade é um dos principais fatores para a ocorrência de um Sinistro de Trânsito, contribuindo para:</p></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>O aumento da distância de frenagem;</li>
+<li>A redução do campo de visão do condutor;</li>
+<li>Dificultar a percepção de distância dos pedestres e a estabilidade do veículo.</li>
+</ul>
 </div>
 
 <div class="slide">
 <h3>Vias Rurais - Velocidades</h3>
 <h3 class="slide-subheading">Vias Rurais - Velocidades</h3>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th></th><th>Rodovia Pista Dupla</th><th>Rodovia Pista Simples</th><th>Estrada</th></tr></thead><tbody><tr class="alt-row"><td>Automóveis</td><td>110 Km/h</td><td>100 Km/h</td><td>60 Km/h</td></tr><tr><td>Motocicletas</td><td>110 Km/h</td><td>100 Km/h</td><td>60 Km/h</td></tr><tr class="alt-row"><td>Camionetas</td><td>110 Km/h</td><td>100 Km/h</td><td>60 Km/h</td></tr><tr><td>Caminhonetes</td><td>110 Km/h</td><td>100 Km/h</td><td>60 Km/h</td></tr><tr class="alt-row"><td>Ônibus e Micro-ônibus</td><td>90 Km/h</td><td>90 Km/h</td><td>60 Km/h</td></tr><tr><td>Demais veículos</td><td>90 Km/h</td><td>90 Km/h</td><td>60 Km/h</td></tr></tbody></table></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>CAMIONETA - veículo misto destinado ao transporte de passageiros e carga no mesmo compartimento.
 CAMINHONETE - veículo de carga com peso máximo de 3,5 toneladas
 RODOVIA -  é aquela cuja pista de rolamento é pavimentada. </p></div></details>

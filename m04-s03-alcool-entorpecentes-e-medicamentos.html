@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -188,7 +201,9 @@
 <h3 class="slide-subheading">Volante</h3>
 <div class="spacer"></div>
 <p>O condutor será considerado embriagado se:</p>
-<ul class='list-element'></ul>
+<ol class='list-element'><li>Em um dos testes citados acusar qualquer quantidade de álcool por litro de sangue ou meio décimo (0,05 mg/L) de miligrama por litro de ar expelido pelos pulmões (alterado pela Resolução CONTRAN 432, de 23/01/2013).</li>
+<li>Pela presunção de culpa ao ocorrer a recusa do condutor em realizar os exames e testes, sendo notória pela autoridade ou agente de trânsito o estado de embriaguez, quando ocorrem excitação ou torpor, ou seja, descaso e indiferença perante a situação (alterado pela Lei Federal nº 11.705, de 19/06/2008).</li>
+</ol>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Em uma análise mais criteriosa dos Sinistros de Trânsito, nota-se que os envolvidos, independente de culpa, apresentam variados graus de confusão mental, o que pode ser perfeitamente confundido com a embriaguez.</p></div></details>
 </div>
 
@@ -198,7 +213,8 @@
 <h3 class="slide-subheading">Volante</h3>
 <div class="spacer"></div>
 <p>O condutor será considerado embriagado se:</p>
-<ul class='list-element'></ul>
+<ol class='list-element'><li>A embriaguez ou dope também poderá ser caracterizada mediante imagem, vídeo, constatação de sinais que indiquem, na forma disciplinada pelo Contran, alteração da capacidade psicomotora ou produção de quaisquer outras provas em direito admitidas. (Lei 12.760, de 20/12/2012).</li>
+</ol>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>A verificação do disposto neste tópico poderá ser obtida mediante teste de alcoolemia ou toxicológico, exame clínico, perícia, vídeo, prova testemunhal ou outros meios de prova em direito admitidos, observado o direito à contraprova (acrescido pela Lei 12.971 / 2014).</p></div></details>
 </div>
 
@@ -236,7 +252,10 @@ Substâncias Psicoativas e o Sistema Nervoso Central e Periférico</p>
 <p>As substâncias psicoativas podem atuar de três formas no SNC:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-sistema-nervoso-3.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>DEPRESSORES;</li>
+<li>ESTIMULANTES;</li>
+<li>PERTURBADORES;</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Substâncias que provocam o surgimento de diversos fenômenos psíquicos anormais (dentre os quais alucinações e delírios), sem que haja inibição ou estimulação globais do SNC. São exemplos desta classe : cannabis e derivados, LSD25, ecstasy e anticolinérgicos.</p></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Substâncias que levam a um aumento do estado de alerta, insônia e aceleração dos processos psíquicos. São exemplos desta classe: cocaína, anfetaminas, nicotina e cafeína . Uma das formas de anfetamina são os anorexígenos, as quais são drogas utilizadas largamente e de forma irresponsável para a redução de apetite e conseqüentemente a perda de peso.</p></div></details></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Substâncias que tendem a produzir diminuição da atividade motora, da reatividade à dor e da ansiedade, sendo comum um efeito euforizante inicial (diminuição das inibições, da crítica)  e um aumento da sonolência, posteriormente. São exemplos desta classe : álcool, benzodiazepínicos, barbitúricos, opiáceos e solventes.</p></div></details>
@@ -306,7 +325,13 @@ Alcoolemia e suas taxas</p>
 <p>O álcool invade o cérebro provocando sintomas progressivos e cada vez mais graves e perigosos.</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-sistema-nervoso-7.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ol class='list-element'><li>LOBO FRONTAL</li>
+<li>LOBO PARIETAL</li>
+<li>LOBO TEMPORAL</li>
+<li>LOBO OCCIPITAL</li>
+<li>CEREBELO</li>
+<li>PONTE E MEDULA</li>
+</ol></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Ao atingir o lobo frontal o álcool dá uma sensação de relaxamento, porém com pouca ou nenhuma perda de raciocínio ou capacidade de  decisão.</p></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Ao atingir o lobo parietal e temporal o álcool tira do indivíduo a capacidade de mensurar uma ação perigosa. É neste momento que começam as quebras das regras de trânsito, tal como cruzar um sinal vermelho.</p></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Ao atingir o lobo occipital o álcool prejudica a visão e a orientação do condutor, tirando dele totalmente a noção de espaço e distância. Neste momento os Sinistros de Trânsito se tornam um risco iminente.</p></div></details>
@@ -346,7 +371,11 @@ A absorção e eliminação do álcool</p>
 <h3 class="slide-subheading">do condutor</h3>
 <p>
 Efeitos do álcool no organismo:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Perda coordenação motora (produz erros de dirigibilidade);</li>
+<li>Visão distorcida, dupla e fora de foco (produz desvios de direção);</li>
+<li>Reações lentas e perda de raciocínio (produz reações fora de tempo);</li>
+<li>Falta de concentração e perda do espírito crítico (produz excesso de velocidade e manobras arriscadas).</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>A eliminação do álcool ocorre de forma natural, não adianta ingerir café ou "tomar ar".</p></div></details>
 </div>
 
@@ -356,7 +385,9 @@ Efeitos do álcool no organismo:</p>
 <h3 class="slide-subheading">do condutor</h3>
 <p>
 SE DIRIGIR NÃO BEBA, SE BEBER NÃO DIRIJA!</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Qual seria seu sentimento se a vida de um familiar seu fosse ceifada por um motorista alcoolizado?</li>
+<li>Se alguém alcoolizado for dirigir e você estiver presente, impeça-o!</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -366,7 +397,9 @@ SE DIRIGIR NÃO BEBA, SE BEBER NÃO DIRIJA!</p>
 <p>
 SE FOR DE CARONA VÁ COM ALGUÉM SÓBRIO.
 </p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Evite trafegar nas madrugadas de finais de semanas e feriados em locais próximos de festas;</li>
+<li>O álcool degenera sua imagem pessoal e sua saúde.</li>
+</ul>
 </div>
         </div>
         <div class="nav-bar">

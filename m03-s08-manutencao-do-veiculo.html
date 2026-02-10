@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -178,14 +191,21 @@
 <h3 class="slide-subheading">Obrigações do Condutor</h3>
 <div class="spacer"></div>
 <p>É obrigação de todo o condutor conhecer seu veículo nos seguintes aspectos:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Operação dos controles (setas, faróis, leitura do painel, etc);</li>
+<li>Necessidade de manutenção preventiva;</li>
+<li>Necessidade de manutenção corretiva;</li>
+<li>Realização de ações para sanar pequenos problemas;</li>
+</ul>
 </div>
 
 <div class="slide">
 <h3>Mecânica Básica o Painel do veículo - Parte I</h3>
 <h2 class="slide-heading">Mecânica Básica </h2>
 <h3 class="slide-subheading">o Painel do veículo</h3>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>É de extrema importância o condutor ler o manual de seu veículo para conhecer cada indicador de painel (lâmpadas piloto, interruptores, símbolos e controles);</li>
+<li>As principais lâmpadas pilotos e indicadores estão nas imagens dos próximos slides (alterado pela resolução CONTRAN 758 de 20/12/2018);</li>
+<li>Esta mudança será cobrada na íntegra após janeiro de 2021, quando todos os veículos novos já deverão sair com tais indicações visuais ou luminosas.</li>
+</ul></div></details>
 <div class="group-vertical"><figure class="image-element"><img src="images/painel1.jpg" alt="Baixo nível Combustível Pisca Alerta Indicadore Pós AcionadosRegulagem de farol Luzes Posição LigadasFarol Baixo Ligado Farol Alto Ligado Óleo Lubrificante Baixa pressão acionado Afogador Acionadoreio de Mão Pára-Brisa Limpador de traseiro Avaria no ABS motor Superaquecimento Defeituoso freio Fraseiro Desembaçador Ignição varia Sistema A Desembaçador
 Pára-Brisa Insuficiente Recarga Vidro Traseiro Limpa/Lavador ventilador Pára-Brisa Lavador de" loading="lazy"></figure></div>
 </div>
@@ -510,7 +530,11 @@ Estando com quatro pneus meia vida em seu veículo e caso vá instalar apenas do
 <h3 class="slide-subheading">Rodízio de Pneus</h3>
 <div class="group-vertical"><p>O rodízio de pneus é essencial para garantir desgaste uniforme, prolongar a vida útil dos pneus e melhorar a segurança. A forma de realizar o rodízio varia com o tipo de tração do veículo: </p>
 <figure class="image-element"><img src="images/rodizio_small.jpg" alt="Imagem" loading="lazy"></figure></div>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>Tração dianteira: Os pneus dianteiros são movidos diretamente para trás no mesmo lado, e os traseiros são movidos para a frente trocando de lado.</li>
+<li>Tração traseira: Os pneus traseiros são movidos diretamente para a frente no mesmo lado, e os dianteiros são movidos para trás trocando de lado.</li>
+<li>Tração nas quatro rodas (4WD/AWD): Troque os pneus dianteiros com os traseiros cruzando-os (frente esquerda para trás direita e frente direita para trás esquerda).</li>
+<li>A exceção fica por conta dos pneus com sentido de rotação (vide imagem).</li>
+</ul></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>A frequência recomendada para o rodízio é a cada 8.000 a 10.000 km, conforme o manual do fabricante. Além disso, é importante manter os pneus balanceados e alinhados para garantir melhor desempenho e segurança. </p></div></details>
 </div>
 
@@ -521,7 +545,11 @@ Estando com quatro pneus meia vida em seu veículo e caso vá instalar apenas do
 <div class="spacer"></div>
 <div class="group-horizontal"><figure class="image-element"><img src="images/desgaste-pneu.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ol class='list-element'><li>Desgaste lateral – baixa pressão dos pneus;</li>
+<li>Desgaste central – alta pressão dos pneus;</li>
+<li>Desgaste em partes – pneus desbalanceados;</li>
+<li>Desgaste em um só lado - veículo desalinhado.</li>
+</ol></div>
 </div>
 
 <div class="slide">
@@ -573,7 +601,10 @@ Estando com quatro pneus meia vida em seu veículo e caso vá instalar apenas do
 <h2 class="slide-heading">Motocicleta, Motoneta e</h2>
 <h3 class="slide-subheading">Ciclomotor</h3>
 <p>INSPEÇÃO DIÁRIA</p>
-<div class="group-horizontal"><ul class='list-element'></ul>
+<div class="group-horizontal"><ul class='list-element'><li>Monte no veículo e verifique o ângulo de visão dos retrovisores;</li>
+<li>Verifique o farol, as setas, luzes de freio e lanternas;</li>
+<li>Verifique o nível de combustível.</li>
+</ul>
 <figure class="image-element"><img src="images/nova1.jpg" alt="Imagem" loading="lazy"></figure></div>
 </div>
 
@@ -649,7 +680,8 @@ para todo veículo utilizado no transporte coletivo de passageiros é de uso obr
 <h3>Extintores de Incêndio - Substituição e Recarga - Parte I</h3>
 <h2 class="slide-heading">Extintores de Incêndio</h2>
 <h3 class="slide-subheading">Substituição e Recarga</h3>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>TIPO DE VEÍCULO</th><th>VALIDADE AGENTE QUÍMICO
+</th><th>VALIDADE    TESTE HIDROSTÁTICO</th></tr></thead><tbody><tr class="alt-row"><td>Automóveis, utilitários, camionetas, caminhonetes, caminhão, caminhão trator e triciclo automotor de cabine fechada.</td><td>5 ANOS</td><td>5 ANOS</td></tr><tr><td>Ônibus, micro-ônibus, veículos de transporte inflamável líquido ou gasoso.</td><td>3 ANOS</td><td>5 ANOS</td></tr></tbody></table></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Deve ser uma preocupação do condutor vistoriar periodicamente seu extintor, com objetivo de averiguar sua carcaça, indicador de pressão e validades (carcaça e agente químico).</p></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Para automóveis, utilitários, camionetas, caminhonetes e triciclos de cabine fechada o uso é facultativo, porém caso seja utilizado deve estar em dia com os prazos de validade.</p></div></details>
 </div>
@@ -726,7 +758,12 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <h3>Extintores de Incêndio - Melhor do que Combater é Prevenir - Parte I</h3>
 <h2 class="slide-heading">Extintores de Incêndio </h2>
 <h3 class="slide-subheading">Melhor do que Combater é Prevenir</h3>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Não carregue combustível fora do tanque;</li>
+<li>Cuidado com cigarros acesos;</li>
+<li>Verifique sempre os terminais e estado de sua bateria, mangueiras de combustível e sistema elétrico do veículo;</li>
+<li>Verifique o isolamento do cano de escape e catalisador,</li>
+<li>Cuidado com o freio de mão preso, pois este também provoca aquecimento excessivo.</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>O isolamento do cano de escape e o catalisador sofrem grande aquecimento e em contato com objetos de fácil ignição podem provocar um incêndio. Por tal motivo não estacione seu carro em locais com grama e folhagens secas que atinja a altura do veículo, pois a probabilidade de um princípio de incêndio é grande;</p></div></details>
 </div>
 
@@ -735,7 +772,10 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <h2 class="slide-heading">Extintores de Incêndio </h2>
 <h3 class="slide-subheading">Melhor do que Combater é Prevenir</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Evite a ligação direta, porém se necessário mantenha sempre os dois pólos isolados;</li>
+<li>Evite improvisar fusíveis;</li>
+<li>Evite fazer o veículo pegar no tranco, pois isto facilita a passagem de combustível não queimado para o sistema de escape, potencializando a possibilidade de um princípio de incêndio.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -743,7 +783,10 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <h2 class="slide-heading">Extintores de Incêndio </h2>
 <h3 class="slide-subheading">como Combater</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Estacione em lugar seguro e aberto, retire a chave do contato, desocupe o veículo rapidamente e pegue seu extintor antes que o fogo o impeça de fazer isso;</li>
+<li>Solicite que alguém acione a equipe de bombeiros pelo 193;</li>
+<li>Existindo objetos inflamáveis dentro do veículo (isopor, tecidos, garrafas pet, etc) retire rapidamente;</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -762,7 +805,8 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <h3 class="slide-subheading">como Combater</h3>
 <div class="spacer"></div>
 <p>Caso mesmo com labaredas e presença de vazamento de combustível você queira combater o princípio de incêndio, siga os seguintes passos:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Identifique o ponto da ocorrência do incêndio (siga o cheiro e fumaça preta;</li>
+</ul>
 <div class="group-horizontal"><p>Posicione-se a favor do vento e aproxime-se do foco de incêndio de forma progressiva e cautelosa. Tome cuidado com vazamento de combustível;</p>
 <div class="spacer"></div>
 <figure class="image-element"><img src="images/mecanica-extintor-como-combater-2.jpg" alt="Imagem" loading="lazy"></figure></div>
@@ -788,14 +832,23 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <h2 class="slide-heading">Extintores de Incêndio </h2>
 <h3 class="slide-subheading">Observações</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Fumaça de cor BRANCA e sem cheiro é vapor de água do radiador e fumaça de cor ESCURA e com cheiro forte é princípio de incêndio;</li>
+<li>Se o fogo não puder ser controlado, isole o local e abandone o veículo;</li>
+<li>Não é aconselhável o condutor tentar apagar incêndio quando ocorrer vazamento de combustível juntamente com labaredas. Porém, caso o faça, não deve lançar o jato do extintor com muita pressão para não espalhar o combustível e as chamas.</li>
+</ul>
 </div>
 
 <div class="slide">
 <h3>Extintores de Incêndio - Combate em GNV</h3>
 <h2 class="slide-heading">Extintores de Incêndio </h2>
 <h3 class="slide-subheading">Combate em GNV</h3>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Acione imediatamente o socorro especializado;</li>
+<li>No caso de simples vazamento, deverão ser evacuadas as pessoas e animais num raio de 400m;</li>
+<li>Nos casos em que houver chama envolvendo os cilindros, deverá ser adotado um raio mínimo de 800m.</li>
+<li>A aproximação do veículo deverá ser feita pelo lado oposto da localização do cilindro;</li>
+<li>Sempre que possível feche as válvulas de abastecimento, geralmente localizadas no próprio motor (de cor vermelha) e próximo ao cilindro (girar no sentido anti-horário para fechar);</li>
+<li>Evite ao máximo que as chamas cheguem ao cilindro, mantendo-o sempre resfriado.</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>O grande problema do incêndio em veículos com cilindro de GNV é que o gás está armazenado sob alta pressão (200 bar ou 200Kgf/cm2). Ocorrendo seu aquecimento, existe a possibilidade do mesmo se tornar uma bomba de grande potencial;</p></div></details>
 </div>
 
@@ -826,7 +879,11 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <p>                                                     Água do Radiador:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/radiador-3.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Faça a verificação com o motor frio;</li>
+<li>Não retire a tampa do reservatório com o motor quente;</li>
+<li>Aguarde o motor esfriar ou complete lentamente com o motor em funcionamento;</li>
+<li>Regularmente proceda a substituição do líquido de arrefecimento, não esquecendo o aditivo recomendado pelo fabricante.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -836,7 +893,10 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <p>                                                          Correias:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-2.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Trincas e rachaduras nas correias exigem substituição;</li>
+<li>Correias brilhosas indicam desgaste por atrito;</li>
+<li>Aplicando com os dedos uma força de aproximadamente 10 Kg em um ponto livre da correia (longe da polia), deve ser provocada uma deformação de aproximadamente 1cm. Caso contrário, a correia necessita de regulagem de tensão.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -845,7 +905,9 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <h3 class="slide-subheading">do Motor</h3>
 <p> Filtro de Ar:</p>
 <div class="group-horizontal"><div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Limpe-o e efetue a substituição de acordo com os prazos propostos no manual do proprietário, e sempre em um local confiável;</li>
+<li>O uso do veículo em regiões empoeiradas reduz a vida útil do filtro, fazendo com que este necessite de limpeza e trocas frequentes.</li>
+</ul>
 <figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-3pq.jpg" alt="Imagem" loading="lazy"></figure></div>
 </div>
 
@@ -856,7 +918,9 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <p>                                                       Nível do Óleo:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-4.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>A falta de óleo pode fundir o motor. Já a colocação em excesso pode gerar carbonização no seu interior, vazamento, queima de óleo e consequentes danos ao catalisador e sistema de injeção eletrônica;</li>
+<li>O nível do óleo deverá ser medido com o motor frio e com o veículo sobre uma superfície plana.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -866,7 +930,10 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <p>                                                       Substituição do Óleo:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-4.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>A substituição do óleo deve seguir as recomendações do fabricante, quanto ao período, tipo e quantidade de lubrificante;</li>
+<li>Se for recomendado, substitua também o filtro do óleo;</li>
+<li>Tanto o óleo quanto o filtro devem ser substituídos em intervalos menores, caso o veículo seja utilizado severamente (Ex: andar muito na lenta).</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -876,7 +943,9 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <p>                                                                  Velas de Ignição:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-5.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Siga o plano de manutenção do veículo para saber quando trocar as velas. Utilize as velas recomendadas. Essa operação deve ser efetuada em um posto de serviços;</li>
+<li>O sistema de ignição funciona com tensões elevadas que podem ser fatais. Não manuseie o sistema com a ignição ligada.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -886,7 +955,11 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <p>                                                     Bateria:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-7.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Para completar o nível de baterias não seladas, utilize somente água destilada;</li>
+<li>Não permita que o nível atinja o topo;</li>
+<li>Para diminuir o risco de faíscas, retire anéis, pulseiras ou outros artigos de metal, evitando contato de ferramentas metálicas com o pólo positivo da bateria;</li>
+<li>Cuidado, a bateria expele vapores explosivos e sua solução é altamente corrosiva.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -896,7 +969,10 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <p>                                                     Fusíveis:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-sistema-eletrico-2.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Mantenha um conjunto de fusíveis reserva no veículo, saiba onde é seu painel e aprenda como se realiza uma substituição, você pode precisar;</li>
+<li>Caso não disponha, numa emergência, utilize os fusíveis de dispositivos menos importantes, tais como ar-condicionado, rádio ou faróis auxiliares;</li>
+<li>Só substitua um fusível por outro de igual capacidade. Nunca improvise um substituto que não seja correto.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -907,7 +983,8 @@ Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável
 <p>                                        Iluminação e Sinalização:</p>
 <div class="group-vertical"><figure class="image-element"><img src="images/mecanica-manutencao-básica-sistema-eletrico-3.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Somente utilize lâmpadas de reposição de igual capacidade. Utilizar especificações diferentes das originais pode ocasionar desde uma queda na luminosidade até uma sobrecarga no sistema elétrico.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -920,7 +997,11 @@ Balanceamento de Rodas:
 Realize sempre que:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-direcão-rodas-pneus_1.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Existir vibração no volante ou no veículo quando em movimento;</li>
+<li>Se o veículo sofrer forte impacto nos pneus;</li>
+<li>Após o conserto ou troca de pneus;</li>
+<li>Preventivamente a cada 10.000 km.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -932,7 +1013,10 @@ Alinhamento de Direção:
 Realize sempre que:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-direcão-rodas-pneus_2.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Direção puxando para um dos lados, mesmo com os pneus calibrados;</li>
+<li>Existir desgaste irregular nos pneus ou se o volante de direção estiver torto;</li>
+<li>Se o veículo sofrer forte impacto nos pneus ou preventivamente a cada 10.000 km;</li>
+</ul></div>
 <div class="spacer"></div>
 <p>Atenção: antes de alinhar verifique a calibragem dos pneus.</p>
 </div>
@@ -945,7 +1029,10 @@ Realize sempre que:</p>
                                                         Pneus:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-direcão-rodas-pneus-f.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Os cinco pneus do veículo devem ter dimensões, tipo de construção e capacidade de cargas iguais;</li>
+<li>Calibre seus pneus semanalmente, de preferência com os mesmos frios. Não esqueça do estepe;</li>
+<li>Verifique periodicamente seus pneus detectando avarias, cortes, deformações  e a banda de rodagem, a qual deve ter no mínimo 1,6 mm.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -953,7 +1040,9 @@ Realize sempre que:</p>
 <h2 class="slide-heading">Manutenção Básica </h2>
 <h3 class="slide-subheading">Freios, Transmissão e Suspensão</h3>
 <p>Transmissão:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Boa parte dos veículos produzidos atualmente dispensam substituição de óleo da transmissão. Verifique no manual e procure um bom posto de serviço. Faça a troca após ter rodado alguns quilômetros com o veículo, a fim de aquecer o óleo;</li>
+<li>Mantenha regulada e em bom estado a embreagem para evitar “arranhar” as marchas e danificar as engrenagens da caixa de câmbio.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -962,7 +1051,10 @@ Realize sempre que:</p>
 <h3 class="slide-subheading">Freios, Transmissão e Suspensão</h3>
 <p>Suspensão:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mec-man-bas-fre-tra-su-2.jpg" alt="Imagem" loading="lazy"></figure>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>A média de quilometragem para troca dos amortecedores é de 30.000 Km, porém dependerá diretamente da severidade que o veículo é submetido;</li>
+<li>Troque todos os amortecedores ou aos pares, dianteiros ou traseiros;</li>
+<li>Atenção com o estado das buchas, pois se estiveram desgastadas ou defeituosas podem danificar os amortecedores.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -971,7 +1063,10 @@ Realize sempre que:</p>
 <h3 class="slide-subheading">Freios, Transmissão e Suspensão</h3>
 <p>Freios:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mec-man-bas-fre-tra-su-3.jpg" alt="Imagem" loading="lazy"></figure>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Verifique o nível do reservatório de fluído de freio, complete, se necessário, substituindo completamente o mesmo dentro do prazo recomendado;</li>
+<li>Utilize fluido de freio de recipientes lacrados, pois o mesmo absorve umidade e não pode ser reaproveitado;</li>
+<li>Confira o estado das lonas de freio e das pastilhas e substitua sempre que necessário.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -979,7 +1074,11 @@ Realize sempre que:</p>
 <h2 class="slide-heading">Veículos de Duas Rodas </h2>
 <h3 class="slide-subheading">e sua Manutenção</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Se a bateria não for “selada”,  verifique periodicamente o fluído de bateria e complete até o nível indicado, caso necessário;</li>
+<li>Verifique periodicamente se existem lâmpadas queimadas (setas, lanternas, farol e de placa);</li>
+<li>Lubrifique periodicamente os cabos de comando de freios e de embreagem;</li>
+<li>Durante as lavagens evite jogar água no painel e produtos como querosene no disco de freio, testando o mesmo após a lavagem.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -987,14 +1086,22 @@ Realize sempre que:</p>
 <h2 class="slide-heading">Veículos de Duas Rodas </h2>
 <h3 class="slide-subheading">e sua Manutenção</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Troque o óleo do motor a cada 1.500 ou 3.000 km rodados, dependendo do modelo e marca;</li>
+<li>Troque o filtro do óleo à cada duas trocas de óleo;</li>
+<li>Lave, seque, ajuste e lubrifique com graxa branca náutica ou óleo SAE 90 sua corrente de transmissão, a cada 1.000 km rodados ou após rodar em uma estrada de terra;</li>
+<li>Nos freios à disco troque o fluído de freio na quilometragem recomendada pelo fabricante;</li>
+</ul>
 </div>
 
 <div class="slide">
 <h3>Manutenção Básica - Segurança nas Tarefas</h3>
 <h2 class="slide-heading">Manutenção Básica</h2>
 <h3 class="slide-subheading">Segurança nas Tarefas</h3>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Escolha um local seguro para executar tarefas de manutenção. Nunca deixe o motor em funcionamento em locais fechados ou com pouca ventilação. Os gases expelidos pelo motor são perigosos;</li>
+<li>Em caso de dúvida, não hesite em procurar pessoal especializado para a manutenção;</li>
+<li>Um motor em funcionamento pode ser perigoso. Não aproxime suas mãos ou outros objetos das partes móveis do motor. Gravatas ou até mesmo cabelos longos podem prender-se nas polias do motor causando graves Sinistros de Trânsito;</li>
+<li>O sistema de ignição, composto por bobinas, cabos, distribuidor e velas, trabalha com tensões de até 30.000 Volts, que podem ser fatais, principalmente às pessoas com problemas cardíacos. Evite manusear estes dispositivos com a ignição ligada.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -1003,7 +1110,7 @@ Realize sempre que:</p>
 <h3 class="slide-subheading">Principais Eventualidades</h3>
 <p>
 MOTOR NÃO “VIRA”</p>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>CAUSA</th><th>SOLUÇÃO</th></tr></thead><tbody><tr class="alt-row"><td>Falta carga na bateria</td><td>Troca ou enxerto na bateria</td></tr><tr><td>Mal contato nos polos</td><td>Limpeza/reaperto</td></tr><tr class="alt-row"><td>Motor de arranque</td><td>Serviço profissional</td></tr><tr><td>Chave de ignição</td><td>Serviço profissional</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
@@ -1012,7 +1119,7 @@ MOTOR NÃO “VIRA”</p>
 <h3 class="slide-subheading">Principais Eventualidades</h3>
 <p>
 MOTOR “VIRA” MAS NÃO “PEGA”</p>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>CAUSA</th><th>SOLUÇÃO</th></tr></thead><tbody><tr class="alt-row"><td>Falta combustível</td><td>Repor</td></tr><tr><td>Velas de Ignição</td><td>Secar/Limpar/Calibrar</td></tr><tr class="alt-row"><td>Distribuidor </td><td>Secar/Apertar</td></tr><tr><td>Tubulações entupidas</td><td>Soprar/Limpar</td></tr><tr class="alt-row"><td>Afogador mal regulado</td><td>Regular</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
@@ -1021,7 +1128,7 @@ MOTOR “VIRA” MAS NÃO “PEGA”</p>
 <h3 class="slide-subheading">Principais Eventualidades</h3>
 <p>
 MOTOR “FALHANDO” OU “PUXANDO” POUCO</p>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>CAUSA</th><th>SOLUÇÃO</th></tr></thead><tbody><tr class="alt-row"><td>Velas de Ignição</td><td>Secar/Limpar/Apertar</td></tr><tr><td>Filtro de Combustível</td><td>Trocar</td></tr><tr class="alt-row"><td>Combustível </td><td>Esvaziar e reabastecer</td></tr><tr><td>Filtro de ar sujo</td><td>Limpar</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
@@ -1030,7 +1137,7 @@ MOTOR “FALHANDO” OU “PUXANDO” POUCO</p>
 <h3 class="slide-subheading">Principais Eventualidades</h3>
 <p>
 MOTOR ESQUENTANDO MUITO</p>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>CAUSA</th><th>SOLUÇÃO</th></tr></thead><tbody><tr class="alt-row"><td>Água do Radiador</td><td>Completar/Verificar vazamento</td></tr><tr><td>Óleo do Motor</td><td>Completar/Trocar</td></tr><tr class="alt-row"><td>Válvula Termostática	</td><td>Serviço profissional</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
@@ -1039,7 +1146,7 @@ MOTOR ESQUENTANDO MUITO</p>
 <h3 class="slide-subheading">Principais Eventualidades</h3>
 <p>
 FREIOS FALHANDO</p>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>CAUSA</th><th>SOLUÇÃO</th></tr></thead><tbody><tr class="alt-row"><td>Fluído de Freio</td><td>Completar/Substituir/ Verificar vazamento</td></tr><tr><td>Lonas ou Pastilhas</td><td>Serviço profissional</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
@@ -1048,7 +1155,7 @@ FREIOS FALHANDO</p>
 <h3 class="slide-subheading">Principais Eventualidades</h3>
 <p>
 DIREÇÃO TREPIDANDO OU “PUXANDO”</p>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>CAUSA</th><th>SOLUÇÃO</th></tr></thead><tbody><tr class="alt-row"><td>Pneus</td><td>Calibrar</td></tr><tr><td>Amortecedores</td><td>Substituir</td></tr><tr class="alt-row"><td>Roda</td><td>Alinhar / balancear</td></tr><tr><td>Barro seco nas rodas</td><td>Limpar</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
@@ -1057,7 +1164,12 @@ DIREÇÃO TREPIDANDO OU “PUXANDO”</p>
 <h3 class="slide-subheading">Regiões Alagadas</h3>
 <p>A regra geral é:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-regiao-alagada.jpg" alt="Imagem" loading="lazy"></figure>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Evite regiões alagadas;</li>
+<li>Desligue o ar-condicionado. O eletro-ventilador do radiador é acionado quando o ar está ligado e jogará água por todo o motor;</li>
+<li>Entre lenta, progressivamente e em primeira marcha;</li>
+<li>Não faça a travessia se o nível estiver acima do centro das rodas do veículo;</li>
+<li>Mantenha a aceleração para evitar a entrada de água pelo escapamento.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -1065,22 +1177,42 @@ DIREÇÃO TREPIDANDO OU “PUXANDO”</p>
 <h2 class="slide-heading">Manutenção Básica</h2>
 <h3 class="slide-subheading">Uso de Guincho</h3>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-uso-de-guincho.jpg" alt="Imagem" loading="lazy"></figure>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>O uso de plataformas, onde o veículo é rebocado totalmente fora do chão é o tipo mais indicado;</li>
+<li>Veículos com transmissão automática não podem ser rebocados por mais de 10 km com as rodas motrizes no chão;</li>
+<li>Veículos com tração integral nas quatro rodas não podem ser rebocados com apenas duas rodas sobre o chão: devem ser rebocados com as quatro rodas no chão ou sobre plataformas.</li>
+</ul></div>
 </div>
 
 <div class="slide">
 <h3>Check-List para Viagem  Parte I</h3>
 <h3 class="slide-subheading">Check-List para Viagem</h3>
 <p>Lista do Veículo:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Nível do óleo.</li>
+<li>Líquido da bateria (não selada).</li>
+<li>Calibragem dos pneus, incluindo o estepe.</li>
+<li>Macaco, triângulo e chave de roda.</li>
+<li>Todas as lâmpadas do veículo.</li>
+<li>Água do radiador.</li>
+<li>Freios e Fluido.</li>
+<li>Combustível.</li>
+<li>Água do depósito do limpador de pára-brisa.</li>
+</ul>
 </div>
 
 <div class="slide">
 <h3>Check-List para Viagem  Parte II</h3>
 <h2 class="slide-heading">Check-List para Viagem</h2>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Paletas e funcionamento do limpador de pára-brisa</li>
+<li>Banda de rodagem dos pneus (mínimo de 1,6 mm)</li>
+<li>Uma rápida revisão nas correias do motor (trincas e desgaste excessivo)</li>
+<li>Cintos de segurança disponíveis para todos os ocupantes do veículo (com encaixe para fora), ou dispositivo de segurança em caso de crianças com menos de 7,5 anos ou de baixa estatura;</li>
+</ul>
 <p>Itens diversos:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Previsão do tempo para o dia e trajeto da viagem</li>
+<li>Planejamento da viagem com pontos de parada</li>
+<li>Documentos pessoais (CNH , RG, etc) e do Veículo (CRLV)</li>
+<li>Saco de lixo para uso na viagem</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Confira ainda:Vacinas em dia e cartão (se a viagem for para local com algum tipo de controle epidêmico).
 
 Alguma quantidade de dinheiro para uma emergência

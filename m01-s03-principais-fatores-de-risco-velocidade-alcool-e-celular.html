@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -198,7 +211,9 @@ Em Sinistro de Trânsito de trânsito ou fiscalização de trânsito, na suspeit
 <div class="group-vertical"><p>Dirigir embriagado ou drogado (dopado):</p>
 <div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/bQbovBiFdl8" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Dirigir embriagado ou drogado, além de ser uma das causas principais de Sinistros de Trânsito, é crime previsto na legislação.</p>
-<ul class='list-element'></ul></div></details>
+<ul class='list-element'><li>O condutor alcoolizado geralmente acredita estar em plenas condições de direção.</li>
+<li>O álcool faz com que o condutor se torne mais ousado.</li>
+</ul></div></details>
 </div>
 
 <div class="slide">
@@ -208,7 +223,11 @@ Em Sinistro de Trânsito de trânsito ou fiscalização de trânsito, na suspeit
 <div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-alcool-volante.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
 <p>Caso considerado embriagado ou dopado o condutor estará sujeito a:</p></div>
-<ul class='list-element'></ul>
+<ol class='list-element'><li>Ser suspenso seu direito de dirigir pelo período mínimo de 12 meses;</li>
+<li>Seu documento de habilitação ser recolhido;</li>
+<li>Seu veículo ser retido ou removido;</li>
+<li>Ser enquadrado em CRIME DE TRÂNSITO (dependendo da concentração de álcool por litro de sangue). Neste caso o delegado ou juiz irá estipular a fiança para o criminoso ser liberado, a qual raramente é menor que R$ 1.000,00.</li>
+</ol>
 </div>
 
 <div class="slide">
@@ -216,7 +235,10 @@ Em Sinistro de Trânsito de trânsito ou fiscalização de trânsito, na suspeit
 <h2 class="slide-heading">Álcool e o </h2>
 <h3 class="slide-subheading">Volante</h3>
 <p>Caso considerado embriagado ou dopado  o condutor estará sujeito ainda a:</p>
-<div class="group-horizontal"><ul class='list-element'></ul>
+<div class="group-horizontal"><ol class='list-element'><li>Ser autuado por infração gravíssima e pagar multa de R$ 2.934,70, ou de R$ 5.869,40 em caso de reincidente na infração no prazo de 12 meses;</li>
+<li>Receber 7 pontos na sua CNH;</li>
+<li>Perder sua condição de réu primário.</li>
+</ol>
 <figure class="image-element"><img src="images/legislacao-alcool-volante.jpg" alt="Imagem" loading="lazy"></figure></div>
 </div>
 
@@ -224,14 +246,14 @@ Em Sinistro de Trânsito de trânsito ou fiscalização de trânsito, na suspeit
 <h3>O Exame Toxicológico</h3>
 <h2 class="slide-heading">O Exame Toxicológico</h2>
 <h3 class="slide-subheading">Lei 14.599/2023</h3>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>INFRAÇÃO</th><th>NATUREZA / PENALIDADE</th></tr></thead><tbody><tr class="alt-row"><td>Reincidir no prazo de 12 meses em dirigir veículo tendo obtido resultado positivo no exame toxicológico </td><td>Gravíssima - multa 10X e suspensão do direito de dirigir </td></tr><tr><td>Não realizar o exame após 30 dias do vencimento </td><td>Gravíssima - multa 5x</td></tr><tr class="alt-row"><td>Obter resultado positivo no exame toxicológico  </td><td>Suspensão do direito de dirigir por 3 meses </td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
 <h3>O Exame Toxicológico</h3>
 <h2 class="slide-heading">O Exame Toxicológico</h2>
 <h3 class="slide-subheading">Lei 14.599/2023</h3>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>INFRAÇÃO</th><th>NATUREZA / PENALIDADE</th></tr></thead><tbody><tr class="alt-row"><td>Reincidir no prazo de 12 meses em dirigir veículo tendo obtido resultado positivo no exame toxicológico </td><td>Gravíssima - multa 10X e suspensão do direito de dirigir </td></tr><tr><td>Não realizar o exame após 30 dias do vencimento </td><td>Gravíssima - multa 5x</td></tr><tr class="alt-row"><td>Obter resultado positivo no exame toxicológico  </td><td>Suspensão do direito de dirigir por 3 meses </td></tr></tbody></table></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>O DETRAN responsável notificará automaticamente o condutor após o trigésimo primeiro dia de vencimento. </p></div></details>
 </div>
         </div>

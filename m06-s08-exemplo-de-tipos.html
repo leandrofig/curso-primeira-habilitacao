@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -183,25 +196,31 @@
 <h3 class="slide-subheading">CompareSliderElement: arraste para ver antes e depois.</h3>
 <div class="group-horizontal"><div class="compare-slider-wrap"><div class="compare-slider-container" id="compare-exemplo-errado-certo" style="height:360px">  <img class="cs-img cs-after" src="images/certo.jpg" alt="Estado correto" draggable="false">  <div class="cs-before-clip" style="width:45%">    <img class="cs-img cs-before" src="images/errado.jpg" alt="Estado errado" draggable="false">  </div>  <div class="cs-handle" style="left:45%">    <div class="cs-handle-line"></div>    <div class="cs-handle-circle"><span>&#x2B0C;</span></div>    <div class="cs-handle-line"></div>  </div>  <span class="cs-label cs-label-before">Errado</span>  <span class="cs-label cs-label-after">Certo</span></div><p class="cs-caption">Arraste o controle para comparar os cenários.</p></div></div>
 <h3 class="slide-subheading">GridElement: tabela com colunas proporcionais e destaque.</h3>
-<div class="group-horizontal"><div class="grid-element grid-cols-2"></div></div>
+<div class="group-horizontal"><div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>Recurso</th><th>Básico</th><th>Plus</th><th>Pro</th></tr></thead><tbody><tr class="alt-row"><td>Suporte</td><td>Email</td><td>Email + Chat</td><td>24/7 Multicanal</td></tr><tr><td>Armazenamento</td><td>10 GB</td><td>100 GB</td><td>1 TB</td></tr><tr class="alt-row"><td>Usuários</td><td>1</td><td>5</td><td>Ilimitado</td></tr><tr><td>Relatórios</td><td>Essenciais</td><td>Avançados</td><td>Customizados</td></tr><tr class="alt-row"><td>Integrações</td><td>Padrão</td><td>API + Webhooks</td><td>API + Webhooks + SSO</td></tr></tbody></table></div></div>
 <h3 class="slide-subheading">InfoBoxElement: gatilhos e modos de ancoragem.</h3>
 <details class="infobox" open><summary>Info em flow-end (dock)</summary><div class="infobox-content"><p>anchorMode "flow-end" empilha os botões no final do slide.</p>
 <p>Ideal para reuniões de links, anexos ou notas globais.</p>
 <figure class="image-element"><img src="images/certo.jpg" alt="Exemplo de imagem" loading="lazy"><figcaption>Imagens tambÇ¸m podem ir dentro da modal.</figcaption></figure></div></details>
 <h3 class="slide-subheading">ListElement: listas numeradas e com marcadores.</h3>
-<div class="group-horizontal"><ul class='list-element'></ul>
+<div class="group-horizontal"><ul class='list-element'><li>Item simples</li>
+<li>Item com descrições curtas</li>
+<li>Item com chamada para ação</li>
+</ul>
 <div class="spacer"></div>
-<ul class='list-element'></ul></div>
+<ol class='list-element'><li>Passo 1: preparar dados</li>
+<li>Passo 2: revisar conteúdo</li>
+<li>Passo 3: publicar e testar</li>
+</ol></div>
 <h3 class="slide-subheading">QuizMCQElement: múltipla escolha com imagem, áudio e shuffle.</h3>
-<div class="group-horizontal"><div class="quiz-mcq"><p class="quiz-question"><strong>Qual opção descreve corretamente o comportamento do botão flow-end?</strong></p><div class="quiz-options"><div class="quiz-option">Fixa o botão na posição absoluta 0,0 do slide.</div><div class="quiz-option quiz-correct">Empilha botões no final do slide em uma barra de dock. ✓</div><div class="quiz-option">Prende o botão sempre no topo do elemento anterior.</div><div class="quiz-option">Oculta o botão e só mostra o modal automaticamente.</div></div></div></div>
+<div class="group-horizontal"><div class="quiz-mcq"><figure class="quiz-image"><img src="images/116-1.jpg" alt="Botão dock destacado" loading="lazy"><figcaption>Exemplo visual do dock de info</figcaption></figure><p class="quiz-question"><strong>Qual opção descreve corretamente o comportamento do botão flow-end?</strong></p><div class="quiz-options"><div class="quiz-option">Fixa o botão na posição absoluta 0,0 do slide.</div><div class="quiz-option quiz-correct">Empilha botões no final do slide em uma barra de dock. ✓</div><div class="quiz-option">Prende o botão sempre no topo do elemento anterior.</div><div class="quiz-option">Oculta o botão e só mostra o modal automaticamente.</div></div><div class="quiz-feedback quiz-feedback-correct">✓ Acertou! Flow-end coloca os gatilhos no dock final.</div><div class="quiz-feedback quiz-feedback-wrong">✗ Quase! Flow-end usa o dock no fim do slide.</div></div></div>
 <h3 class="slide-subheading">TimelineElement: eventos expansíveis com opções de layout.</h3>
-<div class="group-horizontal"><div class="timeline"><div class="timeline-item"><strong></strong></div><div class="timeline-item"><strong></strong></div><div class="timeline-item"><strong></strong></div><div class="timeline-item"><strong></strong></div></div></div>
+<div class="group-horizontal"><div class="timeline"><div class="timeline-item"><strong>Planejamento</strong><span class="timeline-sub"> — Análise de risco</span><p>Mapeamento de pontos críticos e definição de metas.</p></div><div class="timeline-item"><strong>Implementação</strong><span class="timeline-sub"> — Infraestrutura</span><p>Sinalização, dispositivos de redução de velocidade e melhorias viárias.</p><figure class="image-element"><img src="images/116-2.jpg" alt="Implementação" loading="lazy"></figure></div><div class="timeline-item"><strong>Educação</strong><span class="timeline-sub"> — Campanhas</span><div class="timeline-rich"><p>Treinamentos, materiais educativos e ações em escolas.</p><ul><li>Workshops</li><li>Simulações</li><li>Conteúdo multimídia</li></ul></div></div><div class="timeline-item"><strong>Monitoramento</strong><span class="timeline-sub"> — Indicadores</span><p>Coleta de dados, auditorias e ajustes contínuos.</p></div></div></div>
 <h3 class="slide-subheading">VideoElement: YouTube, MP4, preview e recorte de tempo.</h3>
 <div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/pBVLAObNfJI" title="YouTube com preview" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="spacer"></div>
 <div class="video-element"><video controls preload="metadata"><source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"></video></div></div>
 <h3 class="slide-subheading">AccordionInfoElement: acordeão numerado com ícones e HTML.</h3>
-<div class="group-horizontal"><div class="accordion"><details class="accordion-item"><summary>Como posicionar um InfoBox?</summary><div class="accordion-content"></div></details><details class="accordion-item"><summary>Posso misturar mídia no acordeão?</summary><div class="accordion-content"></div></details><details class="accordion-item"><summary>Quando usar modo accordion?</summary><div class="accordion-content"></div></details></div></div>
+<div class="group-horizontal"><div class="accordion"><details class="accordion-item" open><summary>Como posicionar um InfoBox?</summary><div class="accordion-content"><p>Use <strong>anchorMode</strong> para definir o comportamento. No exemplo acima, usamos <code>flow-end</code> para empilhar os gatilhos no dock.</p></div></details><details class="accordion-item"><summary>Posso misturar mídia no acordeão?</summary><div class="accordion-content"><p>Sim. O corpo aceita HTML livre, incluindo imagens:</p><figure><img src="116-3.jpg" alt="Exemplo de mídia" style="max-width:160px; border-radius:8px;"><figcaption>Imagem embutida no painel.</figcaption></figure></div></details><details class="accordion-item"><summary>Quando usar modo accordion?</summary><div class="accordion-content"><ul><li>Quando quiser um item aberto por vez.</li><li>Para reduzir rolagem em telas menores.</li><li>Para agrupar FAQ ou passos curtos.</li></ul></div></details></div></div>
 </div>
         </div>
         <div class="nav-bar">

@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -178,7 +191,11 @@
 <h3 class="slide-subheading">Habilitação </h3>
 <div class="spacer"></div>
 <div class="group-horizontal"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Ser penalmente imputável (que possa ser processado na forma da Lei);</li>
+<li>Saber ler e escrever;</li>
+<li>Possuir documento de identidade;</li>
+<li>Possuir Cadastro de Pessoa Física - CPF.</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Você não poderá se habilitar ou se reabilitar se estiver respondendo por um delito de trânsito ou com sua habilitação suspensa ou cassada.</p></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Na hora da foto, o candidato ou condutor não poderá utilizar óculos, bonés, gorros, chapéus ou qualquer outro item de vestuário/acessório que cubra parte do rosto ou da cabeça, excetuados os itens de vestuário relacionados à crença ou religião (véus, hábitos, etc) e à queda de cabelo em decorrência de patologias ou tratamento médico, desde que a face, a testa e o queixo estejam perfeitamente visíveis (RESOLUÇÃO CONTRAN Nº 1.006, DE 3 DE ABRIL DE 2024).</p></div></details>
 </div>
@@ -204,7 +221,10 @@
 <div class="slide">
 <h3>Permissão para Dirigir</h3>
 <h3 class="slide-subheading">Permissão para Dirigir</h3>
-<div class="group-horizontal"><ul class='list-element'></ul>
+<div class="group-horizontal"><ul class='list-element'><li>O candidato aprovado nos exames exigidos pela legislação, receberá, a PPD nas categorias “A”, “B”, “A/B”  ou a ACC Provisória</li>
+<li>A PPD e a ACC Provisória são válidas por 12 meses;</li>
+<li>A CNH ou a ACC definitiva será conferida ao portador do documento provisório que no decorrer dos 12 meses não tenha cometido nenhuma infração de natureza gravíssima, grave ou duas médias (ou mais).</li>
+</ul>
 <figure class="image-element"><img src="images/permissao-para-dirigir.jpg" alt="Permissão para dirigir" loading="lazy"></figure></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>PPD - Permissão Para Dirigir
 
@@ -221,7 +241,10 @@ Após o pagamento da  taxa do Estado, você receberá a CNH ou ACC  definitiva, 
 <h3 class="slide-subheading">LA</h3>
 <p>
 A LA somente será válida nas seguintes situações:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Com acompanhamento de um instrutor Credenciado;</li>
+<li>Deverá ser apresentada junto com um documento de identidade;</li>
+<li>O candidato que não cumprir as regras acima poderá ter sua LA suspensa..</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>LADV - Licença Para Aprendizagem de Direção Veicular
 
 CFC - Centro de Formação de Condutores
@@ -240,7 +263,11 @@ Após 180 dias de estada regular, deverá submeter-se aos Exames de Aptidão Fí
 <figure class="image-element"><img src="images/condutor-estrangeiro.jpg" alt="Imagem do curso" loading="lazy"></figure></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Quando o condutor estrangeiro cometer infração de trânsito, cuja penalidade implique na proibição do direito de dirigir, a autoridade competente de trânsito aplicará o recolhimento e retenção do documento de habilitação, entre outras providências.</p></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>O condutor estrangeiro deverá portar (RESOLUÇÃO CONTRAN Nº 933, DE 28 DE MARÇO DE 2022):</p>
-<ul class='list-element'></ul></div></details>
+<ul class='list-element'><li>Carteira de habilitação estrangeira, dentro do prazo de validade;</li>
+<li>Permissão Internacional para Dirigir (PID);</li>
+<li>Documento de identificação;</li>
+<li>Documento que comprove a data de entrada no País.</li>
+</ul></div></details>
 </div>
 
 <div class="slide">
@@ -273,7 +300,8 @@ A P.I.D é válida somente para países signatários da Convenção Internaciona
 <div class="slide">
 <h3>Categorias de Habilitação</h3>
 <h2 class="slide-heading">Categorias de Habilitação</h2>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>Categoria</th><th>Regra</th><th>Exame</th></tr></thead><tbody><tr class="alt-row"><td>A</td><td>Automotores e elétricos, de duas ou três rodas, com ou sem carro lateral e ciclomotores.</td><td>Motocicleta acima de 120 cc com no máx. 5 anos de uso;</td></tr><tr><td>B</td><td>1) Automotores e elétricos, 4 rodas, PBT até 3.500 kg, até 8 lugares (exceto motorista); 2) Motor-casa com PBT até 6.000 kg e 8 lugares (exceto motorista); 3) Trator de roda e os equipamentos automotores agrícolas em via pública; 4) Quadriciclos (Res. 573).</td><td>Carro de passeio com no máximo 8 anos de uso.
+</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
@@ -289,14 +317,14 @@ A P.I.D é válida somente para países signatários da Convenção Internaciona
 <div class="slide">
 <h3>Categorias de Habilitação</h3>
 <h2 class="slide-heading">Categorias de Habilitação</h2>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>Categoria</th><th>Regra</th><th>Exame</th></tr></thead><tbody><tr class="alt-row"><td>C</td><td>1) Todos da categoria “B”; 2) Automotores e elétricos de carga com PBT acima de3.500 kg; 3) Tratores e máquinas, motor-casa, combinação de veículos com unidade acoplada, reboque, semirreboque ou articulada até 6.000 kg de PBT.</td><td>Veículo de carga com PBT mínimo de 6.000 Kg, com no máximo 15 anos de uso.</td></tr><tr><td>D</td><td>1) Todos das categorias “B” e “C”; 2) Automotores e elétricos de passageiros, cuja lotação exceda a 8 lugares, excluído condutor; 3) Transporte de escolares.</td><td>Veículo tipo ônibus, com no mínimo 7,20m e no máximo 15 anos de uso.</td></tr></tbody></table></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>PBT - Peso Bruto Total</p></div></details>
 </div>
 
 <div class="slide">
 <h3>Categorias de Habilitação</h3>
 <h2 class="slide-heading">Categorias de Habilitação</h2>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th></th><th>REGRA</th><th>EXAME</th></tr></thead><tbody><tr class="alt-row"><td>E</td><td>1) Todos das categorias “B”, “C” e &quot;D”; 2) Combinação de veículos com unidade tratora das categorias “B”, “C” ou “D” e unidade acoplada tipo reboque, semirreboque, trailer ou articulada, com 6.000 Kg ou mais de PBT ou a unidade acoplada exceda a 8 lugares; 3) Combinação de veículos com mais de uma unidade tracionada, independentemente da capacidade de tração ou do PBT.</td><td>Combinação de veículos, com caminhão trator acoplado a um reboque ou semirreboque, com PBTC de no mínimo 6.000 kg e comprimento mínimo de 13m e no máximo 15 anos de uso, excluído o ano de fabricação;</td></tr></tbody></table></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>PBT - Peso Bruto Total;
 
 ARTICULADO - dois compartimentos de carga ou mais.
@@ -309,8 +337,10 @@ TRAILER - reboque ou semi-reboque tipo casa, com duas, quatro, ou seis rodas, ac
 <div class="slide">
 <h3>Autorização para ACC</h3>
 <h2 class="slide-heading">Autorização para ACC</h2>
-<div class="grid-element grid-cols-2"></div>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th></th><th>REGRA</th><th>EXAME</th></tr></thead><tbody><tr class="alt-row"><td>ACC</td><td>Ciclomotor (incluídas bicicletas adaptadas c/motor e ciclos elétricos - Resolução CONTRAN 789/2020) </td><td>Ciclomotor (50 cc e 50 km/h máximo)</td></tr></tbody></table></div>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>ACC ( Autorização para Conduzir Ciclomotores) não se enquadra em uma categoria de habilitação, sendo apenas uma autorização que pemite ao seu detenor a pilotagem de ciclomotores;</li>
+<li>Serão dispensadas de licenciamento e emplacamento as bicicletas motorizadas, mediante regulamentação do CONTRAN (Lei 14.071, de 13/10/2020).</li>
+</ul></div></details>
 <p>
 
 EXCEÇÕES - </p>
@@ -325,7 +355,11 @@ IV - dimensões de largura e comprimento iguais ou inferiores às de uma cadeira
 <h3>Mudança e Adição de Categoria</h3>
 <h2 class="slide-heading">Mudança e Adição de Categoria</h2>
 <div class="group-horizontal"><figure class="image-element"><img src="images/mudança_adição_categoria.jpg" alt="Imagem" loading="lazy"></figure></div>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>Para adição “C”, “D” ou “E”, não poderá ter cometido mais de uma infração gravíssima nos últimos 12 (doze) meses (alterado pelas Leis 14.071 de 13/10/2020 e 14.440 de 02/09/2022 ).</li>
+<li>Para mudar para “D” ou “E” existe a necessidade da realização de curso prática veicular em situação de risco;</li>
+<li>Para conduzir veículos de outra categoria o condutor deverá realizar exames complementares exigidos para habilitação na categoria pretendida.</li>
+<li>Para adicionar ou mudar a categoria será necessária a realização do curso de prática de direção veicular, complementar e com carga-horária de 15 horas.</li>
+</ul></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>É obrigatória a obtenção de resultado negativo em exame toxicológico para as categorias C, D e E, além de ocorrer na habilitação e na renovação da CNH, deverá ocorrer a cada 2 anos e 6 meses para condutores com idade inferior a 70 anos (alterado pela Lei 14.071, de 13/10/2020).</p></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>O exame toxicológico é capazes de detectar uso de entorpecentes por longos períodos (três ou mais meses). Para a realização dos exames toxicológicos devem ser coletadas duas amostras na presença de uma testemunha devidamente identificada, cujos dados deverão ser inseridos em campo específico no sistema RENACH. A testemunha poderá ser dispensada no caso em que o condutor consentir expressamente filmagem em vídeo contínuo e sem cortes, com os rostos do doador e coleto à vista durante todo o processo. No caso de o condutor ser reprovado no exame toxicológico, fica-lhe garantido o direito de contraprova e de recurso administrativo, sem efeito suspensivo (RESOLUÇÃO CONTRAN Nº 1009, DE 24 DE ABRIL DE 2024).
 
@@ -335,7 +369,10 @@ IV - dimensões de largura e comprimento iguais ou inferiores às de uma cadeira
 <div class="slide">
 <h3>Habilitação Definitiva 1</h3>
 <h3 class="slide-subheading">Habilitação Definitiva</h3>
-<div class="group-horizontal"><ul class='list-element'></ul>
+<div class="group-horizontal"><ul class='list-element'><li>A CNH ou a ACC definitiva será conferida ao portador do documento provisório que no decorrer dos 12 meses não tenha cometido nenhuma infração de natureza gravíssima, grave ou duas médias (ou mais);</li>
+<li>A Habilitação conterá três números de identificação, sendo dois de identificação nacional e um de identificação regional.</li>
+<li>Clique para mais detalhes.</li>
+</ul>
 <figure class="image-element"><img src="images/legislacao-habilitacao-definitiva.jpg" alt="CNH" loading="lazy"></figure>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><figure class="image-element"><img src="images/detalhes-nova-cnh.jpg" alt="Imagem" loading="lazy"></figure></div></details></div>
 </div>
@@ -345,7 +382,14 @@ IV - dimensões de largura e comprimento iguais ou inferiores às de uma cadeira
 <h3 class="slide-subheading">Habilitação Definitiva</h3>
 <p>
 O documento de habilitação sofrerá nova expedição quando ocorrer:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Adição de categoria;</li>
+<li>Mudança de Categoria;</li>
+<li>Extravio ou perda;</li>
+<li>Renovação dos exames para a habilitação, exceto o exame toxicológico;</li>
+<li>Reabilitação do condutor;</li>
+<li>Alteração de dados do condutor;</li>
+<li>Substituição do documento de habilitação estrangeira.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -354,7 +398,12 @@ O documento de habilitação sofrerá nova expedição quando ocorrer:</p>
 <h3 class="slide-subheading">CNH-e</h3>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Para instalar acesse a loja de aplicativos  de seu smartphone e procure por “Carteira Digital de Trânsito”. Para acessar o aplicativo você deverá ter criado previamente uma conta no portal gov.br do governo federal.
 </p></div></details>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>A CNH-e também contará com um código PIN e um sistema de bloqueio no site da SENATRAN - Secretaria Nacional de Trânsito (antigo DENATRAN), caso o smartphone com aplicativo cadastrado seja roubado. A CNH poderá ser salva para visualização offline e será verificada pelo agente de fiscalização através de um leitor de código QR ( aplicativo VIO (https://servicos.serpro.gov.br/vio/aplicativo/);</li>
+<li>A CNH impressa continuará sendo emitida e válida;</li>
+<li>Com todos os processos de validação, será mais difícil a falsificação do documento;</li>
+<li>Não será necessário internet caso tenha que apresentar a CNH digital.</li>
+<li>Siga as orientações do aplicativo para baixar sua CNHe (CNH eletrônica) ou o CRLVe (Certificado de Registro e Licenciamento do Veículo Eletrônico).</li>
+</ul></div></details>
 <div class="group-horizontal"><p>O aplicativo da Carteira Digital de Trânsito oferece a opção de você gerenciar seus documentos de habilitação e do veículo, direto do seu celular, com o mesmo valor legal dos documentos impressos.
 
 
@@ -367,7 +416,10 @@ O documento de habilitação sofrerá nova expedição quando ocorrer:</p>
 <h2 class="slide-heading">O novo Modelo da CNH</h2>
 <div class="spacer"></div>
 <div class="group-horizontal"><figure class="image-element"><img src="images/cnh_pequena.jpg" alt="Nova CNH" loading="lazy"><figcaption>Novo modelo CNH</figcaption></figure>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Novo modelo da CNH entrará em vigor após junho de 2022;</li>
+<li>A letra “P” na parte inferior direita indica que é uma Permissão, com validade de 12 meses;</li>
+<li>O modelo que será utilizado em 2022 já virá com a substituição do nome do Ministério das Cidades para Ministério da Infraestrutura.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -376,7 +428,10 @@ O documento de habilitação sofrerá nova expedição quando ocorrer:</p>
 <h3 class="slide-subheading">Habilitação</h3>
 <div class="group-vertical"><p>O exame de aptidão física e mental, a ser realizado no local de residência ou domicílio do examinado, será preliminar e renovável com a seguinte periodicidade (alterado pela Lei 14.071 de 13/10/2020):</p>
 <figure class="image-element"><img src="images/tabela_renovação.jpg" alt="inferiorsuperior igual 50 70 3 10 5 " loading="lazy"></figure>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>Se o condutor executar serviço remunerado de transporte de pessoas e bens deverá também realizar nova avaliação Psicológica;</li>
+<li>Os condutores de veículos automotores habilitados nas categorias &quot;C&quot;, &quot;D&quot; ou &quot;E&quot; que na renovação do exame de aptidão física e mental vierem a acusar deficiência auditiva igual ou superior a 40 decibéis, estarão impedidos de dirigir veículos desta categoria;</li>
+<li>Além da realização do exame previsto no caput deste artigo, os condutores das categorias C, D e E com idade inferior a 70 anos serão submetidos a novo exame a cada período de 2 (dois) anos e 6 (seis) meses, a partir da obtenção ou renovação da Carteira Nacional de Habilitação, independentemente da validade dos demais exames (alterado pela Lei 14.071 de 13/10/2020). É garantido o direito de contraprova.</li>
+</ul></div></details>
 <p>Fica mantido o prazo de validade dos documentos de habilitação expedidos antes da data de entrada em vigor da Lei 14.071.</p>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Quando houver indícios de deficiência física ou mental, ou de progressividade de doença que possa diminuir a capacidade para conduzir o veículo, os prazos previstos poderão ser diminuídos por proposta do perito examinador.</p></div></details></div>
 </div>
@@ -385,9 +440,16 @@ O documento de habilitação sofrerá nova expedição quando ocorrer:</p>
 <h3>Documentos Obrigatórios</h3>
 <h3 class="slide-subheading">Documentos Obrigatórios</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<ol class='list-element'><li>Documento de habilitação formal coerente com a espécie do veículo em uso – CNH, ACC ou PPD, no original ou digital e dentro dos respectivos prazos de validade;</li>
+<li>Na atualidade o CRLV (Certificado de Registro e Licenciamento do Veículo) na versão impressa poderá ser dispensado quando, no momento da fiscalização, for possível ter acesso ao devido sistema informatizado para verificar se o veículo está licenciado (art. 133 do CTB, alterado pela Lei nº 13.281 de 04 de maio de 2016);</li>
+<li>Condutores profissionais que não tiverem sua especialização constando na CNH, deverão portar documento que comprovem a respectiva especialização.</li>
+</ol>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>Apesar de ser previsto o CRLV-e (eletrônico), o qual poderá ser apresentado pelo condutor usando aplicativo no smartphone, poderá ser que seu aparelho esteja sem bateria e o agente esteja sem acesso ao seu sistema eletrônico para a consulta do licenciamento. Neste caso a única coisa que irá livrá-lo(a) da infração é o porte da versão digital impressa.</li>
+</ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>O porte do documento de habilitação será dispensado quando, no momento da fiscalização, for possível ter acesso ao sistema informatizado para verificar se o condutor está habilitado (Acrescido pela Lei 14.071, de 13/10/2020);</li>
+<li>Importante lembrar que todo o cidadão ao ser abordado pelo agente de segurança deverá se identificar com um documento de Identidade com foto;</li>
+<li>Os órgãos ou entidades executivos de trânsito dos Estados e do Distrito Federal enviarão por meio eletrônico, com 30 (trinta) dias de antecedência, aviso de vencimento da validade da Carteira Nacional de Habilitação a todos os condutores cadastrados no RENACH com endereço na respectiva unidade da Federação.</li>
+</ul></div></details>
 </div>
 
 <div class="slide">
@@ -434,7 +496,10 @@ CI - peritos estrangeiros de Acordo de Cooperação Internacional.
 <div class="group-vertical"><figure class="image-element"><img src="images/placa_mercosul.jpg" alt="Imagem" loading="lazy"></figure></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><figure class="image-element"><img src="images/placa_moto.jpg" alt="Imagem" loading="lazy"><figcaption>Placa Moto Mercosul</figcaption></figure>
 <p>Para veículos de duas rodas, triciclos e quadricíclos  existe um tamanho diferenciado de placa:</p></div></details>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>Os caracteres (letras e números) serão alterados dentro de determinada regra, passando do padrão LLLNNNN para o LLLNLNN, onde L é letra e N é número.  Desta forma, um veículo com a placa ABC1234 tem equivalência no Padrão Mercosul de ABC1C34;</li>
+<li>Devem possuir os novos modelos os veículos no primeiro emplacamento, na substituição de qualquer das placas em decorrência de mudança de categoria do veículo ou furto, extravio, roubo ou dano da referida placa, na mudança de município ou de Unidade Federativa e no casos em que haja necessidade de instalação da segunda placa atrás;</li>
+<li>A vantagem deste novo modelo de placa é que por meio de aplicativo especíﬁco usado pelo agente de trânsito será possível identiﬁcar uma clonagem, pois todo o processo produtivo das novas placas é controlado.</li>
+</ul></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>O MERCOSUL (Mercado Comum do Sul) é composto por Argentina, Brasil, Paraguai, Uruguai e Venezuela e tem como associados Chile, Bolívia, Peru, Colômbia e Equador.</p></div></details>
 </div>
 
@@ -461,22 +526,32 @@ CI - peritos estrangeiros de Acordo de Cooperação Internacional.
 <div class="slide">
 <h3>O Registro de Veículos</h3>
 <h2 class="slide-heading">O Registro de Veículos</h2>
-<div class="group-horizontal"><ul class='list-element'></ul>
+<div class="group-horizontal"><ol class='list-element'><li>Registrado o veículo, expedir-se-á o Certificado de Registro de Veículo (CRV), em meio físico e/ou digital, à escolha do proprietário, de acordo com os modelos e com as especificações estabelecidos pelo Contran, com as características e as condições de invulnerabilidade à falsificação e à adulteração (alterado pela Lei 14.071, de 13/10/2020);</li>
+<li>Registra os dados do proprietário atual, do anterior, dados do veículo e do GRAVAME;</li>
+</ol>
 <figure class="image-element"><img src="images/legislacao-registro-certo.jpg" alt="Imagem" loading="lazy"><figcaption>Certificado de Registro de Veículo  CRV</figcaption></figure></div>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>O veículo poderá transitar por 15 (quinze) dias consecutivos, ou no caso dos Estados da Região Norte do País por 30 (trinta) dias consecutivos, contados da data de saída do veículo consignada em campo próprio ou mediante carimbo constante do DANFe ou do documento alfandegário (Resolução CONTRAN 911, de 28/03/2022);</li>
+<li>Para veículos recém fabricados e ainda sem Nota Fiscal fica permitido o transporte somente do pátio interno das montadoras e fabricantes para os pátios externos das montadoras e fabricantes ou das empresas responsáveis pelo transporte dos veículos, em um raio máximo de 10 (dez) quilômetros.</li>
+</ul></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>GRAVAME  - registra os contratos de garantias de alienação fiduciária em operações financeiras, consórcio, arrendamento mercantil, reserva de domínio ou penhor.</p></div></details>
 </div>
 
 <div class="slide">
 <h3>O Registro de Veículos</h3>
 <h2 class="slide-heading">O Registro de Veículos</h2>
-<div class="group-horizontal"><ul class='list-element'></ul>
+<div class="group-horizontal"><ol class='list-element'><li>Será obrigatório novo CRV em caso de venda do veículo, mudança do município de domicílio do proprietário e no caso de alteração das características do veículo;</li>
+<li>O novo proprietário terá 30 dias para providenciar a atualização do CRV;</li>
+<li>O proprietário de veículo irrecuperável, ou definitivamente desmontado, deverá requerer a baixa do registro;</li>
+</ol>
 <figure class="image-element"><img src="images/legislacao-registro-crv.jpg" alt="Imagem" loading="lazy"><figcaption>Certificado de Registro de Veículo  CRV</figcaption></figure>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Caso o comprador não realize a transferência de propriedade em 30 dias, o vendedor tem a obrigação legal de comunicar a venda do veículo ao DETRAN no prazo máximo de 60 dias (alterado pela Lei 14.071, de 13/10/2020), sob pena de ter que se responsabilizar solidariamente pelas penalidades impostas e suas reincidências até a data da comunicação.
 
 A comunicação de venda documental será protocolada no órgão ou entidade executiva de trânsito do Estado ou do Distrito Federal (DETRAN) em que o veículo estiver registrado, por intermédio de cópia autenticada da Autorização para Transferência de Propriedade de Veículo – ATPV, que consta do verso do Certificado de Registro de Veículos – CRV, devidamente preenchida, ou ainda por meio eletrônico, tal como regulamentado pelo CONTRAN.</p></div></details>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details></div>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>O comprovante de transferência de propriedade, poderá ser substituído por documento eletrônico com assinatura eletrônica válida, na forma regulamentada pelo Contran.</li>
+</ul></div></details></div>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>A obrigação de que trata este artigo é da companhia seguradora ou do adquirente do veículo destinado à desmontagem, quando estes sucederem ao proprietário.</li>
+<li>A Resolução CONTRAN 810, de 15/12/2020 regulamenta  a classificação de danos e os procedimentos para a regularização, a transferência e a baixa dos veículos envolvidos em Sinistros de Trânsito.</li>
+</ul></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>* A Autorização para Transferência de Propriedade do Veículo – ATPV poderá existir na versão impressa ou digital. Na versão digital a assinatura do vendedor e comprador também ocorrerá por meio digital (assinaturas e certificados digitais);
 
 * No caso da ATPV-e na versão impressa, nos termos do art. 17, ou da ATPV constante no verso de CRV válido, o antigo proprietário deverá encaminhar ao órgão ou entidade executivo de trânsito do Estado ou do Distrito Federal onde o veículo for registrado a cópia autenticada da ATPV-e ou da ATPV, respectivamente, devidamente preenchida.</p></div></details>
@@ -485,7 +560,10 @@ A comunicação de venda documental será protocolada no órgão ou entidade exe
 <div class="slide">
 <h3>O Registro de Veículos</h3>
 <h2 class="slide-heading">O Registro de Veículos</h2>
-<div class="group-horizontal"><ul class='list-element'></ul></div>
+<div class="group-horizontal"><ol class='list-element'><li>Não será emitido novo CRV se houverem débitos de multas ligadas ao veículo;</li>
+<li>Atenção, no caso de venda jamais assine a “AUTORIZAÇÃO PARA TRANSFERÊNCIA DE VEÍCULO” sem colocar o local e data.</li>
+<li>Este documento deverá ser guardado em local seguro e não é necessário seu porte.</li>
+</ol></div>
 </div>
 
 <div class="slide">
@@ -500,10 +578,16 @@ A comunicação de venda documental será protocolada no órgão ou entidade exe
 <div class="slide">
 <h3>O Licenciamento de Veículos</h3>
 <h2 class="slide-heading">O Licenciamento de Veículos</h2>
-<div class="group-horizontal"><ul class='list-element'></ul>
+<div class="group-horizontal"><ol class='list-element'><li>Todo veículo automotor, elétrico, articulado, reboque ou semi-reboque deve ser licenciado anualmente;</li>
+<li>Na atualidade o CRLV (Certificado de Registro e Licenciamento do Veículo) na versão impressa poderá ser dispensado quando, no momento da fiscalização, for possível ter acesso ao devido sistema informatizado para verificar se o veículo está licenciado (art. 133 do CTB, alterado pela Lei nº 13.281 de 04 de maio de 2016);</li>
+</ol>
 <figure class="image-element"><img src="images/legislacao-licenciamento-crlv-pequena.jpg" alt="Imagem" loading="lazy"><figcaption>Certificado de Registro de Veículo  CRLV</figcaption></figure></div>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>Não sendo possível sanar a falha de um veículo no local da infração, desde que o mesmo ofereça condições de segurança para circulação, poderá ser liberado a um condutor habilitado, mediante recolhimento do CRLV (agente emite recibo), com prazo não superior a 15 (quinze) dias, para regularizar a situação, e será considerado notificado para essa finalidade na mesma ocasião (alterado pelas Leis 14.071, de 13/10/2020 e 14.229/10/2021). Para ser liberado o veículo deverá estar devidamente registrado e licenciado.</li>
+<li>Recusar-se a entregar o CRLV também é infração de trânsito. No resgate do veículo pelo seu proprietário, o CRLV deverá ser devolvido pela Autoridade de Trânsito..</li>
+</ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>Apesar do que preconiza a legislação, é aconselhável que o condutor porte o CRLV na versão impressa, pois caso a verificação eletrônica não possa ocorrer por algum motivo, o CRLV na versão impressa deverá ser apresentado pelo condutor.</li>
+<li>Uma decisão liminar recente (fev/2021) do Tribunal Regional Federal da 4ª Região (TRF4) determina que os Departamentos Estaduais de Trânsito de todos os Estados brasileiros voltem a emitir de forma física o Certificado de Registro de Veículo (CRV) e o Certificado de Licenciamento Anual (CLA). Segundo a desembargadora, a escolha entre digital e impresso deverá ser uma escolha do proprietário do veículo, até mesmo pelo fato de que a Lei 14.071 de 13/10/2020 preve esta opção de escolha.</li>
+</ul></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p></p>
 <p>O condutor poderá optar por portar o CRLV no formato eletrônico, o qual será chamado de CRLVe, o que torna as ações citadas acima sem efeito, pois neste caso não existe a possibilidade de recolhimento de nenhum documento. Provavelmente no futuro o legislador irá prever o travamento do CRLVe pela autoridade de trânsito ou seu agente</p></div></details>
 </div>
@@ -524,7 +608,11 @@ A comunicação de venda documental será protocolada no órgão ou entidade exe
 <div class="slide">
 <h3>O Recall</h3>
 <h2 class="slide-heading">O Recall e sua Obrigatoriedade</h2>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Recall é um termo usado para o chamamento dos fabricantes de veículos para a troca de peças ou conserto de falhas em veículos colocados no mercado, tudo de forma gratuita;</li>
+<li>Atender a este chamamento passou a ser obrigatório;</li>
+<li>As informações referentes às campanhas de chamamento de consumidores para substituição ou reparo de veículos não atendidas no prazo de 1 (um) ano, contado da data de sua comunicação, deverão constar do Certificado de Licenciamento Anual;</li>
+<li>Após a inclusão das informações de &#x27;Não atendimento ao RECALL&#x27;  no CRLV, o veículo somente será licenciado mediante comprovação do atendimento às campanhas de chamamento de consumidores para substituição ou reparo de veículos.</li>
+</ul>
 </div>
 
 <div class="slide">

@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -175,13 +188,25 @@
             <div class="slide">
 <h3>Meio Ambiente - O Que Podemos Fazer? (Parte I)</h3>
 <h3 class="slide-subheading">O Que Podemos Fazer?</h3>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Use uma sacola coletora de lixo dentro do veículo;</li>
+<li>Ande em velocidade moderada e evite acelerar e frear desnecessariamente;</li>
+<li>Em veículos mais antigos e sem o catalisador, procure instalar tal peça no veículo. Mantenha o catalisador sempre em boas condições de funcionamento (vida útil é de oitenta mil quilômetros ou cinco anos de uso);</li>
+<li>Não abasteça em lugares de procedência duvidosa, pois combustível adulterado polui ainda mais do que o normal e danifica o catalisador;</li>
+<li>Sempre que possível vá a pé, de bicicleta, de carona ou de veículo coletivo;</li>
+<li>Fiscalize o serviço de troca de fluídos e óleos de seu veículo;</li>
+</ul>
 </div>
 
 <div class="slide">
 <h3>Meio Ambiente - O Que Podemos Fazer? (Parte II)</h3>
 <h3 class="slide-subheading">O Que Podemos Fazer?</h3>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Mantenha sempre seu veículo bem regulado e pneus calibrados, evitando assim o consumo excessivo de combustível e o aumento da emissão de gases poluentes;</li>
+<li>Mantenha o veículo sem vazamentos;</li>
+<li>Se for parar ou estacionar seu veículo por mais de quinze segundos, desligue o motor;</li>
+<li>Utilize marcas e compre seus pneus somente em empresas que cumpram a Legislação da coleta;</li>
+<li>Ao comprar seu veículo prefira os modelos de menos potência e que consumam menos combustível;</li>
+<li>Se puder optar, escolha alternativas menos poluentes, tais como o GNV (Gás Natural Veicular) ou o álcool;</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Veja uma curiosidade:
 
 Lixo Produzido no Brasil - aproximadamente 240 mil toneladas por dia
@@ -280,7 +305,7 @@ Se sua Prefeitura Municipal não possuir um programa de coleta seletiva, procure
 <h3>Meio Ambiente - Decomposição do Lixo - Parte I</h3>
 <h2 class="slide-heading">Meio Ambiente</h2>
 <h3 class="slide-subheading">Decomposição do Lixo</h3>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>MATERIAL</th><th>REC. PRESERVA</th><th>DECOMPOSIÇÃO</th></tr></thead><tbody><tr class="alt-row"><td>Papel</td><td>Árvores</td><td>3 a 6 meses</td></tr><tr><td>Sacolas plásticas</td><td>Petróleo</td><td>30 a 40 anos</td></tr><tr class="alt-row"><td>Copo descartável</td><td>Petróleo</td><td>40 a 50 anos</td></tr><tr><td>Garrafa vidro</td><td>Minério e Energia</td><td>Indeterminado</td></tr><tr class="alt-row"><td>Garrafa plástica</td><td>Petróleo</td><td>200 a 450 anos</td></tr><tr><td>Pneus</td><td>Petróleo</td><td>Indeterminado</td></tr><tr class="alt-row"><td>Cigarros</td><td>---</td><td>1 a 2 anos</td></tr><tr><td>Lata aluminio</td><td>Minério e Energia</td><td>250 a 500 anos</td></tr></tbody></table></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Existem muitas contradições sobre a decomposição do alumínio, inclusive alguns biólogos e cientistas afirmando que o alumínio possui tempo indeterminado de decomposição.</p></div></details>
 </div>
 
@@ -288,7 +313,7 @@ Se sua Prefeitura Municipal não possuir um programa de coleta seletiva, procure
 <h3>Meio Ambiente - Decomposição do Lixo - Parte II</h3>
 <h2 class="slide-heading">Meio Ambiente</h2>
 <h3 class="slide-subheading">Decomposição do Lixo</h3>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>MATERIAL</th><th>REC. PRESERVA</th><th>DECOMPOSIÇÃO</th></tr></thead><tbody><tr class="alt-row"><td>Chiclete</td><td>---</td><td>5 anos</td></tr><tr><td>Fralda descartável não biodegradável</td><td>---</td><td>Até 600 anos</td></tr><tr class="alt-row"><td>Lata aço comum</td><td>Minério e energia</td><td>10 anos</td></tr><tr><td>Jornal</td><td>Árvores</td><td>6 a 12 meses</td></tr><tr class="alt-row"><td>Emb. longa vida</td><td>Árvores</td><td>100 a 120 anos</td></tr><tr><td>Tecidos naturais</td><td>---</td><td>6 a 12 meses</td></tr></tbody></table></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Fraldas descartáveis biodegradáveis levam em torno de 12 meses para sumir na natureza.</p></div></details>
 <p>Importante citar que o tempo de decomposição é aproximado.</p>
 </div>

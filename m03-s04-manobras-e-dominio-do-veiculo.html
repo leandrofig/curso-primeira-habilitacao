@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -178,7 +191,9 @@
 <h3 class="slide-subheading"> o Perigo nas curvas</h3>
 <p>
 A DIFERENÇA ENTRE AS CURVAS:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>CURVA PARA A DIREITA: 	Mais perigosa do que a curva para a esquerda. Se você perder o controle da direção, irá invadir a contramão;</li>
+<li>CURVA PARA A ESQUERDA: Perigosa quando a via não possui acostamento, ou após ele, existir um precipício.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -210,7 +225,9 @@ Evite o travamento das rodas e a perda do resto de aderência que ainda existe d
 <h2 class="slide-heading">Situações de Risco</h2>
 <h3 class="slide-subheading">o Perigo nas Curvas e as Derrapagens</h3>
 <div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/P4R08itlcFA" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>EM CURVA À DIREITA: Entre mais à direita dela, diminua a velocidade e acelere devagar;</li>
+<li>EM CURVA À ESQUERDA: 	Entre mais ao centro diminua a velocidade e acelere devagar ;</li>
+</ul>
 <p>Quando acelera em uma curva o veículo tende a sair de frente, já quando desacelera, ele tende a sair pela traseira.</p></div></details>
 </div>
 
@@ -218,21 +235,21 @@ Evite o travamento das rodas e a perda do resto de aderência que ainda existe d
 <h3>Situações de Risco Vícios ao volante - Parte I</h3>
 <h2 class="slide-heading">Situações de Risco</h2>
 <h3 class="slide-subheading">Vícios ao volante</h3>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>VÍCIO</th><th>RESULTADO</th></tr></thead><tbody><tr class="alt-row"><td>Dirigir com o pé apoiado no pedal de embreagem</td><td>Redução vida útil do disco de embreagem</td></tr><tr><td>Acelerar antes de desligar o motor </td><td>Desgaste prematuro do motor </td></tr><tr class="alt-row"><td>Sair em segunda marcha</td><td>Desgaste do platô da embreagem </td></tr><tr><td>Esquecer o afogador puxado </td><td>Aumento do consumo de combustível</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
 <h3>Situações de Risco Vícios ao volante - Parte II</h3>
 <h2 class="slide-heading">Situações de Risco</h2>
 <h3 class="slide-subheading">Vícios ao volante</h3>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>VÍCIO</th><th>RESULTADO</th></tr></thead><tbody><tr class="alt-row"><td>Dirigir usando só um braço </td><td>Perda de agilidade para reação</td></tr><tr><td>Parar depois da retenção </td><td>Possibilidade de atropelamento</td></tr><tr class="alt-row"><td>Acelerar no amarelo</td><td>Possível colisão ou atropelamento</td></tr><tr><td>Não usar o cinto nas áreas urbanas e bancos traseiros</td><td>Possibilidade de danos pessoais</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
 <h3>Situações de Risco Vícios ao volante - Parte III</h3>
 <h2 class="slide-heading">Situações de Risco</h2>
 <h3 class="slide-subheading">Vícios ao volante</h3>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>VÍCIO</th><th>RESULTADO</th></tr></thead><tbody><tr class="alt-row"><td>Não calibrar os pneus semanalmente</td><td>Maior consumo de combustível</td></tr><tr><td>Frear ou realizar curvas em ponto morto </td><td>Perigo de Sinistro de Trânsito</td></tr><tr class="alt-row"><td>Ultrapassar nos cruzamentos	</td><td>Perigo de Sinistro de Trânsito</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
@@ -242,7 +259,10 @@ Evite o travamento das rodas e a perda do resto de aderência que ainda existe d
 <div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/36O3HjaJYjQ" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Evite  o travamento das rodas.
 Qualquer ação que venha a reduzir a velocidade do veículo pode ser considerada uma frenagem, tal como:</p>
-<ul class='list-element'></ul></div></details>
+<ul class='list-element'><li>Redução de marcha;</li>
+<li>Desaceleração;</li>
+<li>Acionar pedal de freio.</li>
+</ul></div></details>
 </div>
 
 <div class="slide">
@@ -251,7 +271,8 @@ Qualquer ação que venha a reduzir a velocidade do veículo pode ser considerad
 <h3 class="slide-subheading">a Frenagem de Errada</h3>
 <p></p>
 <p>Existem alguns fatores externos que influenciam na capacidade de frenagem dos pneus, é o chamado coeficiente de atrito:</p>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>PAVIMENTO </th><th>SECO</th><th>MOLHADO</th></tr></thead><tbody><tr class="alt-row"><td>Asfalto</td><td>0,80</td><td>0,70</td></tr><tr><td>Concreto</td><td>0,70</td><td>0,40</td></tr><tr class="alt-row"><td>Paralelepípedo
+</td><td>0,70</td><td>0,50</td></tr><tr><td>Pedra</td><td>0,55</td><td>0,40</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
@@ -320,7 +341,11 @@ Evite deixar objetos sobre bancos e painéis; evite locais desconhecidos; desace
 <h2 class="slide-heading">Situações de Risco</h2>
 <h3 class="slide-subheading"> a Aquaplanagem</h3>
 <p></p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Evite pneus com menos de 1,6 mm de sulco;</li>
+<li>Reduza a velocidade antecipadamente;</li>
+<li>Evite pneus sub-calibrados;</li>
+<li>Evite pneus extremamente largos</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -330,7 +355,10 @@ Evite deixar objetos sobre bancos e painéis; evite locais desconhecidos; desace
 <p>
 Jamais execute em uma aquaplanagem:
 </p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Freadas bruscas;</li>
+<li>Movimentos bruscos na direção;</li>
+<li>Desaceleração brusca;</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -339,7 +367,10 @@ Jamais execute em uma aquaplanagem:
 <h3 class="slide-subheading"> a Aquaplanagem</h3>
 <p>
 Como agir em uma aquaplanagem:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Execute pequenos toques no freio (não ABS)</li>
+<li>Vá reduzindo a marcha gradativamente</li>
+<li>Execute pequenos movimentos na direção</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -373,7 +404,11 @@ Como agir em uma aquaplanagem:</p>
 <h2 class="slide-heading">Condições Adversas</h2>
 <h3 class="slide-subheading">Fumaça</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Tenha certeza que no meio da fumaça você não encontrará labaredas invadindo a pista;</li>
+<li>Mantenha velocidade baixa e constante.</li>
+<li>Jamais pare dentro da cortina de fumaça, saia do outro lado.</li>
+<li>Feche os vidros de seu veículo.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -433,7 +468,14 @@ Como agir em uma aquaplanagem:</p>
 <div class="group-horizontal"><p>Como Reduzir os Riscos
 Existem diversas ações que podem reduzir os riscos do ponto cego da visão e dos espelhos retrovisores (áreas cegas), sendo:</p>
 <figure class="image-element"><img src="images/ponto-cego.jpg" alt="Imagem" loading="lazy"></figure></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Use espelhos convexos auxiliares;</li>
+<li>Posicione os espelhos laterais em 90 graus;</li>
+<li>Faça a leitura permanente dos espelhos;</li>
+<li>Se necessário, realize movimentos rápidos com a cabeça;</li>
+<li>Sinalize com antecedência e clareza suas manobras;</li>
+<li>Se estiver de moto evite costurar entre os veículos;</li>
+<li>Ao pilotar use roupas e capacete claros, adesivos refletivos e utilize sempre a luz baixa acesa (dia e noite).</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -486,7 +528,9 @@ VER E SER VISTO</p>
 <h3 class="slide-subheading"> Ciclomotor</h3>
 <p>
 CRUZAMENTOS E CORREDORES</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Evite andar nos corredores com os veículos em movimento. Para andar entre os veículos parados, tenha cuidado com os pedestres que surgem de repente;</li>
+<li>Cuidado ao arrancar no semáforo, logo após ele abrir, pois muitos condutores tentam aproveitar o “finalzinho” do sinal amarelo e acabam passando no vermelho.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -496,14 +540,22 @@ CRUZAMENTOS E CORREDORES</p>
 <p>
 CONDUÇÃO DE PASSAGEIROS</p>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>O passageiro deverá ser orientado a:</p>
-<ul class='list-element'></ul></div></details>
+<ul class='list-element'><li>Subir na motocicleta preferencialmente pelo lado esquerdo;</li>
+<li>Nas paradas deverá manter os pés sobre as pedaleiras;</li>
+<li>Sentar próximo ao piloto e manter as pernas firmes no banco;</li>
+<li>Ter visão do deslocamento da motocicleta e acompanhar as manobras com o corpo, facilitando assim a condução para o piloto;</li>
+<li>Segurar firmemente nas alças de segurança ou no quadril do piloto e tomar cuidado principalmente nas arrancadas;</li>
+<li>Nas frenagens deverá pressionar suas pernas no quadril do piloto evitando que seu peso seja todo absorvido por ele;</li>
+</ul></div></details>
 <div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-12b.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
 <p>A condução de crianças menores de dez anos ou que não possam cuidar de sua segurança e integridade é proibido (alterado pela Lei 14.071, de 13/10/2020);</p></div>
 <div class="spacer"></div>
 <p>A motocicleta deverá possuir pedaleira de apoio dos pés, alça de segurança do passageiro e estar com os pneus com a calibragem adequada ao peso transportado.</p>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>O passageiro deverá ser orientado a:</p>
-<ul class='list-element'></ul></div></details>
+<ul class='list-element'><li>Estar atento aos avisos do piloto sobre a necessidade de realização de uma manobra inesperada;</li>
+<li>Ao descer da motocicleta avisar com antecedência ao piloto e realizar a descida preferencialmente pelo lado esquerdo.</li>
+</ul></div></details>
 </div>
 
 <div class="slide">
@@ -612,7 +664,10 @@ Lembre-se que sua motocicleta deverá estar totalmente na vertical.
 <h2 class="slide-heading">Motocicleta, Motoneta e</h2>
 <h3 class="slide-subheading"> Ciclomotor</h3>
 <p>ACIONAMENTO DOS FREIOS</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Freie progressivamente, sem travar as rodas e utilize aproximadamente 70% do freio dianteiro por 30% do traseiro, com auxílio do freio motor. Algumas motos possuem sistema de freios combinados ou ABS;</li>
+<li>Se for a primeira vez que você está pilotando a motocicleta, faça um teste da sensibilidade dos freios antes de sair para a estrada;</li>
+<li>Procure não acionar os freios de forma contínua, mas sim de forma intermitente, pois eles aquecerão e perderão sua eficiência;</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -648,7 +703,10 @@ A precaução é a melhor forma de evitar uma derrapagem</p></div>
 <h2 class="slide-heading">Motocicleta, Motoneta e</h2>
 <h3 class="slide-subheading"> Ciclomotor</h3>
 <p>ACIONAMENTO DOS FREIOS</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Nunca use os freios ao cair em um buraco, utilize antes para reduzir a velocidade e libere os mesmos, deixando assim a suspensão aliviada para absorver o impacto;</li>
+<li>A parte pintada da via (sinalização horizontal) é extremamente escorregadia, principalmente quando molhada.</li>
+<li>Em pisos molhados e escorregadios a possibilidade de travamento das rodas é maior devido a perda do atrito.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -656,7 +714,9 @@ A precaução é a melhor forma de evitar uma derrapagem</p></div>
 <h2 class="slide-heading">Motocicleta, Motoneta e</h2>
 <h3 class="slide-subheading"> Ciclomotor</h3>
 <p>ULTRAPASSAGENS E PASSAGENS</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Ao ultrapassar um veículo, cuidado com o turbilhão de ar e com o vácuo, tal efeito puxa a motocicleta para próximo do veículo ultrapassado. Evitar essa situação mantendo a distância lateral de segurança na ultrapassagem (de quatro a cinco metros);</li>
+<li>Veículos de grande porte em sentido contrário deslocam grande massa de ar, jogando a motocicleta para fora da pista, pelo lado direito. Diminua a velocidade, segure o guidão com firmeza e ande mais à direita na pista.</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Uma ultrapassagem forçada poderá resultar em uma colisão frontal, sendo esta a pior situação para o motociclista, e na grande maioria dos casos fatal.</p></div></details>
 </div>
 
@@ -665,7 +725,11 @@ A precaução é a melhor forma de evitar uma derrapagem</p></div>
 <h2 class="slide-heading">Motocicleta, Motoneta e</h2>
 <h3 class="slide-subheading"> Ciclomotor</h3>
 <p>DICAS ÚTEIS DE PILOTAGEM</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Cuidado ao passar por veículos parados, a porta do mesmo poderá se abrir repentinamente;</li>
+<li>Saiba que à medida que a velocidade aumenta seu ângulo de visão vai se estreitando;</li>
+<li>Evite pilotar na frente de veículos de grande porte e muito próximos a eles. Ofereça passagem;</li>
+<li>Segure sempre as duas mãos no guidão e não cole no veículo da frente.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -673,7 +737,11 @@ A precaução é a melhor forma de evitar uma derrapagem</p></div>
 <h2 class="slide-heading">Motocicleta, Motoneta e</h2>
 <h3 class="slide-subheading"> Ciclomotor</h3>
 <p>DICAS ÚTEIS DE PILOTAGEM</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Ocupe o espaço de um carro na pista, isso faz com que os demais condutores tenham maior atenção e respeito;</li>
+<li>Preferencialmente utilize luvas, porém maleáveis para evitar o  retardo do comando da motocicleta;</li>
+<li>Cuidado com linhas de pipas e cerol . Se for o caso, instale as chamadas haste “corta-pipa”;</li>
+<li>Cuidado com areia, brita, óleo e material solto nas curvas, o que poderá provocar uma derrapagem.</li>
+</ul>
 </div>
         </div>
         <div class="nav-bar">

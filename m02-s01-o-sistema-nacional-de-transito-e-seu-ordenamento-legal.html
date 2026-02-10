@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -176,7 +189,7 @@
 <h3>Conhecendo o Sistema Nacional de Trânsito</h3>
 <h2 class="slide-heading">Conhecendo o </h2>
 <h3 class="slide-subheading">Sistema Nacional de Trânsito</h3>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>ORGÃO</th><th>FEDERAL</th><th>ESTADUAL</th><th>MUNICIPAL</th></tr></thead><tbody><tr class="alt-row"><td>Normativo</td><td>CONTRAN</td><td>CETRAN CONTRANDIFE</td><td>---</td></tr><tr><td>Executivo</td><td>SENATRAN</td><td>DETRAN</td><td>O.E.T.M</td></tr><tr class="alt-row"><td>Executivo Rodoviário</td><td>DNIT</td><td>DER / DAER</td><td>---</td></tr><tr><td>Fiscalização</td><td>PRF</td><td>PRE</td><td>PM / GM</td></tr><tr class="alt-row"><td>De Recursos</td><td>JARI</td><td>JARI</td><td>JARI</td></tr></tbody></table></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>CONTRAN - Conselho Nacional de Trânsito;
 CETRAN - Conselho Estadual de Trânsito;
 CONTRANDIFE - Conselho de Trânsito do Distrito Federal;
@@ -199,7 +212,13 @@ JARI - Junta Administrativa de Recurso de Infração.</p></div></details>
 <h3 class="slide-subheading">S.N.T</h3>
 <div class="spacer"></div>
 <p>A regulamentação para o trânsito de veículos (motorizados ou não) e de pessoas está:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Na Constituição Federal;</li>
+<li>Em Leis Sancionadas;</li>
+<li>Em Medidas Provisórias;</li>
+<li>Em Resoluções e Deliberações;</li>
+<li>Em Decretos, Regulamentos e Portarias;</li>
+<li>Em acordos Internacionais;</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>ACORDOS INTERNACIONAIS - o Brasil é signatário da Convenção sobre Trânsito Viário, celebrada em Viena, em 8 de novembro de 1968 e do Acordo sobre Regulamentação Básica Unificada de Trânsito (no âmbito do Mercosul), celebrado em Montevidéu, em 29 de setembro de 1992.</p></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>RESOLUÇÃO E DELIBERAÇÃO - são normas emanadas dos órgãos Normativos do SNT e tem por finalidade complementar e detalhar as Leis;</p></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>DECRETOS, REGULAMENTOS E PORTARIAS - alguns atos de caráter administrativo editados pelos Órgãos Executivos do SNT (e, eventualmente, pelos Normativos), com o intuito de permitir a correta aplicação de uma Lei ou Resolução.</p></div></details>
@@ -215,7 +234,11 @@ OBS: - Decreto-Lei não é mais previsto na Constituição</p></div></details>
 <div class="group-vertical"><figure class="image-element"><img src="images/direitos-pequeno.jpg" alt="desesa prévia, primeira, segunda, instância, CETRAN. CONTRANDIFE, JARI, Autoridade, notificação, auto, autuação, prazo, deferida, inderefida, renach, NIP, recurso, 20%, 40%" loading="lazy"><figcaption>Clique na imagem para ampliar e use as barras de rolagem</figcaption></figure></div>
 <p>O desconto para pagamento da multa  poderá ser de 40%, caso o infrator opte pelo sistema de notificação eletrônica, conforme regulamentação do Contran, além de não apresentar defesa prévia nem recurso, reconhecendo o cometimento da infração. Este desconto será válido em qualquer fase do processo, até o vencimento da multa. </p>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>É parte legítima para apresentar defesa prévia ou recurso em 1ª e 2ª instâncias contra a imposição de penalidade de advertência por escrito ou de multa:</p>
-<ul class='list-element'></ul></div></details>
+<ul class='list-element'><li>A pessoa física ou jurídica proprietária do veículo;</li>
+<li>O condutor, devidamente identificado;</li>
+<li>O embarcador, quando responsável exclusiva ou solidariamente pela infração;</li>
+<li>O transportador, quando responsável exclusiva ou solidariamente pela infração.</li>
+</ul></div></details>
 </div>
 
 <div class="slide">
@@ -224,7 +247,11 @@ OBS: - Decreto-Lei não é mais previsto na Constituição</p></div></details>
 <h3 class="slide-subheading">Documentos para Defesa</h3>
 <div class="spacer"></div>
 <p>Documentos necessários para a defesa de autuação ou aplicação (interposição) de multa:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Requerimento de defesa ou recurso;</li>
+<li>Cópia de notificação de autuação ou da notificação de multa;</li>
+<li>Cópia da CNH ou outro documento de identificação. Quando pessoa jurídica, documento comprovando a representação;</li>
+<li>Procuração, quando for o caso.</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Na apresentação de defesa ou recurso, em qualquer fase do processo, para efeitos de admissibilidade, não serão exigidos documentos ou cópia de documentos emitidos pelo órgão responsável pela autuação.</p></div></details>
 </div>
 
@@ -234,7 +261,11 @@ OBS: - Decreto-Lei não é mais previsto na Constituição</p></div></details>
 <h3 class="slide-subheading">Notificação Eletrônica</h3>
 <div class="group-vertical"><figure class="image-element"><img src="images/sne.jpg" alt="Imagem" loading="lazy"></figure>
 <p>O SNE é na prática um aplicativo que dá direito de desconto de até 40% no pagamento de multas, bem como agiliza todo o processo burocrático nas seguintes situações:</p>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Notificação de autuação, penalidade de multa e penalidade de advertência por escrito;</li>
+<li>Interposição de defesa da autuação e de recursos administrativos de infrações de trânsito;</li>
+<li>Indicação de condutor infrator e seu resultado;</li>
+<li>Resultado de julgamentos;</li>
+</ul></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>O sistema de notificação eletrônica deve disponibilizar, na mesma plataforma, campo destinado à apresentação de defesa prévia e de recurso, quando o condutor não reconhecer o cometimento da infração, na forma regulamentada pelo Contran.</p></div></details>
 </div>
 
@@ -245,7 +276,10 @@ OBS: - Decreto-Lei não é mais previsto na Constituição</p></div></details>
 <div class="group-vertical"><figure class="image-element"><img src="images/sne.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
 <p>COMO USAR O SNE:</p>
-<ul class='list-element'></ul></div>
+<ol class='list-element'><li>Instale o aplicativo da loja de aplicativos da Google Play (para Android) ou App Store (para iOS);</li>
+<li>Faça seu cadastro e insira os dados do(s) veículo(s) de sua propriedade;</li>
+<li>Mantenhas sempre seus dados atualizados.</li>
+</ol></div>
 </div>
 
 <div class="slide">
@@ -254,7 +288,10 @@ OBS: - Decreto-Lei não é mais previsto na Constituição</p></div></details>
 <h3 class="slide-subheading">Notificação Eletrônica</h3>
 <div class="spacer"></div>
 <p>DETALHES DE USO:</p>
-<ul class='list-element'></ul>
+<ol class='list-element'><li>O proprietário poderá visualizar os detalhes de cada infração e optar pelo seu reconhecimento. Desta forma, será oferecido a ele a possibilidade de pagar a infração com 40% de desconto;</li>
+<li>Na hipótese de notificação por meio eletrônico, o proprietário ou o condutor autuado será considerado notificado 30 (trinta) dias após a inclusão da informação no sistema eletrônico;</li>
+<li>Por livre iniciativa do usuário, poderá ser cancelado o acesso ao SNE, porém as notificações disponibilizadas no sistema até o dia do cancelamento do acesso permanecerão válidas para fins de comprovação da notificação do infrator;</li>
+</ol>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Após a comunicação de venda ou a transferência de propriedade de veículo cadastrado no SNE, o vínculo entre o proprietário anterior aderente ao SNE e o veículo será cancelado.</p></div></details>
 </div>
 
@@ -264,7 +301,9 @@ OBS: - Decreto-Lei não é mais previsto na Constituição</p></div></details>
 <h3 class="slide-subheading">Notificação Eletrônica</h3>
 <div class="spacer"></div>
 <p>DEFESA PRÉVIA E RECURSO DE DEFESA:</p>
-<ul class='list-element'></ul>
+<ol class='list-element'><li>O sistema de notificação eletrônica deve disponibilizar, na mesma plataforma, campo destinado à apresentação de defesa prévia e de recurso, quando o condutor não reconhecer o cometimento da infração, na forma regulamentada pelo CONTRAN;</li>
+<li>No caso de apresentação de defesa, será perdida a possibilidade de pagamento com 40% de desconto</li>
+</ol>
 </div>
 
 <div class="slide">
@@ -275,7 +314,10 @@ OBS: - Decreto-Lei não é mais previsto na Constituição</p></div></details>
 <p>É o seguro pago pelos proprietários de veículos para cobrir Danos Pessoais Causados por Veículos Automotores de Via Terrestre. Isso significa que o DPVAT é um seguro que indeniza vítimas de Sinistros de Trânsito causados por veículos que têm motor próprio (automotores) e circulam por terra ou por asfalto (vias terrestres).
 
 O DPVAT oferece três coberturas:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Morte - R$ 13.500,00 (para o benefeciário)</li>
+<li>Invalidez permanente total ou parcial - até R$ 13.500,00</li>
+<li>Assistência médica e suplementares - até R$ 2.700,00</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>As coberturas são (Valores de 2006, conforme última alteração do CNSP nº 151, de 2006 – Conselho Nacional de Seguros Privados).
 
 Apesar de contrariar a Lei Federal n° 6.205, de 29.04.1975, ainda em vigor, alguns DETRAN's consideram para fins de cobrança na prova teórica, o valor do DPVAT indexado ao salário mínimo vigente.</p></div></details>
@@ -286,7 +328,10 @@ Apesar de contrariar a Lei Federal n° 6.205, de 29.04.1975, ainda em vigor, alg
 <h2 class="slide-heading">Seguro Obrigatório - DPVAT</h2>
 <h3 class="slide-subheading">Como Solicitar?</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Procure uma das seguradoras credenciadas. Em caso de dúvidas ligue para o telefone 0800-0221204;</li>
+<li>IMPORTANTE: é necessário que você tenha registrada a ocorrência, para tal procure a autoridade policial competente, geralmente a Polícia Militar Estadual;</li>
+<li>IMPORTANTE: solicite recibo para qualquer despesa médica ou hospitalar, você precisará comprovar para a seguradora.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -294,7 +339,10 @@ Apesar de contrariar a Lei Federal n° 6.205, de 29.04.1975, ainda em vigor, alg
 <h2 class="slide-heading">Seguro Obrigatório - DPVAT</h2>
 <h3 class="slide-subheading">Algumas Regras</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>A indenização de Sinistros de Trânsito envolvendo veículos não identificados obedece regras específicas, sobre as quais basta consultar as seguradoras conveniadas pelo telefone 0800 - 022 12 04;</li>
+<li>O próprio culpado pelo Sinistros de Trânsito poderá utilizar o DPVAT desde que não esteja inadimplente com o mesmo. Para as demais vítimas independe da inadimplência;</li>
+<li>Não importa quantas vítimas o Sinistro de Trânsito provoque. O Seguro DPVAT indeniza todas, uma a uma, individualmente.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -302,7 +350,12 @@ Apesar de contrariar a Lei Federal n° 6.205, de 29.04.1975, ainda em vigor, alg
 <h2 class="slide-heading">Seguro Obrigatório - DPVAT</h2>
 <h3 class="slide-subheading">Algumas Regras</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>O reembolso da indenização por morte ou invalidez é cumulativo com os das despesas médicas, ou seja, ambos devem ser pagos;</li>
+<li>Para que ocorra o reembolso, as despesas médico-hospitalares devem ser realizadas em locais não conveniados com o SUS (Sistema Único de Saúde);</li>
+<li>Despesas dentárias também são cobertas pelo DPVAT;</li>
+<li>Vítimas menores de 16 anos devem pleitear a indenização por meio de representante legal;</li>
+<li>O prazo para requerer o pedido de indenização é de TRÊS anos a contar da data do Sinistro de Trânsito.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -311,7 +364,11 @@ Apesar de contrariar a Lei Federal n° 6.205, de 29.04.1975, ainda em vigor, alg
 <h3 class="slide-subheading">e Seus Direitos</h3>
 <div class="spacer"></div>
 <p>A legislação brasileira e em alguns casos a Estadual, tenta amenizar as dificuldades de locomoção dos motoristas que possuem deficiência física ou mental, dando a eles algumas isenções na aquisição e utilização de seu veículo, tais como:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Isenção de IPI (Imposto sobre produtos industrializados);</li>
+<li>Isenção de ICMS e IPVA (dependendo do Estado);</li>
+<li>Isenção de IOF e IOC (nas operações de financiamento e crédito);</li>
+<li>Desobrigação de respeitar os rodízios (deverá ser autorizado previamente).</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -327,7 +384,9 @@ Apesar de contrariar a Lei Federal n° 6.205, de 29.04.1975, ainda em vigor, alg
 <h2 class="slide-heading">Direito a Segurança</h2>
 <h3 class="slide-subheading">e Educação</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>O trânsito, em condições seguras, é um direito de todos e dever dos órgãos e entidades componentes do Sistema Nacional de Trânsito;</li>
+<li>A educação para o trânsito é direito de todos e constitui dever prioritário para os componentes do Sistema Nacional de Trânsito.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -337,7 +396,9 @@ Apesar de contrariar a Lei Federal n° 6.205, de 29.04.1975, ainda em vigor, alg
 <div class="spacer"></div>
 <div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-direitos-teste.jpg" alt="Imagem" loading="lazy"></figure>
 <p>Todo condutor durante o teste de direção veícular terá o direito de:</p></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Não ser induzido ao erro quanto às regras de circulação e conduta pelo examinador;</li>
+<li>Ser tratado com o devido respeito pelo examinador.</li>
+</ul>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>Para o teste de baliza o condutor terá o direito de três tentativas, no tempo máximo de:
 a) para categoria "B": de 2' a 5' (dois a cinco minutos);
 b) para categoria "C" e "D": de 3' a 6' (três a seis minutos);
@@ -383,7 +444,10 @@ Revoga ainda a necessidade de existir a sinalização vertical (placa) informand
 Os documentos que podem ser emitidos sem custos são:
 
 </p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>CNH;</li>
+<li>RG – Registro Geral (Documento de Identidade);</li>
+<li>CRLV - Licenciamento Anual de Veículo.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -392,7 +456,7 @@ Os documentos que podem ser emitidos sem custos são:
 <h3 class="slide-subheading"> (somente no RS)</h3>
 <div class="spacer"></div>
 <p>Será concedido o desconto de até 15% no valor do IPVA ao condutor e proprietário de veículo automotor que não tenha incorrido em infração de trânsito conforme:</p>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>PRAZO SEM INFRAÇÃO</th><th>DESCONTO (%)</th></tr></thead><tbody><tr class="alt-row"><td>1 ANO</td><td>5</td></tr><tr><td>2 ANOS</td><td>10</td></tr><tr class="alt-row"><td>3 ANOS</td><td>15</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">
@@ -402,7 +466,11 @@ Os documentos que podem ser emitidos sem custos são:
 <div class="spacer"></div>
 <p>Criado pela Lei 14.071, de 13/10/2020, o Registro Nacional Positivo de Condutores (RNPC), cadastrará os condutores que não cometeram infração de trânsito sujeita à pontuação, nos últimos doze meses, conforme regulamentação do CONTRAN.
 A União, os Estados, o Distrito Federal e os Municípios poderão utilizar o RNPC para conceder benefícios fiscais ou tarifários aos condutores cadastrados, na forma da legislação específica de cada ente da Federação.</p>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>O RNPC deverá ser atualizado mensalmente;</li>
+<li>A abertura de cadastro requer autorização prévia e expressa do potencial cadastrado;</li>
+<li>Após a abertura do cadastro, a anotação de informação no RNPC independe de autorização e de comunicação ao cadastrado;</li>
+<li>A consulta ao RNPC é garantida a todos os cidadãos, nos termos da regulamentação do Contran.</li>
+</ul></div></details>
 </div>
 
 <div class="slide">
@@ -411,7 +479,12 @@ A União, os Estados, o Distrito Federal e os Municípios poderão utilizar o RN
 <h3 class="slide-subheading">Positivo de Condutores</h3>
 <div class="spacer"></div>
 <h2 class="slide-heading">A exclusão do RNPC dar-se-á:</h2>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Por solicitação do cadastrado;</li>
+<li>Quando for atribuída ao cadastrado pontuação por infração;</li>
+<li>Quando o cadastrado tiver o direito de dirigir suspenso;</li>
+<li>Quando a Carteira Nacional de Habilitação do cadastrado estiver cassada ou com validade vencida há mais de trinta dias;</li>
+<li>Quando o cadastrado estiver cumprindo pena privativa de liberdade.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -420,7 +493,9 @@ A União, os Estados, o Distrito Federal e os Municípios poderão utilizar o RN
 <h3 class="slide-subheading">do Tipo Portátil</h3>
 <div class="spacer"></div>
 <p>O uso de medidores do tipo portátil para a fiscalização do excesso de velocidade Será restrito às seguintes situações:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Será restrito às seguintes situações:</li>
+<li>Nas vias urbanas e rurais com características urbanas, quando a velocidade máxima permitida for igual ou superior a 60 km/h (sessenta quilômetros por hora);</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -428,9 +503,13 @@ A União, os Estados, o Distrito Federal e os Municípios poderão utilizar o RN
 <h2 class="slide-heading">O uso de medidores</h2>
 <h3 class="slide-subheading">do Tipo Portátil</h3>
 <p>Continuação:</p>
-<ul class='list-element'></ul>
-<ul class='list-element'></ul>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Nas vias rurais, quando a velocidade máxima permitida for igual ou superior a:</li>
+</ul>
+<ol class='list-element'><li>80 km/h (oitenta quilômetros por hora), em rodovia;</li>
+<li>60 km/h (sessenta quilômetros por hora), em estrada.</li>
+</ol>
+<ul class='list-element'><li>O órgão ou entidade com circunscrição sobre a via deve mapear e publicar em seu site na rede mundial de computadores relação de trechos ou locais em que está apto a ser fiscalizado o excesso de velocidade por meio de equipamento portátil.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -452,7 +531,14 @@ Os dados necessários para a consulta serão encontrados no auto de notificaçã
 <h2 class="slide-heading">Deveres Diversos do</h2>
 <h3 class="slide-subheading">Condutor Cidadão</h3>
 <div class="spacer"></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Estar devidamente habilitado para a condução do veículo;</li>
+<li>Manter o veículo registrado e licenciado;</li>
+<li>Conhecer e respeitar TODAS as regras e Leis de trânsito;</li>
+<li>Manter o veículo em boas condições de manutenção;</li>
+<li>Evitar a poluição do meio ambiente pelo veículo e seus usuários;</li>
+<li>Dirigir defensivamente.</li>
+<li>Prestar socorro às vitimas de trânsito, salvo nos casos de risco de morte.</li>
+</ul>
 </div>
 
 <div class="slide">

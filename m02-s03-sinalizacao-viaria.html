@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -177,7 +190,14 @@
 <h3 class="slide-subheading">A Sinalização de Trânsito</h3>
 <div class="spacer"></div>
 <p>Os Sinais Classificam-se em:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Verticais (Placas);</li>
+<li>Horizontais (pintura na via);</li>
+<li>Sonoro (apito do Agente de Trânsito);</li>
+<li>Gestuais (Condutores e Agentes de trânsito);</li>
+<li>Luminosos (Semáforos);</li>
+<li>Dispositivos Auxiliares (Barreiras);</li>
+<li>Sinalização de Obra.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -186,7 +206,10 @@
 <h3 class="slide-subheading">Ordem de  Prevalência</h3>
 <div class="spacer"></div>
 <p>Existe uma ordem de prevalência entre os sinais, ou seja, uma ordem que define quem deverá ser atendido em caso de duplicidade:</p>
-<ul class='list-element'></ul>
+<ol class='list-element'><li>Ordem dos agentes de trânsito;</li>
+<li>Semáforos;</li>
+<li>Demais sinais (horizontais e verticais).</li>
+</ol>
 </div>
 
 <div class="slide">
@@ -194,7 +217,10 @@
 <h3 class="slide-subheading">A Sinalização Vertical</h3>
 <div class="spacer"></div>
 <p>Os Sinais Verticais são:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>Placas de Regulamentação;</li>
+<li>Placas de Advertência;</li>
+<li>Placas Indicativas.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -260,7 +286,9 @@ e veículo tracionando outroVeículos de 2 ou 3 rodas,
 quadricilos, automóveis,utilitários,
 caminhonete e camioneta Informações Complementares Placa de Regulamentação com " loading="lazy"></figure></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>RESOLUÇÃO Nº 798, DE 2 DE SETEMBRO DE 2020</p>
-<ul class='list-element'></ul></div></details>
+<ul class='list-element'><li>VEÍCULO LEVE - ciclomotor, motoneta, motocicleta, triciclo, quadriciclo, automóvel, utilitário, caminhonete e camioneta, com peso bruto total inferior ou igual a três mil e quinhentos quilogramas</li>
+<li>VEÍCULO PESADO - ônibus, micro-ônibus, caminhão, caminhão-trator, trator de rodas, trator misto, chassi-plataforma, motor-casa, reboque ou semirreboque, combinação de veículos, veículo leve tracionando outro veículo, ou qualquer outro veículo com peso bruto total superior a três mil e quinhentos quilogramas.</li>
+</ul></div></details>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>ATENÇÃO:
 Caso você esteja conduzindo um veículo de passeio rebocando um reboque ou semirreboque deverá obedecer a velocidade para veículos pesados.</p></div></details>
 </div>
@@ -675,7 +703,12 @@ Veja o exemplo abaixo:
 <h3 class="slide-subheading">Introdução</h3>
 <p>Os Sinais Horizontais são:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/a-sinalizacao-horizontal-introducao_1.jpg" alt="Imagem" loading="lazy"></figure>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Marcas Longitudinais;</li>
+<li>Marcas Transversais;</li>
+<li>Marcas de Canalização;</li>
+<li>Marcas de Parada e/ou Estacionamento;</li>
+<li>Inscrições no Pavimento.</li>
+</ul></div>
 </div>
 
 <div class="slide">
@@ -818,7 +851,9 @@ Os veículos se deslocam no mesmo sentido  das demais faixas da viapara Ônibus 
 
 Jamais pare, estacione, ultrapasse ou retorne sobre estas faixas.</p>
 <figure class="image-element"><img src="images/faixa_elevada-slim.jpg" alt="Travessia elevada pedestre marcação cego piso tátil" loading="lazy"><figcaption>Travessia de Pedestre Elevada</figcaption></figure></div>
-<details class="infobox" open><summary>Faixas Elevadas de Pedestres</summary><div class="infobox-content"><div class="group-vertical"><ul class='list-element'></ul></div></div></details>
+<details class="infobox" open><summary>Faixas Elevadas de Pedestres</summary><div class="infobox-content"><div class="group-vertical"><ul class='list-element'><li>Deve haver no local uma placa R-19 constando limite de velocidade em 40 km/h antecedendo a travessia;</li>
+<li>Placas de advertência  A-32b ou a A-33b devem ser instaladas nas proximidades de escolas.</li>
+</ul></div></div></details>
 </div>
 
 <div class="slide">
@@ -914,11 +949,14 @@ Fluxo no mesmo sentido " loading="lazy"></figure></div>
 <h3 class="slide-subheading"> Regulamentado na Via</h3>
 <div class="spacer"></div>
 <p>Áreas de estacionamentos regulamentados definem basicamente três coisas, sendo:</p>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>A finalidade (deficientes físicos, táxis, ambulâncias, idosos, etc);</li>
+</ul>
 <div class="group-horizontal"><figure class="image-element"><img src="images/idoso_simbolo.jpg" alt="Imagem" loading="lazy"></figure>
 <div class="spacer"></div>
 <p>Símbolo de pessoa idosa Indicação de área de estacionamento para veículos de pessoas com 60 anos ou mais</p></div>
-<ul class='list-element'></ul>
+<ul class='list-element'><li>A Posição (paralelo ou oblíquo);</li>
+<li>O espaço reservado.</li>
+</ul>
 </div>
 
 <div class="slide">
@@ -1109,7 +1147,7 @@ Fluxo no mesmo sentido " loading="lazy"></figure></div>
 <h2 class="slide-heading">Gestos do Agente </h2>
 <h3 class="slide-subheading">Silvos de Apito</h3>
 <p>Os silvos de apito são emitidos pelo Agente de Trânsito em conjunto com os gestos, conforme abaixo:</p>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><thead><tr><th>SILVO</th><th>SIGNIFICA</th><th>EMPREGO</th></tr></thead><tbody><tr class="alt-row"><td>01 Silvo Breve</td><td>Siga</td><td>Liberar o trânsito</td></tr><tr><td>02 Silvos Breves</td><td>Pare</td><td>Parada Obrigatória</td></tr><tr class="alt-row"><td>01 Silvo Longo</td><td>Diminuir Marcha</td><td>Diminuir a velocidade</td></tr></tbody></table></div>
 </div>
 
 <div class="slide">

@@ -134,11 +134,24 @@
         .cs-label-before { left: 12px; }
         .cs-label-after { right: 12px; }
         .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
+        .grid-table-wrap { margin: 1em 0; overflow-x: auto; }
+        .grid-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .grid-table th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .grid-table td { padding: 9px 14px; border-bottom: 1px solid #e8e0c0; }
+        .grid-table .alt-row { background: #f9f6eb; }
+        .timeline-sub { font-size: 0.88em; color: #6b5e3e; font-weight: 400; }
+        .timeline-rich { margin-top: 6px; font-size: 0.93em; }
+        .timeline-rich ul { margin: 4px 0 4px 1.2em; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
+        .quiz-image { margin: 0 0 12px; text-align: center; }
+        .quiz-image img { max-height: 200px; border-radius: 6px; }
+        .quiz-image figcaption { font-size: 0.82em; color: #6b5e3e; margin-top: 4px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
         .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
         .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .quiz-feedback-correct { color: #166534; }
+        .quiz-feedback-wrong { color: #991b1b; }
         .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
         .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .spacer { height: 20px; }
@@ -178,28 +191,34 @@
 <h3 class="slide-subheading"> Agente Poluidor</h3>
 <p>Torna-se o veículo um agente poluidor principalmente quando: </p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/meio-ambiente-agente-poluidor.jpg" alt="Imagem" loading="lazy"></figure>
-<ul class='list-element'></ul></div>
+<ul class='list-element'><li>Emite gases e partículas (fumaça) na atmosfera;</li>
+<li>Pelo descarte de óleos lubrificantes e fluídos;</li>
+<li>Pelo descarte de pneus e baterias;</li>
+<li>Pela volatilidade dos combustíveis no abastecimento;</li>
+<li>Pelo descarte de sucatas inservíveis;</li>
+<li>Nos Sinistros de Trânsito envolvendo cargas tóxicas.</li>
+</ul></div>
 </div>
 
 <div class="slide">
 <h3>Emissão de Gases e Seus Efeitos - Parte I</h3>
 <h2 class="slide-heading">Emissão de Gases e Seus Efeitos</h2>
 <div class="spacer"></div>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><tr><td>CO (monóxido de carbono)</td><td>É um gás letal, mata por asfixia química, impedindo o oxigênio de chegar às células.</td></tr><tr class="alt-row"><td>NOx (Óxidos de nitrogênio)</td><td>São gases irritantes. Provocam desconforto respiratório, diminuição da imunidade e alterações celulares. Agrava os problemas respiratórios, como alergias, asma e bronquite. Sua emissão é feita majoritariamente por veículos movidos a diesel</td></tr><tr><td>HC (hidrocarbonetos) </td><td>Assim como os óxidos de nitrogênio, provocam irritação nos olhos, nariz, pele e aparelho respiratório. São cancerígenos. Sua emissão é feita pelos motores de ciclo Otto (álcool e gasolina) e diesel</td></tr></table></div>
 </div>
 
 <div class="slide">
 <h3>Emissão de Gases e Seus Efeitos - Parte II</h3>
 <h2 class="slide-heading">Emissão de Gases e Seus Efeitos</h2>
 <div class="spacer"></div>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><tr><td>CH4 (metano)</td><td>Apesar de não trazer grandes malefícios ao corpo humano, é um gás estufa. Seu excesso de emissão contribui para o aquecimento global. Não é avaliado pelo PROCONVE</td></tr><tr class="alt-row"><td>CHO (aldeídos)</td><td>Também é um gás irritante e provoca os mesmos efeitos do HC e NOx, e também é cancerígeno.</td></tr><tr><td>MP (material particulado)</td><td>É a famosa fumaça, a qual aparece principalmente nos motores diesel. Além de causarem grandes danos ao sistema respiratório, pois ficam retidas nos alvéolos pulmonares, causando grande irritação e desconforto, também contribuem para agravar o efeito estufa.</td></tr></table></div>
 </div>
 
 <div class="slide">
 <h3>Emissão de Gases e Seus Efeitos - Parte III</h3>
 <h2 class="slide-heading">Emissão de Gases e Seus Efeitos</h2>
 <div class="spacer"></div>
-<div class="grid-element grid-cols-2"></div>
+<div class="grid-table-wrap"><table class="grid-table"><tr><td>CO2 (dióxido de carbono)</td><td>Assim como o metano, não é prejudicial à saúde, mas é o principal causador do efeito estufa, por ser o gás emitido em maior quantidade</td></tr><tr class="alt-row"><td>SO2(dióxido de enxofre)</td><td>Estes gases se combinam com água na atmosfera formando as chuvas ácidas.</td></tr></table></div>
 </div>
 
 <div class="slide">
@@ -267,8 +286,14 @@ Toda a vez que uma comunidade criar pontos de depósito de lixo em terreno baldi
 <p>
 Os veículos se tornam verdadeiras parafernálias  sonoras quando:</p>
 <div class="group-horizontal"><figure class="image-element"><img src="images/meio-ambiente-origem-do-barulho-1.jpg" alt="Imagem" loading="lazy"></figure>
-<ul class='list-element'></ul>
-<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details></div>
+<ul class='list-element'><li>Seu proprietário acredita que seu veículo é uma discoteca ambulante;</li>
+<li>Seu condutor utiliza a buzina sem critério e sem saber que a mesma só deve ser utilizado em casos de segurança;</li>
+<li>Seu proprietário adora sentir o ronco do motor e acelera sem necessidade, não lembrando que a cada acelerada o combustível vai sumindo do tanque.</li>
+</ul>
+<details class="infobox" open><summary>Info</summary><div class="infobox-content"><ul class='list-element'><li>É proibida a utilização de equipamento que produza som audível pelo lado externo do veículo, independentemente do volume ou frequência, que perturbe o sossego público, nas vias terrestres abertas à circulação, exceto buzinas, alarmes, sinalizadores de marcha à ré, sirenes e demais sons originados do funcionamento do veículo,</li>
+<li>Prestadores de serviço de publicidade com emissão sonora acima do limite, devem portar autorização do órgão ou entidade local competente;</li>
+<li>Saiba ainda que o uso de equipamento de som com volume ou frequência acima da estipulada, ou seja, perturbando os demais usuários das vias, é uma INFRAÇÃO GRAVE, com penalidade de MULTA e RETENÇÃO DO VEÍCULO.</li>
+</ul></div></details></div>
 <details class="infobox" open><summary>Info</summary><div class="infobox-content"><p>A retirada do ‘miolo’ escapamento das motocicletas para aumentar o ruído do motor, além de maximizar a poluição causada pela queima do combustível é uma infração GRAVE, sujeita a multa e retenção do veículo.</p></div></details>
 </div>
         </div>

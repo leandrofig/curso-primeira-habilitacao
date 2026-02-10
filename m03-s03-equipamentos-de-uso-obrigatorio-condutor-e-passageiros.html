@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipamentos de Uso Obrigatório - Condutor e Passageiros - M3 - CONDUÇÃO EFICIENTE E SEGURA | Nosso Trânsito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, rgba(246,241,215,0.92) 0%, rgba(235,225,170,0.85) 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .page-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .site-header {
+            background: #f9f6eb;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #DCBD32;
+        }
+        .site-header .logo img { height: 42px; width: auto; }
+        .site-header h2 { font-size: 1em; color: #1a1a1a; display: none; }
+        .course-badge {
+            background: linear-gradient(135deg, #DCBD32, #c4a82a);
+            color: #1a1a1a;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.78em;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            padding: 12px 40px;
+            background: #f9f6eb;
+            border-bottom: 1px solid #e8e0c0;
+            font-size: 0.85em;
+            color: #6b5e3e;
+        }
+        .breadcrumb a { color: #8b7a3e; text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+        .module-header {
+            padding: 32px 40px;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #3a3a3a);
+            color: white;
+            position: relative;
+        }
+        .module-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #DCBD32, #e8d44d, #DCBD32);
+        }
+        .module-header .label { font-size: 0.82em; text-transform: uppercase; letter-spacing: 2px; color: #DCBD32; font-weight: 600; margin-bottom: 6px; }
+        .module-header h1 { font-size: 1.5em; font-weight: 700; }
+        .content-body { padding: 36px 40px; }
+        .slide { margin-bottom: 48px; border-bottom: 1px solid #e8e0c0; padding-bottom: 32px; }
+        .slide:last-child { border-bottom: none; }
+        .slide-heading { color: #1a1a1a; font-size: 1.35em; margin: 1.5em 0 0.7em; padding-bottom: 8px; border-bottom: 2px solid #DCBD32; font-weight: 700; }
+        .slide-subheading { color: #3a3a3a; font-size: 1.15em; margin: 1.2em 0 0.5em; font-weight: 600; }
+        p { margin-bottom: 1em; text-align: justify; }
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        .image-element { margin: 1em 0; text-align: center; }
+        .image-element figcaption { font-size: 0.85em; color: #6b5e3e; margin-top: 6px; }
+        .video-element { margin: 1em 0; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+        .group-horizontal { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; margin: 1em 0; }
+        .group-horizontal > * { flex: 1; min-width: 200px; }
+        .group-vertical { margin: 1em 0; }
+        .grid-element { display: grid; gap: 16px; margin: 1em 0; }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        .list-element { margin: 0.5em 0 1em 1.5em; }
+        .list-element li { margin-bottom: 0.4em; }
+        .infobox { margin: 1em 0; background: #fdf8e1; border-left: 4px solid #DCBD32; border-radius: 0 8px 8px 0; }
+        .infobox summary { cursor: pointer; padding: 12px 20px; font-weight: 600; color: #6b5010; }
+        .infobox-content { padding: 0 20px 16px; }
+        .card-image { background: #f9f6eb; border-radius: 10px; padding: 16px; margin: 8px 0; text-align: center; }
+        .card-image img { max-height: 200px; border-radius: 6px; margin-bottom: 8px; }
+        .card-image h4 { color: #1a1a1a; margin-bottom: 4px; }
+        .card-detail { text-align: left; margin-top: 8px; font-size: 0.9em; }
+        .timeline { border-left: 3px solid #DCBD32; margin: 1em 0 1em 16px; padding-left: 20px; }
+        .timeline-item { margin-bottom: 16px; position: relative; }
+        .timeline-item::before { content: ''; width: 12px; height: 12px; background: #DCBD32; border-radius: 50%; position: absolute; left: -27px; top: 6px; }
+        .accordion { margin: 1em 0; }
+        .accordion-item { border: 1px solid #e8e0c0; border-radius: 8px; margin-bottom: 8px; }
+        .accordion-item summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
+        .accordion-content { padding: 0 16px 12px; }
+        .compare-slider { display: flex; gap: 16px; margin: 1em 0; }
+        .compare-slider > div { flex: 1; text-align: center; }
+        .compare-slider img { max-width: 100%; border-radius: 8px; }
+        .compare-slider span { display: block; font-size: 0.85em; color: #6b5e3e; margin-top: 4px; }
+        .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .quiz-question { margin-bottom: 12px; }
+        .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
+        .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
+        .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
+        .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .spacer { height: 20px; }
+        .nav-bar { display: flex; justify-content: space-between; padding: 16px 40px; background: #f9f6eb; border-top: 1px solid #e8e0c0; }
+        .nav-bar a { color: #8b6914; text-decoration: none; font-weight: 600; font-size: 0.9em; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .footer { background: #1a1a1a; color: #999; text-align: center; padding: 16px 40px; font-size: 0.78em; }
+        .footer a { color: #DCBD32; text-decoration: none; font-weight: 600; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .site-header, .breadcrumb, .content-body, .nav-bar, .footer { padding-left: 20px; padding-right: 20px; }
+            .module-header { padding: 24px 20px; }
+            .group-horizontal { flex-direction: column; }
+            .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="site-header">
+            <div class="logo"><img src="images/logo.png" alt="Condutor Legal"></div>
+            <span class="course-badge">Primeira Habilitação</span>
+        </header>
+        <div class="breadcrumb">
+            <a href="index.html">Início</a>
+            <span class="sep">›</span>
+            <a href="index.html">M3 - CONDUÇÃO EFICIENTE E SEGURA</a><span class="sep">›</span>Equipamentos de Uso Obrigatório - Condutor e Passageiros
+        </div>
+        <div class="module-header">
+            <div class="label">M3 - CONDUÇÃO EFICIENTE E SEGURA</div>
+            <h1>Equipamentos de Uso Obrigatório - Condutor e Passageiros</h1>
+        </div>
+        <div class="content-body">
+            <div class="slide">
+<h3>O Cinto de Segurança e sua Ação</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading"> e sua Ação</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/uso-cinto.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O cinto de segurança garante em caso de um Sinistro de Trânsito que o condutor e passageiros não colidam entre si, sejam projetados para frente ou arremessados para fora do veículo.</p></div>
+</div>
+
+<div class="slide">
+<h3>O Cinto de Segurança o Cinto nas vias urbanas</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">o Cinto nas vias urbanas</h3>
+<p></p>
+<p>Existe uma tendência dos motoristas e demais ocupantes do veículo de se descuidarem quanto ao uso do cinto de segurança nos trajetos urbanos, principalmente nos trajetos curtos e quando próximos de suas residências e locais de trabalho, locais que segundo as estatísticas ocorrem a maioria dos Sinistros de Trânsito urbanos.</p>
+</div>
+
+<div class="slide">
+<h3>Tabela de Uso</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">Tabela de Uso</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/tabela_cinto.jpg" alt="tabela uso do cinto" loading="lazy"></figure></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Fica revogada a obrigatoriedade do uso de dispositivo de retenção para o transporte de crianças com até sete anos e meio de idade nos veículos de transporte escolar (Resolução CONTRAN 639/2016)</p></div></details>
+</div>
+
+<div class="slide">
+<h3>O Cinto de Segurança a forma correta de uso do Cinto</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">a forma correta de uso do Cinto</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/CAPUfvqtPhw" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+</div>
+
+<div class="slide">
+<h3>O Cinto de Segurança as Crianças e as Grávidas</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">as Crianças e as Grávidas</h3>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ta5vWMvWbDY" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wnrILBuCyCM" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><figure class="image-element"><img src="images/gestante.jpg" alt="cinto para gestantes" loading="lazy"></figure></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Art. 64 do CTB:
+As crianças com idade inferior a 10 (dez) anos que não tenham atingido 1,45 m (um metro e quarenta e cinco centímetros) de altura devem ser transportadas nos bancos traseiros, em dispositivo de retenção adequado para cada idade, peso e altura, salvo exceções relacionadas a tipos específicos de veículos regulamentadas pelo Contran.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Na hipótese do transporte de menores de dez anos exceder a capacidade de lotação do banco traseiro, será admitido o transporte daquele de maior estatura no banco dianteiro.
+
+As grávidas devem manter o volante distante do ventre o máximo que for possível sem comprometer a segurança e a dirigibilidade do veículo;
+
+Para a afixação de crianças, deve-se tomar ainda os seguintes cuidados: 
+1) Afixar corretamente a cadeirinha (bebê-conforto);
+2) Utilizar cadeirinha tipo bebê-conforto que  tenha sido produzida respeitando a norma NBR 14.400 e tenha o selo do INMETRO.
+
+Existindo a necessidade de transportar criança no banco dianteiro em assentos tipo bebê-conforto, cadeirinha  ou assentos de elevação, recue o máximo que puder o banco para trás antes de afixar a criança e certifique-se que o veículo não possui dispositivo de segurança tipo air-bar dianteiro.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>O Cinto de Segurança - Queda em Barrancos e Incêndios</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">Queda em Barrancos e Incêndios</h3>
+<p></p>
+<p>Nos Sinistros de Trânsito em que o veículo role em uma ribanceira e venha a pegar fogo, o medo é  o  de ficar preso pelo cinto. Ele é infundado, pois sem o cinto, os ocupantes do veículo poderiam ser jogados para fora do mesmo,ou perderem a consciência e serem carbonizados por uma explosão do veículo.</p>
+</div>
+
+<div class="slide">
+<h3>O Cinto de Segurança - Queda na Água</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">Queda na Água</h3>
+<div class="spacer"></div>
+<p>Existe uma grande preocupação dos condutores quanto aos Sinistros de Trânsito em que o veículo caia em um rio ou similar, com medo de ficarem presos pelo cinto, ela é infundada, pois sem o cinto, os ocupantes do veículo poderiam perder a consciência, e aí sim se afogarem.</p>
+</div>
+
+<div class="slide">
+<h3>O Cinto de Segurança Regulamentação</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">Regulamentação</h3>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>O Cinto de Segurança uso nos Bancos Traseiros</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">uso nos Bancos Traseiros</h3>
+<p></p>
+<p>Nos bancos traseiros não há maior segurança que nos dianteiros. Um passageiro sem cinto, além de estar vulnerável aos mecanismos do Sinistro de Trânsito é uma ameaça para os ocupantes dos bancos dianteiros.</p>
+<div class="group-vertical"><figure class="image-element"><img src="images/direcao-defensiva-uso-bancos-traseiros.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>O Cinto de Segurança de Dois Pontos  - Parte I</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">de Dois Pontos</h3>
+<p>A Resolução 819/2021 do CONTRAN trouxe algumas regulamentações:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-cinto-duas-pontas.jpg" alt="Imagem" loading="lazy"></figure>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>O Cinto de Segurança de Dois Pontos  - Parte II</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">de Dois Pontos</h3>
+<p></p>
+<p>Excepcionalmente, as crianças com idade superior a quatro anos e inferior a sete anos e meio poderão ser transportadas utilizando cinto de segurança de dois pontos SEM o dispositivo denominado “assento de elevação”, nos bancos traseiros, quando o veículo for dotado originalmente destes cintos (de dois pontos)
+</p>
+</div>
+
+<div class="slide">
+<h3>O Cinto de Segurança - Dificuldades na Instalação</h3>
+<h2 class="slide-heading">O Cinto de Segurança</h2>
+<h3 class="slide-subheading">Dificuldades na Instalação</h3>
+<p>Um dos problemas encontrados pelos condutores é a fixação dos dispositivos de segurança nos bancos coma utilização dos cintos de três pontas, principalmente aqueles que são afixados na posição inversa de deslocamento do veículo. Devido estes problemas novas soluções de fixação estão sendo desenvolvidas e implantadas, tal como o ISOFIX.</p>
+<div class="group-vertical"><figure class="image-element"><img src="images/isofix.jpg" alt="Imagem" loading="lazy"></figure></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O ISOFIX é um novo sistema de ancoragem dos acentos de segurança para a condução de crianças em veículos automotores, onde a fixação é realizada na estrutura do monobloco do veículo e não somente usando os cintos de segurança.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Os automóveis, camionetas, e utilitários fabricados após 2018 deverão possuir ao menos uma ancoragem inferior ISOFIX e uma ancoragem do tirante superior ISOFIX ou uma posição LATCH (fixação por gancho) para fixação de um dispositivo de retenção de segurança para criança em um dos assentos do banco traseiro, com ancoragens em conformidade com a norma ABNT.</p></div></details>
+</div>
+        </div>
+        <div class="nav-bar">
+            <a href="m03-s02-direcao-defensiva-e-preventiva-conceitos-gerais.html">← Anterior</a>
+            <a href="m03-s04-manobras-e-dominio-do-veiculo.html">Próxima →</a>
+        </div>
+        <footer class="footer">
+            <a href="https://cursos.itt.org.br">ITT</a> — Nosso Trânsito Multimídia — Primeira Habilitação
+        </footer>
+    </div>
+</body>
+</html>

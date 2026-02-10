@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noções de Primeiros Socorros - M4 - SAÚDE, PRIMEIROS SOCORROS E AUTOCUIDADO NO TRÂNSITO | Nosso Trânsito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, rgba(246,241,215,0.92) 0%, rgba(235,225,170,0.85) 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .page-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .site-header {
+            background: #f9f6eb;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #DCBD32;
+        }
+        .site-header .logo img { height: 42px; width: auto; }
+        .site-header h2 { font-size: 1em; color: #1a1a1a; display: none; }
+        .course-badge {
+            background: linear-gradient(135deg, #DCBD32, #c4a82a);
+            color: #1a1a1a;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.78em;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            padding: 12px 40px;
+            background: #f9f6eb;
+            border-bottom: 1px solid #e8e0c0;
+            font-size: 0.85em;
+            color: #6b5e3e;
+        }
+        .breadcrumb a { color: #8b7a3e; text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+        .module-header {
+            padding: 32px 40px;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #3a3a3a);
+            color: white;
+            position: relative;
+        }
+        .module-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #DCBD32, #e8d44d, #DCBD32);
+        }
+        .module-header .label { font-size: 0.82em; text-transform: uppercase; letter-spacing: 2px; color: #DCBD32; font-weight: 600; margin-bottom: 6px; }
+        .module-header h1 { font-size: 1.5em; font-weight: 700; }
+        .content-body { padding: 36px 40px; }
+        .slide { margin-bottom: 48px; border-bottom: 1px solid #e8e0c0; padding-bottom: 32px; }
+        .slide:last-child { border-bottom: none; }
+        .slide-heading { color: #1a1a1a; font-size: 1.35em; margin: 1.5em 0 0.7em; padding-bottom: 8px; border-bottom: 2px solid #DCBD32; font-weight: 700; }
+        .slide-subheading { color: #3a3a3a; font-size: 1.15em; margin: 1.2em 0 0.5em; font-weight: 600; }
+        p { margin-bottom: 1em; text-align: justify; }
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        .image-element { margin: 1em 0; text-align: center; }
+        .image-element figcaption { font-size: 0.85em; color: #6b5e3e; margin-top: 6px; }
+        .video-element { margin: 1em 0; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+        .group-horizontal { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; margin: 1em 0; }
+        .group-horizontal > * { flex: 1; min-width: 200px; }
+        .group-vertical { margin: 1em 0; }
+        .grid-element { display: grid; gap: 16px; margin: 1em 0; }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        .list-element { margin: 0.5em 0 1em 1.5em; }
+        .list-element li { margin-bottom: 0.4em; }
+        .infobox { margin: 1em 0; background: #fdf8e1; border-left: 4px solid #DCBD32; border-radius: 0 8px 8px 0; }
+        .infobox summary { cursor: pointer; padding: 12px 20px; font-weight: 600; color: #6b5010; }
+        .infobox-content { padding: 0 20px 16px; }
+        .card-image { background: #f9f6eb; border-radius: 10px; padding: 16px; margin: 8px 0; text-align: center; }
+        .card-image img { max-height: 200px; border-radius: 6px; margin-bottom: 8px; }
+        .card-image h4 { color: #1a1a1a; margin-bottom: 4px; }
+        .card-detail { text-align: left; margin-top: 8px; font-size: 0.9em; }
+        .timeline { border-left: 3px solid #DCBD32; margin: 1em 0 1em 16px; padding-left: 20px; }
+        .timeline-item { margin-bottom: 16px; position: relative; }
+        .timeline-item::before { content: ''; width: 12px; height: 12px; background: #DCBD32; border-radius: 50%; position: absolute; left: -27px; top: 6px; }
+        .accordion { margin: 1em 0; }
+        .accordion-item { border: 1px solid #e8e0c0; border-radius: 8px; margin-bottom: 8px; }
+        .accordion-item summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
+        .accordion-content { padding: 0 16px 12px; }
+        .compare-slider { display: flex; gap: 16px; margin: 1em 0; }
+        .compare-slider > div { flex: 1; text-align: center; }
+        .compare-slider img { max-width: 100%; border-radius: 8px; }
+        .compare-slider span { display: block; font-size: 0.85em; color: #6b5e3e; margin-top: 4px; }
+        .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .quiz-question { margin-bottom: 12px; }
+        .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
+        .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
+        .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
+        .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .spacer { height: 20px; }
+        .nav-bar { display: flex; justify-content: space-between; padding: 16px 40px; background: #f9f6eb; border-top: 1px solid #e8e0c0; }
+        .nav-bar a { color: #8b6914; text-decoration: none; font-weight: 600; font-size: 0.9em; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .footer { background: #1a1a1a; color: #999; text-align: center; padding: 16px 40px; font-size: 0.78em; }
+        .footer a { color: #DCBD32; text-decoration: none; font-weight: 600; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .site-header, .breadcrumb, .content-body, .nav-bar, .footer { padding-left: 20px; padding-right: 20px; }
+            .module-header { padding: 24px 20px; }
+            .group-horizontal { flex-direction: column; }
+            .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="site-header">
+            <div class="logo"><img src="images/logo.png" alt="Condutor Legal"></div>
+            <span class="course-badge">Primeira Habilitação</span>
+        </header>
+        <div class="breadcrumb">
+            <a href="index.html">Início</a>
+            <span class="sep">›</span>
+            <a href="index.html">M4 - SAÚDE, PRIMEIROS SOCORROS E AUTOCUIDADO NO TRÂNSITO</a><span class="sep">›</span>Noções de Primeiros Socorros
+        </div>
+        <div class="module-header">
+            <div class="label">M4 - SAÚDE, PRIMEIROS SOCORROS E AUTOCUIDADO NO TRÂNSITO</div>
+            <h1>Noções de Primeiros Socorros</h1>
+        </div>
+        <div class="content-body">
+            <div class="slide">
+<h3>O Primeiro Atendimento - Como Fazer A Remoção da Vítima?</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">Como Fazer a Remoção da Vítima</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/primeiros-socorros-remocao-vitima.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A vítima deverá ser removida somente se estiver correndo risco de morte.
+O socorrista deverá solicitar ajuda para evitar ao máximo que a coluna e pescoço do acidentado se dobre durante sua remoção.</p></div>
+</div>
+
+<div class="slide">
+<h3>O Primeiro Atendimento a Sequencia AVAMANAPRO</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">a Sequencia AVAMANAPRO</h3>
+<div class="spacer"></div>
+<div class="group-vertical"><figure class="image-element"><img src="images/primeiros-socorros-sequencia.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>O Primeiro Atendimento Avaliação Primária VIRECINIE</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">Avaliação Primária VIRECINIE</h3>
+<div class="spacer"></div>
+<p>Mantenha a respiração e batimentos cardíacos, preserve a coluna e evite a falência hemodinâmica.</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Avaliação Primária Desobstrução das Vias Aéreas com Cuidado da Coluna</h3>
+<h2 class="slide-heading">Avaliação Primária </h2>
+<h3 class="slide-subheading"> Desobstrução das Vias Aéreas com Cuidado da Coluna</h3>
+<div class="spacer"></div>
+<p>Uma pessoa com obstrução nas vias aéreas e sem respirar poderá morrer ou ficar com sequelas rapidamente.
+Principalmente com vítimas inconscientes, tome muito cuidado com sua coluna e evite mover seu pescoço. Retire objetos e resíduos que existam em sua boca e fossas nasais.</p>
+</div>
+
+<div class="slide">
+<h3>Avaliação Primária Verificação da respiração</h3>
+<h2 class="slide-heading">Avaliação Primária </h2>
+<h3 class="slide-subheading">Verificação da Respiração</h3>
+<div class="spacer"></div>
+<div class="group-vertical"><figure class="image-element"><img src="images/primeiros-socorros-verifivar-respiracao.jpg" alt="Imagem" loading="lazy"></figure></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Recentemente o AHA (American Heart Association) preconizou que para verificar a respiração é observado apenas o movimento do abdômen, momento em que se aproveita para verificar os batimentos cardíacos. </p></div></details>
+</div>
+
+<div class="slide">
+<h3>Avaliação Primária Circulação e Hemorragias</h3>
+<h2 class="slide-heading">Avaliação Primária </h2>
+<h3 class="slide-subheading">Circulação e Hemorragias</h3>
+<div class="spacer"></div>
+<p>Para realizar a verificação da circulação é necessário sentir a pulsação do paciente. Não havendo pulsação, está ocorrendo uma parada cardíorespiratória e deverá ser iniciado de imediato o ciclo de RCP (Ressuscitação ou Reanimação Cárdio - Pulmonar).
+
+Sangramento excessivo pode levar à falência hemodinâmica (do sangue) e fatalmente ao estado de choque e sequencialmente à morte.
+</p>
+</div>
+
+<div class="slide">
+<h3>Avaliação Primária Verificação Estado de Consciência</h3>
+<h2 class="slide-heading">Avaliação Primária </h2>
+<h3 class="slide-subheading">Verificação Estado de Consciência</h3>
+<div class="spacer"></div>
+<p>Estando a vítima consciente faça perguntas de forma a identificar algum problema na coluna ou dor localizada. Veja se a vítima sente as pernas e braços.
+Estando a vítima inconsciente, trate-a como lesionada na coluna e verifique de imediato a pulsação e a respiração, movimentando-a o mínimo possível.Havendo no local alguém com conhecimentos suficientes para a ação, deverá de imediato iniciar a respiração artificial e/ou a massagem cardíaca.</p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>É aconselhável que após a estabilização do pescoço na posição natural, com a ajuda de algumas pessoas, seja feita a "lateralização" do acidentado sem a movimentação da coluna, evitando assim o afogamento em líquidos e secreções do próprio corpo. Esta ação é realizada somente para acidentados que estejam respirando normalmente.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Avaliação Primária Exposição e Proteção da Vítima</h3>
+<h2 class="slide-heading">Avaliação Primária </h2>
+<h3 class="slide-subheading">Exposição e Proteção da Vítima</h3>
+<div class="spacer"></div>
+<p>É necessário que seja feita a exposição do corpo da vítima para a realização da verificação de traumas diversos (fraturas, escoriações, etc), mas sempre tenha cuidado com a exposição excessiva das partes íntimas da mesma.
+Mantenha o acidentado aquecido e protegido contra as intempéries do tempo, pois é uma reação natural do corpo baixar a temperatura rapidamente.</p>
+</div>
+
+<div class="slide">
+<h3>O Primeiro Atendimento Manutenção Sinais Vitais</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">Manutenção Sinais Vitais</h3>
+<div class="spacer"></div>
+<p>O suporte básico de vida deve ser constante até a chegada do socorro especializado, ou seja, devemos manter a vítima respirando, com pulsação (coração batendo) e protegida contra o estado de choque.</p>
+</div>
+
+<div class="slide">
+<h3>O Primeiro Atendimento Avaliação Secundária</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">Avaliação Secundária</h3>
+<div class="spacer"></div>
+<p>Após a estabilização da vítima, ou seja, estando respirando, com pulsação e protegida contra o estado de choque, devemos iniciar uma análise completa do corpo da vítima, onde:</p>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Todas as informações colhidas devem ser repassadas imediatamente para o socorro especializado.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Procedimentos Emergênciais Parada Respiratória</h3>
+<h2 class="slide-heading">Procedimentos Emergênciais </h2>
+<h3 class="slide-subheading">Parada Respiratória</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/primeiros-socorros-procedimentos-emergencias.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Quadro onde a vítima apresenta pulso, porém não respira.
+
+Sintomas: ausência do movimento respiratório; inconsciência; dilatação das pupilas; arroxeamento  dos lábios e extremidade dos membros (cianose).</p></div>
+</div>
+
+<div class="slide">
+<h3>Parada Respiratória Procedimentos</h3>
+<h2 class="slide-heading">Parada Respiratória </h2>
+<h3 class="slide-subheading">Procedimentos</h3>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Posteriormente o AHA (American Heart Association) preconizou um espaço maior entre as insuflações, totalizando de 8 a 9 por minuto.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Procedimentos Emergênciais Parada Cardiorespiratória</h3>
+<h2 class="slide-heading">Procedimentos Emergênciais</h2>
+<h3 class="slide-subheading">Parada Cardiorespiratória</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/primeiros-socorros-paradacardiorespiratoria.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Quadro no qual a vítima não apresenta movimentos respiratórios e o pulso é completamente ausente, porém não podemos afirmar que ocorreu o óbito.
+
+</p></div>
+<p>Sintomas: ausência do movimento respiratório e pulso (sem batimentos cardíacos), inconsciência, pupilas dilatadas, pele e lábios arroxeados (cianose),</p>
+</div>
+
+<div class="slide">
+<h3>Parada Cardiorespiratória Procedimentos</h3>
+<h2 class="slide-heading">Parada Cardiorespiratória</h2>
+<h3 class="slide-subheading"> Procedimentos</h3>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Para vítima adulta as mãos devem ser sobrepostas, dedos entrelaçados e somente uma das mãos em contato com o osso esterno;
+
+Para crianças utilize apenas uma mão para a compressão e para lactentes somente os dedos indicador e médio;</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Alterado pela Associação Americana do Coração – AHA em 2005. Anteriormente o que se preconizava eram 02 INSUFLAÇÕES por 15 MASSAGENS CARDÍACAS.
+
+O AHA (American Heart Association) orienta que caso o socorrista não possua o aparelho de respiração artificial (Ambú) e não esteja certo de assumir o risco, deverá executar apenas as massagens cardíacas, sem as insuflações.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Parada Cardiorespiratória Detalhes da RCP</h3>
+<h2 class="slide-heading">Parada Cardiorespiratória</h2>
+<h3 class="slide-subheading">Detalhes da RCP</h3>
+<p>                                                         (Ressuscitação Cardiorespiratória)</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Procedimentos Emergênciais Hemorragias</h3>
+<h2 class="slide-heading">Procedimentos Emergênciais </h2>
+<h3 class="slide-subheading">Hemorragias</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/procedimentos-emergenciais-hemorragias.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Hemorragia é a perda aguda de sangue circulante. A intensidade dessa perda vai depender do calibre do vaso afetado:</p></div>
+<p>Na hemorragia arterial o sangue é vermelho vivo e sai com maior pressão;
+Na hemorragia venosa o sangue é vermelho escuro e sai com menor pressão;
+Na hemorragia capilar o sangue sai em pequena quantidade.</p>
+</div>
+
+<div class="slide">
+<h3>Hemorragias Externas Procedimentos</h3>
+<h2 class="slide-heading">Hemorragias Externas </h2>
+<h3 class="slide-subheading">Procedimentos</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+<p>Ocorrendo amputações de membros poderão ocorrer grandes hemorragias, o que levará o acidentado rapidamente à morte. Realize pressão no local com gaze limpo e previna o estado de choque.</p>
+</div>
+
+<div class="slide">
+<h3>Hemorragias Internas Procedimentos</h3>
+<h2 class="slide-heading">Hemorragias Internas</h2>
+<h3 class="slide-subheading">Procedimentos</h3>
+<div class="spacer"></div>
+<p>Ocorre quando a perda de sangue é no interior do organismo, sem ser visível. A região das coxas pode acondicionar até 1,5 litros de sangue e a abdominal até 2,0 litros de sangue em suas cavidades. Uma pessoa com hemorragia interna, a cada minuto que passa chega a perder em média de 30 a 50 ml. de sangue.</p>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Para colocar a pessoa na Posição de Choque siga os seguintes passos:
+
+1. Deite a pessoa de costas;
+2. Rode a cabeça para um lado;
+3. Se possível, levante-lhe os pés;
+4. Desaperte a roupa em redor do pescoço e da cintura;
+5. Chame ajuda médica ou transporte a pessoa nessa posição para o Hospital;
+6. Não dê à pessoa nada para comer ou beber
+7. Se parecer que a pessoa vai vomitar ou se ela ficar inconsciente, coloque-a na posição de reanimação.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Hemorragias Internas Detalhamentos</h3>
+<h2 class="slide-heading">Hemorragias Internas</h2>
+<h3 class="slide-subheading">Detalhamentos</h3>
+<p>
+HEMOPTISE ou hemorragia dos Pulmões – é a eliminação pela boca e nariz de sangue proveniente do aparelho respiratório, geralmente em golfadas de sangue vivo e na presença de tosse. A ação imediata para socorrer o acidentado deve ser voltada para evitar que este morra por asfixia.
+
+HEMATÊMESE ou hemorragia do Estômago – é a eliminação pela boca de sangue proveniente do aparelho digestivo, principalmente do estômago, geralmente na cor vermelho escuro e na presença de vômitos. A ação imediata para socorrer o acidentado deve ser voltada para evitar que este morra por asfixia e posteriormente resfriar a região externa do abdômen.</p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O uso de bebida alcoólica antes de conduzir um veículo, além de ser um dos fatores que levam ao Sinistro de Trânsito, piora e muito a gravidade do quadro do acidentado, pois aumenta a pressão sanguínea.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Procedimentos Emergênciais Fraturas</h3>
+<h2 class="slide-heading">Procedimentos Emergênciais </h2>
+<h3 class="slide-subheading">Fraturas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/primeiros-socorros-fratura.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Sintomas: membros deformados e dores em articulações indicam fratura interna (ou fechada). A fratura exposta é automaticamente identificada, pois parte do osso rasga o tecido muscular.</p></div>
+<p>Tratamento: improvise uma tala para imobilização; jamais tente retornar o membro deformado para o lugar e estanque a hemorragia caso exista.</p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Como princípio geral, a imobilização deve abranger não somente o sítio da lesão mas também todos os lugares que se relacionem a ele na elaboração de algum movimento.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Procedimentos Emergênciais Detalhamento das Fraturas - Parte I</h3>
+<h2 class="slide-heading">Procedimentos Emergênciais</h2>
+<h3 class="slide-subheading"> Detalhamento das Fraturas</h3>
+<div class="spacer"></div>
+<p>Fratura de Costela - tem como sintomas dor intensa no local e dificuldades na respiração. O grande problema deste tipo de fratura é a possibilidade de perfuração de algum órgão interno, principalmente dos pulmões. Mantenha a vítima em repouso total.
+
+Fratura da coluna - tem como sintomas dor muito intensa no local, perda de movimentos e da sensibilidade, ou um simples formigamento nos membros. Na suspeita de fratura de coluna movimente a vítima somente em caso extremo de risco de morte.
+</p>
+</div>
+
+<div class="slide">
+<h3>Procedimentos Emergênciais Detalhamento das Fraturas - Parte II</h3>
+<h2 class="slide-heading">Procedimentos Emergênciais</h2>
+<h3 class="slide-subheading"> Detalhamento das Fraturas</h3>
+<div class="spacer"></div>
+<p>Fratura da Bacia ou Quadril - tem como principais sintomas fortes dores locais e dificuldade de movimento das pernas. Mantenha a vítima deitada em local plano e em total repouso.
+
+TCE (Traumatismo Cranioencefálico) - são ferimentos considerados na maioria das vezes graves, principalmente por nem sempre serem de fácil identificação. Os principais sintomas apresentados são: sangramento no crânio, nariz, boca ou ouvido; dor de cabeça; tonturas e desmaios; enjôos e vômitos; alteração no tamanho das pupilas. Cuidado com a asfixia por motivo de vômitos e mantenha a vítima em total repouso.</p>
+</div>
+
+<div class="slide">
+<h3>Procedimentos Emergênciais Queimaduras</h3>
+<h2 class="slide-heading">Procedimentos Emergênciais</h2>
+<h3 class="slide-subheading"> Queimaduras</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/primeiros-socorros-queimaduras.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>As queimaduras podem ser de 1º grau (apenas vermelhidão), 2º grau (com bolhas) e 3º grau (camada muscular atingida).</p></div>
+<p>Tratamento: primeiramente combata o fogo e logo após mantenha o local resfriado com água limpa, umedecendo-o constantemente. Cuidado com a queimadura ocasionada por produtos químicos, pois em alguns casos a água potencializa a capacidade de corrosão do produto.</p>
+</div>
+
+<div class="slide">
+<h3>Queimaduras Classificação</h3>
+<h2 class="slide-heading">Queimaduras </h2>
+<h3 class="slide-subheading">Classificação</h3>
+<div class="spacer"></div>
+<p>PEQUENAS QUEIMADURAS: menos de 10% da área corpórea atingida.
+GRANDES  QUEIMADURAS: mais  de  10% da área corpórea atingida.</p>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Queimaduras Gravidade</h3>
+<h2 class="slide-heading">Queimaduras </h2>
+<h3 class="slide-subheading">Gravidade</h3>
+<div class="spacer"></div>
+<p>Quanto maior for a área atingida independente do grau da queimadura, maior será o risco de morte para a vítima, devido a possibilidade de choque e infecção na área queimada.
+
+QUEIMADURAS CONSIDERADAS GRAVES</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Procedimentos Emergênciais Ferimento no Tórax ou Abdômen</h3>
+<h2 class="slide-heading">Procedimentos Emergênciais </h2>
+<h3 class="slide-subheading">Ferimento no Tórax ou Abdômen</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/primeiros-socorros-queimaduras-2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>No caso de ferimento no abdômen não se deve tentar recolocar os órgãos expostos no lugar, mas sim, cobri-los com uma compressa úmida e limpa.
+Em relação a ferimento aberto no tórax deve-se vedar a entrada de ar usando, por exemplo, um pano, um plástico ou até mesmo a própria mão. Isso é importante, pois, se houver entrada de ar, os pulmões podem se contrair e fechar.</p></div>
+</div>
+
+<div class="slide">
+<h3>O Primeiro Atendimento Demais Lesões</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">Demais Lesões</h3>
+<div class="spacer"></div>
+<p>Entorse - ruptura total ou parcial de ligamentos ou cápsula articular;
+
+Luxação - separação total ou parcial de um osso da sua articulação;
+
+Contusão - lesão muscular causada por uma pancada, sem rompimento da pele.
+
+Tratamento - use uma bandagem envolvendo os membros lesionados e imobilizando-os junto ao tronco (membro superior) ou faça uma bandagem uniforme do quadril até abaixo dos joelhos (membros inferiores)</p>
+</div>
+
+<div class="slide">
+<h3>Primeiro Atendimento - O Que Não Fazer - Parte I</h3>
+<h2 class="slide-heading">Primeiro Atendimento</h2>
+<h3 class="slide-subheading">O Que Não Fazer</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Primeiro Atendimento - O Que Não Fazer - Parte II</h3>
+<h2 class="slide-heading">Primeiro Atendimento</h2>
+<h3 class="slide-subheading">O Que Não Fazer</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>O Primeiro Atendimento Duas Rodas</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">Duas Rodas</h3>
+<div class="spacer"></div>
+<p>Requer alguns cuidados e conhecimentos especiais para não agravar o estado da vítima.
+
+Resumo da Dinâmica dos Sinistros de Trânsito</p>
+<div class="group-vertical"><ul class='list-element'></ul></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Dinâmica do Sinistro de Trânsito: Neste tipo de Sinistro de Trânsito o motociclista tem geralmente um de seus membros inferiores seriamente ferido, em alguns casos esmagado ou decepado de seu corpo, podendo ser seguido de um atropelamento e arrastamento da vítima.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Dinâmica do Sinistro de Trânsito: No momento da colisão o motociclista geralmente cai de sua motocicleta e é atropelado pelo veículo que o colidiu. Neste tipo de Sinistro de Trânsito os resultados são imprevisíveis, porém em sua grande maioria ocorrem fraturas múltiplas de grande gravidade. Bastante comum nestes casos a vítima ser arrastada pelo outro veículo, o que geralmente resulta na morte da vítima.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Dinâmica do Sinistro de Trânsito: O motociclista é projetado para frente (a violência da projeção é diretamente proporcional à velocidade na hora da colisão); sua cabeça atinge o objeto colidido, ocorrendo neste momento uma possível lesão de coluna e uma lesão encefálica, pois o capacete a princípio previne a ruptura da pele e do crânio, porém o impacto interno dos órgãos é inevitável devido a desaceleração brusca.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Na sua grande maioria, os Sinistros de Trânsito com motocicletas ocorrem nas vias urbanas, o que não reduz sua gravidade, devido a grande exposição do corpo da vítima.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>O Primeiro Atendimento Duas Rodas Movimentação do Acidentado</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">Duas Rodas Movimentação do Acidentado</h3>
+<div class="spacer"></div>
+<p>Como em qualquer Sinistro de Trânsito, um motociclista acidentado não deve ser removido do local ou realizado qualquer movimento com seu corpo, a não ser que esteja correndo risco comprovado de morte.</p>
+</div>
+
+<div class="slide">
+<h3>O Primeiro Atendimento Duas Rodas Retirar o Capacete?</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">Duas Rodas Retirar o Capacete?</h3>
+<div class="spacer"></div>
+<p>Poderá ser retirado somente em caso comprovado de parada respiratória, quando será necessária a respiração artificial. Com cuidado da coluna e sempre por duas pessoas.</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/primeiros-socorros-retirar-capacete.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Um dos socorristas faz a estabilização da cabeça;</p></div>
+</div>
+
+<div class="slide">
+<h3>O Primeiro Atendimento Retirar o Capacete?</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">Retirar o Capacete?</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><div class="spacer"></div>
+<p>O outro socorrista abre a viseira e retira objetos soltos, tais como óculos de grau ou de proteção;</p>
+<figure class="image-element"><img src="images/primeiros-socorros-retirar-capacete-2-b.jpg" alt="Imagem" loading="lazy"></figure>
+<figure class="image-element"><img src="images/primeiros-socorros-retirar-capacete-2-a.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A jugular deve ser solta totalmente para permitir a retirada do capacete;</p></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/primeiros-socorros-retirar-capacete-2-c.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O segundo socorrista apóia uma das mãos na parte de trás da cabeça e a outra na mandíbula e o primeiro remove o capacete, com todo o cuidado, alargando as laterais e realizando pequenos movimentos giratório para frente e para trás enquanto puxa suavemente o capacete, até livrar o nariz, quando então o capacete sairá suavemente.</p></div>
+</div>
+
+<div class="slide">
+<h3>O Primeiro Atendimento Duas Rodas Veículo Sobre o Acidentado</h3>
+<h2 class="slide-heading">O Primeiro Atendimento</h2>
+<h3 class="slide-subheading">Duas Rodas Veículo Sobre o Acidentado</h3>
+<div class="spacer"></div>
+<p>Em alguns casos o motociclista acidentado poderá permanecer embaixo do veículo. Nestes casos a situação se complica ainda mais, pois a tentativa de movimentar o veículo para retirá-lo de cima da vítima poderá agravar ainda mais a situação.
+O ideal é sempre aguardar o socorro especializado, principalmente quando a vítima está consciente. Caso seja necessário retirar o veículo que está sobre a vítima, faça com todo o cuidado, e caso você perceba que a vítima está presa sob o veículo, eleve o mesmo utilizando dois ou três macacos e retire a vítima, com total imobilização da coluna.</p>
+</div>
+        </div>
+        <div class="nav-bar">
+            <a href="m04-s04-como-se-ccomportar-no-caso-de-um-sinistro.html">← Anterior</a>
+            <a href="m05-s01-introducao.html">Próxima →</a>
+        </div>
+        <footer class="footer">
+            <a href="https://cursos.itt.org.br">ITT</a> — Nosso Trânsito Multimídia — Primeira Habilitação
+        </footer>
+    </div>
+</body>
+</html>

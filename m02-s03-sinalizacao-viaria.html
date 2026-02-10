@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinalização Viária - M2 - NORMAS E PRINCÍPIOS GERAIS DO TRÂNSITO | Nosso Trânsito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, rgba(246,241,215,0.92) 0%, rgba(235,225,170,0.85) 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .page-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .site-header {
+            background: #f9f6eb;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #DCBD32;
+        }
+        .site-header .logo img { height: 42px; width: auto; }
+        .site-header h2 { font-size: 1em; color: #1a1a1a; display: none; }
+        .course-badge {
+            background: linear-gradient(135deg, #DCBD32, #c4a82a);
+            color: #1a1a1a;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.78em;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            padding: 12px 40px;
+            background: #f9f6eb;
+            border-bottom: 1px solid #e8e0c0;
+            font-size: 0.85em;
+            color: #6b5e3e;
+        }
+        .breadcrumb a { color: #8b7a3e; text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+        .module-header {
+            padding: 32px 40px;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #3a3a3a);
+            color: white;
+            position: relative;
+        }
+        .module-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #DCBD32, #e8d44d, #DCBD32);
+        }
+        .module-header .label { font-size: 0.82em; text-transform: uppercase; letter-spacing: 2px; color: #DCBD32; font-weight: 600; margin-bottom: 6px; }
+        .module-header h1 { font-size: 1.5em; font-weight: 700; }
+        .content-body { padding: 36px 40px; }
+        .slide { margin-bottom: 48px; border-bottom: 1px solid #e8e0c0; padding-bottom: 32px; }
+        .slide:last-child { border-bottom: none; }
+        .slide-heading { color: #1a1a1a; font-size: 1.35em; margin: 1.5em 0 0.7em; padding-bottom: 8px; border-bottom: 2px solid #DCBD32; font-weight: 700; }
+        .slide-subheading { color: #3a3a3a; font-size: 1.15em; margin: 1.2em 0 0.5em; font-weight: 600; }
+        p { margin-bottom: 1em; text-align: justify; }
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        .image-element { margin: 1em 0; text-align: center; }
+        .image-element figcaption { font-size: 0.85em; color: #6b5e3e; margin-top: 6px; }
+        .video-element { margin: 1em 0; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+        .group-horizontal { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; margin: 1em 0; }
+        .group-horizontal > * { flex: 1; min-width: 200px; }
+        .group-vertical { margin: 1em 0; }
+        .grid-element { display: grid; gap: 16px; margin: 1em 0; }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        .list-element { margin: 0.5em 0 1em 1.5em; }
+        .list-element li { margin-bottom: 0.4em; }
+        .infobox { margin: 1em 0; background: #fdf8e1; border-left: 4px solid #DCBD32; border-radius: 0 8px 8px 0; }
+        .infobox summary { cursor: pointer; padding: 12px 20px; font-weight: 600; color: #6b5010; }
+        .infobox-content { padding: 0 20px 16px; }
+        .card-image { background: #f9f6eb; border-radius: 10px; padding: 16px; margin: 8px 0; text-align: center; }
+        .card-image img { max-height: 200px; border-radius: 6px; margin-bottom: 8px; }
+        .card-image h4 { color: #1a1a1a; margin-bottom: 4px; }
+        .card-detail { text-align: left; margin-top: 8px; font-size: 0.9em; }
+        .timeline { border-left: 3px solid #DCBD32; margin: 1em 0 1em 16px; padding-left: 20px; }
+        .timeline-item { margin-bottom: 16px; position: relative; }
+        .timeline-item::before { content: ''; width: 12px; height: 12px; background: #DCBD32; border-radius: 50%; position: absolute; left: -27px; top: 6px; }
+        .accordion { margin: 1em 0; }
+        .accordion-item { border: 1px solid #e8e0c0; border-radius: 8px; margin-bottom: 8px; }
+        .accordion-item summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
+        .accordion-content { padding: 0 16px 12px; }
+        .compare-slider { display: flex; gap: 16px; margin: 1em 0; }
+        .compare-slider > div { flex: 1; text-align: center; }
+        .compare-slider img { max-width: 100%; border-radius: 8px; }
+        .compare-slider span { display: block; font-size: 0.85em; color: #6b5e3e; margin-top: 4px; }
+        .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .quiz-question { margin-bottom: 12px; }
+        .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
+        .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
+        .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
+        .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .spacer { height: 20px; }
+        .nav-bar { display: flex; justify-content: space-between; padding: 16px 40px; background: #f9f6eb; border-top: 1px solid #e8e0c0; }
+        .nav-bar a { color: #8b6914; text-decoration: none; font-weight: 600; font-size: 0.9em; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .footer { background: #1a1a1a; color: #999; text-align: center; padding: 16px 40px; font-size: 0.78em; }
+        .footer a { color: #DCBD32; text-decoration: none; font-weight: 600; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .site-header, .breadcrumb, .content-body, .nav-bar, .footer { padding-left: 20px; padding-right: 20px; }
+            .module-header { padding: 24px 20px; }
+            .group-horizontal { flex-direction: column; }
+            .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="site-header">
+            <div class="logo"><img src="images/logo.png" alt="Condutor Legal"></div>
+            <span class="course-badge">Primeira Habilitação</span>
+        </header>
+        <div class="breadcrumb">
+            <a href="index.html">Início</a>
+            <span class="sep">›</span>
+            <a href="index.html">M2 - NORMAS E PRINCÍPIOS GERAIS DO TRÂNSITO</a><span class="sep">›</span>Sinalização Viária
+        </div>
+        <div class="module-header">
+            <div class="label">M2 - NORMAS E PRINCÍPIOS GERAIS DO TRÂNSITO</div>
+            <h1>Sinalização Viária</h1>
+        </div>
+        <div class="content-body">
+            <div class="slide">
+<h3>A Sinalização de Trânsito</h3>
+<h3 class="slide-subheading">A Sinalização de Trânsito</h3>
+<div class="spacer"></div>
+<p>Os Sinais Classificam-se em:</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>A Sinalização Ordem de  Prevalência</h3>
+<h2 class="slide-heading">A Sinalização</h2>
+<h3 class="slide-subheading">Ordem de  Prevalência</h3>
+<div class="spacer"></div>
+<p>Existe uma ordem de prevalência entre os sinais, ou seja, uma ordem que define quem deverá ser atendido em caso de duplicidade:</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>A Sinalização Vertical</h3>
+<h3 class="slide-subheading">A Sinalização Vertical</h3>
+<div class="spacer"></div>
+<p>Os Sinais Verticais são:</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>A Sinalização Vertical e sua Abrangência</h3>
+<h2 class="slide-heading">A Sinalização Vertical</h2>
+<h3 class="slide-subheading">e sua Abrangência</h3>
+<div class="group-vertical"><p>A maioria dos sinais de regulamentação tem validade no ponto em que está implantado ou a partir deste ponto. Outros têm sua validade na face de quadras onde estão implantados vinculados à sinalização horizontal ou às informações complementares.</p>
+<figure class="image-element"><img src="images/leg-sinali-vert-abrana-nova.jpg" alt="abrangência de face ou trecho
+abrangência de ponto
+abrangência a partir do ponto
+abrangência da informação complementar" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Regulamentação 1</h3>
+<h3 class="slide-subheading">Placas de Regulamentação</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/regulamentacao.jpg" alt="ou à Direit aSiga em Frente ou à Esquerda Siga em Frente Direita Vire à Esquerda Vire à FrenteSiga em à Esquerda Proibido Virar à Direita Proibido Virar Proibido Sentido " loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Regulamentação 2</h3>
+<h3 class="slide-subheading">Placas de Regulamentação</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-regulamentacao2-01.jpg" alt="na Rotatória Circulação Sentido de Obrigatória Passagem da Via / Pista Circulação Sentido de Estacionar Parar e Proibido Estacionar Proibido Regulamentado Estacionamento Preferência Dê a Obrigatória Parada " loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Regulamentação 3</h3>
+<h3 class="slide-subheading">Placas de Regulamentação</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-placas-de-regulamentacao3-01.jpg" alt="Direita Retornar à Proibido Permitida Máxima Velocidade Mantenha-se à Direita de Grande Porte Ônibus Caminhões  e Veículos à Direita Conserve-se Ultrapassar Proibido de Circulação Duplo Sentido à Esquerda Proibido Retornar" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Regulamentação 4</h3>
+<h3 class="slide-subheading">Placas de Regulamentação</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-placas-de-regulamentacao4-01.jpg" alt="Pedestre Trânsito Proibido Carros de Mão Proibido aTrânsito ÔnibusTrânsito de Proibido CaminhõesTrânsito Proibido BicicletasTrânsito Proibido Ciclomotores Motonetas e de Motocicletas Proibido Trânsito Obras Máquinas de de Tratores e Proibido Trânsito Tração Animal Veículos de Trânsito de Proibido Automotoresde VeículosTrânsito Proibido" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Regulamentação 5</h3>
+<h3 class="slide-subheading">Placas de Regulamentação</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-placas-de-regulamentacao5-01.jpg" alt="de Correntes Uso Obrigatório Buzina ou Sinal Sonoro Proibido Acionar Alfândega Direita para Esquerda ou Pista de Trânsito daProibido Mudar de Faixa Esquerda para Direita ou Pista de Trânsito da Proibido Mudar de Faixa" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Regulamentação 6</h3>
+<h3 class="slide-subheading">Placas de Regulamentação</h3>
+<p></p>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-regulamentacao6.jpg" alt="Permitido Por Eixo Peso Máximo Permitida Largura Máxima Permitida Altura MáximaMáximo Permitido Peso Bruto Total Máximo Permitido Comprimento" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Regulamentação 7</h3>
+<h3 class="slide-subheading">Placas de Regulamentação</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-regulamentacao7-01.jpg" alt="Esquerda Ande Pela Pedestre,Bicicletas Exclusiva Circulação Ciclista à Direita Esquerda Pedestre à à Direita Pedestre Ciclista à Esquerda Direita Transite à Ciclista,Esquerda Transite àCiclista,Caminhão Exclusiva Circulação Direita Ande Pela Pedestre,de Ônibus Exclusiva Circulação" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Regulamentação 8</h3>
+<h3 class="slide-subheading">Placas Complementares</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-regulamentacao8-nova.jpg" alt="Ônibus e micro, caminhão, trator,
+motor-casa, reboque ou semireboque
+e veículo tracionando outroVeículos de 2 ou 3 rodas,
+quadricilos, automóveis,utilitários,
+caminhonete e camioneta Informações Complementares Placa de Regulamentação com " loading="lazy"></figure></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>RESOLUÇÃO Nº 798, DE 2 DE SETEMBRO DE 2020</p>
+<ul class='list-element'></ul></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>ATENÇÃO:
+Caso você esteja conduzindo um veículo de passeio rebocando um reboque ou semirreboque deverá obedecer a velocidade para veículos pesados.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Placa de Regulamentação 9</h3>
+<h3 class="slide-subheading">Placa de Regulamentação</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/novas_placas_regula.jpg" alt="Ciclistas à direita, VLT à  esquerda, pedestre, bonde, veículo, compartilhada " loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Regulamentação 10</h3>
+<h3 class="slide-subheading">Tabela de Distâncias</h3>
+<h2 class="slide-heading">Placa R-19</h2>
+<div class="group-vertical"><figure class="image-element"><img src="images/tabela-dist-placas.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Manual Brasileiro de Sinalização Vertical de Regulamentação:
+
+As distâncias acima representam a distância que uma placa de regulamentação de velocidade deve estar da outra. Podemos concluir por analogia que esta é a distância que devemos percorrer para ter a possibilidade de imprimir ao nosso veículo uma velocidade maior do que a regulamentada pela placa R-19, desde que é claro esteja dentro da velocidade regulamentada para o tipo de via ou para o tipo de veículo conduzido. </p></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 1</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia1.jpg" alt="à Esquerda Sinuosa Pista Esquerda Em “S” à Curva à Esquerda Acentuada Em “S”Curva à Esquerda Curva à EsquerdaAcentuada Curva" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 2</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia2.jpg" alt="à Direita Sinuosa Pista “S” à Direita Acentuada emCurvaà Direita Curva à Direita Acentuada Curva à Direita Curva Em “S”" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 3</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia3.jpg" alt="1ª à Direita Contrárias Sucessivas Junçõesà Esquerd aConfluência1ª à Esquerda Contrárias Sucessivas Junçõesà Direita Confluênciaà Frente Obrigatória Parada à Frente Semáforode Vias Cruzamento" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 4</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia4.jpg" alt="à Esquerda Oblíquo Entroncamento Direita Oblíquo à Entroncamento em Círculo Interseção em “T” Interseçãoà Direita Via Lateral em “Y” Bifurcaçãoà Esquerda Via Lateral" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 5</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia5.jpg" alt="Cascalho Projeção deDepressão ou Lombada Saliência Móvel Ponte Irregular Pista Desmoronamento Área com Escorregadia Pista Estreita Ponte" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 6</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia6.jpg" alt="Dividida Pista Acentuado Aclive à Direitade Pista Estreitamento Dupla Fim de Pista Centro de Pista ao Estreitamento Acentuado Declive à Esquerdade Pista Estreitamento DuplaInício de Pista " loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 7</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia7.jpg" alt="Sinalizada de Passagem CiclistasTrânsito de Máquinária Agrícola Trânsito de Tratores ou Criançasde PedestreTrânsito Sinalizada de Passagem Escolar Área" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 8</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia8.jpg" alt="Direitada Pista à Alargamento Sem Barreirade Nível Passagem Esquerdada Pista àAlargamento com Barreirade Nível Passagem Adiante Mão Dupla Duplo Sentido Único Sentido" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 9</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia9.jpg" alt="Direitada Pista à Alargamento Sem Barreirade Nível Passagem Esquerdada Pista à Alargamento com Barreirade Nível Passagem Adiante Mão Dupla Duplo Sentido Único Sentido" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 10</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia10.jpg" alt="Limitada Largura Ciclistas e Pedestres Compartilhado porTrânsito de CiclistasSinalizada Passagem Limitado Comprimento Limitada Altura por Eixo Limitado Peso Limitado Total Peso Bruto" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 11</h3>
+<h3 class="slide-subheading">Placas de Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/novas_placas_advertencia.jpg" alt="Pedestres à esquerda, VLT à direita, veículo" loading="lazy"></figure></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Apesar do desenho apresentar um ciclista,  MBST-Volume II (Sinalização Vertical de Advertencia) apresenta a nomenclatura referenciando um pedestre.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 12</h3>
+<h2 class="slide-heading">Placas Especiais de</h2>
+<h3 class="slide-subheading">Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia11.jpg" alt="Sinalização Especial
+para Pedestres Exclusivas de ÔnibusFaixas ou Pistas Sinalização Especial para" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 13</h3>
+<h2 class="slide-heading">Placas Especiais de</h2>
+<h3 class="slide-subheading">Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia12.jpg" alt="rânsito Rápido de TRodovias, Estradas e Vias Advertência somente para Sinalização Especial de " loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Advertência 14</h3>
+<h2 class="slide-heading">Placas Especiais de</h2>
+<h3 class="slide-subheading">Advertência</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-advertencia13.jpg" alt="Informações Complementares Placa de Advertência com" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical como Interpretar 1</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">como Interpretar</h3>
+<p></p>
+<p>Para evitar tais erros, lembre-se que:
+</p>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-placas-de-como-interpretar1.jpg" alt="Placas, interpretar, regulamenta, proibe uma ação, ações, adverte, futuro" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Como Interpretar 2</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Como Interpretar</h3>
+<p>Sempre interprete o desenho das placas, isso ajuda você na identificação da nomenclatura das mesmas.
+Veja o exemplo abaixo:
+</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/interpreta_placas.jpg" alt="ônibus, caminhão, grande porte, direita" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Possíveis Erros 1</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Possíveis Erros</h3>
+<p>Algumas placas, devido sua semelhança, ocasionam confusão na hora de sua identificação correta:</p>
+<div class="group-vertical"><figure class="image-element"><img src="images/erro1.jpg" alt="parada obrigatória à frente duplo sentido circulação mão dupla adiante" loading="lazy"></figure></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Lembre-se. Placas de advertência indicam uma situação de futuro, geralmente citando em seu nome o texto “à Frente” ou “Adiante”, bem como possuem o formato de um quadrado inclinado.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Possíveis Erros 2</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Possíveis Erros</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/erro2.jpg" alt="peso bruto total máximo permitido, limitado, permitida, altura, limitada" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Possíveis Erros 3</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Possíveis Erros</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/erro3.jpg" alt="Permitida/ Permitido Limitada / Limitado Limitada Largura Permitida Máxima Largura Limitada Altura Permitida Máxima Altura Limitado Total Peso Bruto Permitido Total Máximo Peso Bruto rotatoria interseção" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Possíveis Erros 4</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Possíveis Erros</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/erro4.jpg" alt="Comprimento máximo permitido, limitado, peso máximo, eixo" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Possíveis Erros 5</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Possíveis Erros</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/erro5.jpg" alt="vire, direita, curva, esquerda" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Possíveis Erros 6</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Possíveis Erros</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/erro6.jpg" alt="sentido de circulação, pista, via, exclusiva, bicicleta, sentido, único, circulação, trãnsito, ciclistas" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Possíveis Erros 7</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Possíveis Erros</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/erro7.jpg" alt="ciclista, pedestre, esquerda, direita, trânsito, compartilhado, passagem, sinalizada" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Possíveis Erros 8</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Possíveis Erros</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/leg-placas-possiveis-erros7a.jpg" alt="fim, pista, dupla" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Possíveis Erros 9</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Possíveis Erros</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-placas-possiveis-erros7b.jpg" alt="inicio, pista, dupla" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Vertical Possíveis Erros 10</h3>
+<h2 class="slide-heading">Sinalização Vertical</h2>
+<h3 class="slide-subheading">Possíveis Erros</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/erro10.jpg" alt="esquerda, acentuada, sinuosa, pista, curva" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Indicação de Identificação 1</h3>
+<h2 class="slide-heading">Placas de Indicação</h2>
+<h3 class="slide-subheading">de Identificação</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-placas-indi-indetif1.jpg" alt="Estaduais Estradas Rodovias Federai Estradas Rodovias e Panamericanas Estradas Rodovias e" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Indicação de Identificação 2</h3>
+<h2 class="slide-heading">Placas de Indicação</h2>
+<h3 class="slide-subheading">de Identificação</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-placas-indi-indetific2.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Indicação de Identificação 3</h3>
+<h2 class="slide-heading">Placas de Indicação</h2>
+<h3 class="slide-subheading">de Identificação</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-placas-indi-indetifi3.jpg" alt="Identificação Quilométrica Viadutos, Túneis  e Passarelas Identificação Nominal de Pontes e Logradouros Interesse  de Tráfego Identificação de Regiões de Identificação de Município" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Indicação Orientação de Destinos</h3>
+<h2 class="slide-heading">Placas de Indicação</h2>
+<h3 class="slide-subheading">Orientação de Destinos</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-placas-indic-orienta.jpg" alt="Diagramadas  Indicativas de Distância Indicativas de Sentido (Direção)" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Indicação Educativas</h3>
+<h2 class="slide-heading">Placas de Indicação</h2>
+<h3 class="slide-subheading">Educativas</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-placas-ind-educa.jpg" alt="luz baixa ao ulrapassar veículos" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas de Serviços Auxiliares 1</h3>
+<h2 class="slide-heading">Placas Indicativas de</h2>
+<h3 class="slide-subheading">Serviços Auxiliares</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-placas-indica-serv-aux1.jpg" alt="Área de Estacionamento SAU-01 Serviço telefônico SAU-06 Mecânico SAU-07 Abastecimento SAU-09 Pronto Socorro SAU-10 Terminal Rodoviário SAU-19" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas de Serviços Auxiliares 2</h3>
+<h2 class="slide-heading">Placas Indicativas de</h2>
+<h3 class="slide-subheading">Serviços Auxiliares</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-placas-indica-serv-aux2.jpg" alt="SAU-12 Restaurante SAU-08 Borracharia SAU-13 Hotel SAU-14 Área Campismo Aeroposrto Transporte sobre água" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas de Serviços Auxiliares 3</h3>
+<h2 class="slide-heading">Placas Indicativas de</h2>
+<h3 class="slide-subheading">Serviços Auxiliares</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-placas-indica-serv-aux3.jpg" alt="SAU-20 Terminal Ferroviário Metroviário SAU-26 Ponto Parada SAU-02 Informações Turísticas SAU-18 Pedágio" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas Ponto de  Parada</h3>
+<h2 class="slide-heading">Placas Indicativas de</h2>
+<h3 class="slide-subheading">Ponto de Parada</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/leg-placas-indica-ponto-de-partida2.jpg" alt="proibido estacionar e parar" loading="lazy"></figure>
+<p>Juntamente com a placa Ponto de Parada poderemos encontrar a marcação (pintura amarela da via) de Parada de Veículos Específicos. Nestes locais os demais veículos não podem estacionar ou parar, mesmo que para embarque e desembarque ou carga e descarga.
+</p></div>
+<p>A partir do marco do ponto de parada, dez metros para trás e dez metros para frente é proibido estacionar.</p>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas de Atrativos Turísticos</h3>
+<h2 class="slide-heading">Placas Indicativas de</h2>
+<h3 class="slide-subheading">Atrativos Turísticos</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-placas-indica-atrat-tur.jpg" alt="de Atrativo Turístico Indicação de Distânciade Atrativo Turístico Indicação de Sentido Atrativo Turístico Indicação de" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas de Posto de Fiscalização</h3>
+<h2 class="slide-heading">Placas Indicativas de</h2>
+<h3 class="slide-subheading">Posto de Fiscalização</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/posto_fiscalizacao.jpg" alt="Polícia rodoviária, posto passagem, fiscalização fazendária" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Pedestres</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_pedestre.jpg" alt="PED-01 Rota para pedestres PED-02 Travessia em nível PED-03 Passarela com acesso em rampa PED-04 Passagem subterrânea com acesso em rampa PED-05 Passagem com acesso por escada PED-06 Passagem subterrânea com acesso por escada PED-07 Botoeira em semáforo com travessia de pedestre" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Acessibilidade</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/pictograma_acessibilidade.jpg" alt="DEF-01 Indicação de rota, mobiliário, espaço ou equipamento que atende as exigências de normas de acessibilidade DEF-02 DEF-03 DEF-04 Indicação de travessia em nível para pedestre que atende as exigências de normas de acessibilidade Indicação de passarela para pedestre com acesso em rampa que atende as exigências de normas de acessibilidade Indicação de passagem subterrânea para pedestres com acesso em rampa que atende as exigências de normas de acessibilidade" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Serviçoss Auxiliares</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/pictograma_ser_auxiliar.jpg" alt="SAU-01 Pátios coletivos de estacionamento SAU-02 Locais de informações turísticas SAU-03 Casas de câmbio SAU-04 Locais de prestação de serviços postais SAU-05 Comércio, serviço e laser com funcionamento 24 h SAU-06 Locais com telefone para uso público" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas -Serviços Auxiliares</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_ser_auxiliar2.jpg" alt="SAU-07 Locais atendimento mecânico SAU-08 Locais serviço de borracheiro SAU-09 Existência de posto de abastecimento SAU-10 Existência de prontosocorro, hospital ou casa de saúde SAU-11 Locais equipados com sanitários públicos SAU-12 Existência de restaurante ou lanchonete " loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Serviços Auxiliares</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_ser_auxiliar3.jpg" alt="SAU-13 SAU-14 Existência de área destinada a camping Locais com serviços hoteleiros SAU-15 SAU-16 Locais equipados com chuveiros públicos Existência de área para estacionamento de trailler SAU-17 SAU-18 Existência de praça de pedágio" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Serviços Auxiliares</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_ser_auxiliar4.jpg" alt="SAU-19 Terminais de passageiros de ônibus, interurbano ou rodoviário SAU-20 Terminais de estações de trem e metrô SAU-21 Aeroportos domésticos e internacionais SAU-22 Locais de pouso ou manutenção de helicópteros SAU-23 Portos marítimos e fluviais SAU-24 Balsas ou ferry-boat" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Serviços Auxiliares</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_ser_auxiliar5.jpg" alt="SAU-25 Terminal de transporte quático de passageiros SAU-26 Ponto de parada de ônibus SAU-27 SAU-28 Existência de equipamento para fiscalização eletrônica de infração de trânsito Existência de sistema de cobrança automática de tarifa de pedágio SAU-29 Existência de circuito fechado de TV para monitorização de trânsito" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Atrat. Turísticos Naturais</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_atra_tur_natural.jpg" alt="SAU-25 Terminal de transporte quático de passageiros SAU-26 Ponto de parada de ônibus SAU-27 SAU-28 Existência de equipamento para fiscalização eletrônica de infração de trânsito Existência de sistema de cobrança automática de tarifa de pedágio SAU-29 Existência de circuito fechado de TV para monitorização de trânsito" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Atrat. Turísticos Naturais</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_atra_tur_natural2.jpg" alt="TNA-07 Grutas e cavernas com visitação permitida e reconhecida como de interesse de preservação TNA-08 Serviço de hospedagem, alimentação, lazer, compras e outros relacionados ao meio rural TNA-09 Localidades ou empreendimentos situados juntos a fontes de água mineral, com propriedades terapeuticas ou de revigoramento." loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Atrat. Históricos e Culturais</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_atra_hist_cult.jpg" alt="THC-01 Igrejas, capelas, templos, catedrais, basílicas, sinagogas, seminários, mosteiros, reconhecidos como de interesse de preservação. THC-02 Quartéis, fortes e fortalezas, reconhecidos como de interesse de preservação Edificações de valor histórico e artístico reconhecido como de interesse de preservação Obeliscos, esculturas estátuas, bustos, pórticos, chafarizes reconhecido como de interesse de preservação THC - 03 THC - 04" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Atrat. Históricos e Culturais</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_atra_hist_cult2.jpg" alt="Locais que abrigam e conservam acervos históricos ou artísticos, abertos à visitação pública, voltados à pesquisa, com objetivos de promover estudos, educação e lazer THC - 05 Ruínas de valor histórico reconhecidas como de interesse de preservação THC - 06 Conjunto de atrativos de interesse cultural abrangendo núcleos e centros históricos, rotas de circuitos culturais, reconhecidas como de interesse de preservação" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Atrat. Históricos e Culturais</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_atra_hist_cult3.jpg" alt="Locais onde se localizam vestígios de atividades humanas, ou não, reconhecidos como de interesse de preservação THC - 08 Faróis de auxílio à navegação em atividade, ou não, reconhecidos como de interesse de preservação THC - 09 Casas de cultura, centros culturais, pinacotecas, cinematecas, arquivos e demais locais onde ocorram manifestações culturais THC - 10 TCH-11 Bibliotecas abertas ao público" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Prática de Esportes</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_area_prat_esporte.jpg" alt="TAD - 01 Local para a prática de esportes (uso genérico) TAD - 02 Hípicas, hipódromos, jóqueis-clubes e haras TAD - 03 Autódromos, kartódromos e demais pistas de competição de veículos motorizados TAD - 04 Locais para a prática de esqui aquático, jet-sky vela e windsurf TAD - 05 Local para a prática de mergulho TAD - 06 Plataforma para decolagem de vôo livre" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Prática de Esportes</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_area_prat_esporte2.jpg" alt="TAD - 07 Local para a prática de surfe TAD - 08 Local para a prática de canoagem, remo e rafting TAD - 09 Local para a prática de pesca submarina TAD - 10 Local para a prática de pesca esportiva TAD - 11 Local para a prática de montanhismo TAD - 12 campo de golfe" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Prática de Esportes</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_area_prat_esporte3.jpg" alt="TAD - 13 Local para uso de aeronaves particulares TAD - 14 Marinas e ancoradouros TAD - 15 Estádios e outros locais para a prática de futebol TAD - 16 Ciclovias de lazer e velódromos " loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Área de Recreação</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_area_recreacao.jpg" alt="TAR - 01 Praças ou largos TAR - 02 Local de partida de barco de passeio TAR - 03 Parques urbanos com predominância de áreas verdes TAR - 04 TAR - 05 Teleféricos e bondes aéreos TAR - 06 Mirantes naturais ou construídos, locais com vistas panorâmicas de interesse turístico Represas e barragens TAR - 07 Parques de diversões e parques temáticos" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Interesse Turístico</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_int_turístico.jpg" alt="TIT - 01 Locais para festas típicas populares TIT - 02 Locais para exibições teatrais, anfiteatros TIT - 03 Auditórios e centros de convenções TIT - 04 produção e comercialização de artesanato TIT - 05 Jardins zoológicos" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Placas Indicativas - Interesse Turístico</h3>
+<h2 class="slide-heading">Placas Indicativas</h2>
+<h3 class="slide-subheading">Pictogramas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/pictograma_int_turístico2.jpg" alt="TIT - 06 Parques ou reservas para zoossafari TIT - 07 Planetários e observatórios astronômicos TIT - 08 Feiras de produtos típicos TIT - 09 Locais para exposições agropecuárias TIT - 10 Locais para realização de rodeios TIT - 10 Locais para realização de feiras, exposições e espaço cívico" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>A Sinalização Horizontal Introdução 1</h3>
+<h2 class="slide-heading">A Sinalização Horizontal</h2>
+<h3 class="slide-subheading">Introdução</h3>
+<p>Os Sinais Horizontais são:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/a-sinalizacao-horizontal-introducao_1.jpg" alt="Imagem" loading="lazy"></figure>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>A Sinalização Horizontal Introdução 2</h3>
+<h2 class="slide-heading">A Sinalização Horizontal</h2>
+<h3 class="slide-subheading">Introdução</h3>
+<p>O pavimento pode ser pintada com uma das cinco cores abaixo:
+</p>
+<div class="group-vertical"><figure class="image-element"><img src="images/cores_sin_horizontal.jpg" alt="indica sentido duplo e proibição de estacionamento 
+indica sentido único, estacionamento regulamentado símbolos e faixas de pedestre
+Símbolos e áreas especiais de estacionamento e/ou parada
+símbolos de hospitais e ciclovias ou ciclofaixas
+para constraste entre pavimento e a pintura" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Longitudinais Divisão de Fluxos Opostos</h3>
+<h2 class="slide-heading">Marcas Longitudinais</h2>
+<h3 class="slide-subheading">Divisão de Fluxos Opostos</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IbDKB-0RV5s" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Indica ao condutor a proibição ou permissão de ultrapassagem para ambos os lados da via, bem como proibe a chamada cavalgagem  da faixa.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Marcas Longitudinais Divisão de Fluxos Mesmo Sentido</h3>
+<h2 class="slide-heading">Marcas Longitudinais</h2>
+<h3 class="slide-subheading">Divisão de Fluxos Mesmo Sentido</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Para divisão de fluxos no mesmo sentido. Terá a cor branca e sendo contínua não permitirá a mudança de faixa até que se torne seccionada, provavelmente porque à frente existe um ponto de perigo.</p></div></details>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IbDKB-0RV5s" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Longitudinais Linhas de Bordo</h3>
+<h2 class="slide-heading">Marcas Longitudinais</h2>
+<h3 class="slide-subheading">Linhas de Bordo</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/FyHjwKhWvqg" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<p>
+Delimita  a parte da pista destinada ao deslocamento de veículos.</p></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Longitudinais Linhas de Continuidade</h3>
+<h2 class="slide-heading">Marcas Longitudinais</h2>
+<h3 class="slide-subheading">Linhas de Continuidade</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><p>Tais linhas são o prolongamento das linhas de bordos e  longitudinais, quando da ocorrência de um cruzamento, dando a noção de continuidade das  mesmas.</p>
+<figure class="image-element"><img src="images/legislacao-sinalizacao-horizonta-linhas-de-continuidade.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Longitudinais Resumo</h3>
+<h2 class="slide-heading">Marcas Longitudinais</h2>
+<h3 class="slide-subheading">Resumo</h3>
+<p>Proibida Ultrapassagem e Mudança de Faixa</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/116-1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/116-2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/116-3.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/116-4.jpg" alt="Imagem" loading="lazy"></figure></div>
+<p>Permitida Ultrapassagem, Mudança de Faixa  e  Passagem</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/116-5.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/116-6.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/116-7.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Longitudinais Faixas Exclusivas</h3>
+<h2 class="slide-heading">Marcas Longitudinais</h2>
+<h3 class="slide-subheading">Faixas Exclusivas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/veiculo_exclusivo.jpg" alt="Imagem" loading="lazy"></figure></div>
+<div class="group-horizontal"><div class="card-image"><img src="images/contra_fluxo_1.jpg" alt="Contra-Fluxo" loading="lazy"><h4>Contra-Fluxo</h4></div>
+<div class="spacer"></div>
+<div class="card-image"><img src="images/contra_fluxo_2.jpg" alt="No Fluxo" loading="lazy"><h4>No Fluxo</h4></div></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Longitudinais Faixas Preferenciais</h3>
+<h2 class="slide-heading">Marcas Longitudinais</h2>
+<h3 class="slide-subheading">Faixas Preferenciais</h3>
+<div class="spacer"></div>
+<div class="group-vertical"><p>Nestas faixas são permitidos veículos diversos, porém com preferência para os tipos de veículos indicados na sinalização vertical. A legislação prevê este tipo de faixa somente no mesmo fluxo das demais faixas da via.</p>
+<figure class="image-element"><img src="images/leg-sina-horizonta-resumo-3.jpg" alt="Exemplo de
+Sinalização No Fluxo
+Os veículos se deslocam no mesmo sentido  das demais faixas da viapara Ônibus Fluxo Preferencial" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Longitudinais Faixas Reversíveis</h3>
+<h2 class="slide-heading">Marcas Longitudinais</h2>
+<h3 class="slide-subheading">Faixas Reversíveis</h3>
+<div class="group-vertical"><p>São faixas que podem assumir qualquer mão de direção, no fluxo ou contra-fluxo, dependerá da operação de tráfego da via. Geralmente se utilizam dos sinais luminosos previstos para indicar o sentido assumido naquele momento para a faixa.</p>
+<figure class="image-element"><img src="images/leg-sinal-horizonta-resumo-4.jpg" alt="Sinal Luminoso para Controle de Faixas Reversíveis demais faixas da via" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Transversais Linha de Retenção</h3>
+<h2 class="slide-heading">Marcas Transversais </h2>
+<h3 class="slide-subheading">Linha de Retenção</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ceDqO7_RAIc" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Indica o ponto de retenção do seu veículo, ou então determina que você está na contramão da via, sendo colocada geralmente antes de faixas de pedestres e sinalização luminosa semafórica.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Marcas Transversais Estímulos a Redução da Velocidade</h3>
+<h2 class="slide-heading">Marcas Transversais </h2>
+<h3 class="slide-subheading">Estímulos a Redução da Velocidade</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/_YBJp-vpiw4" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Estimulam e induzem o condutor a reduzir a velocidade, pois são dispostas na via de forma transversal e progressivamente mais próximas umas das outras, o que dá ao condutor a impressão de que sua velocidade está aumentando, fazendo assim com que o mesmo diminua a velocidade real do veículo. Atenção, indicam que a frente há um obstáculo.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Marcas Transversais Linha de Dê a Preferência</h3>
+<h2 class="slide-heading">Marcas Transversais </h2>
+<h3 class="slide-subheading">Linha de Dê a Preferência</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><p>Indicam ao condutor  o local limite em que deve parar o veículo, quando necessário, em locais sinalizados com a placa R2 (Placa de Dê a Preferência) ou o símbolo R2 pintado no asfalto.</p>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/legislacao-sinalizacao-horizonta-dê-preferencia.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Transversais Travessia de Pedestre 1</h3>
+<h2 class="slide-heading">Marcas Transversais </h2>
+<h3 class="slide-subheading">Travessia de Pedestre</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/xKRgJfudLtI" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Geralmente encontradas em esquinas e antecedidas por uma marca de retenção, ou então no meio de uma via. Servem para permitir ao pedestre um local seguro para sua travessia. Sobre elas é proibido parar, estacionar, retornar ou ultrapassar.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Marcas Transversais Travessia de Pedestre 2</h3>
+<h2 class="slide-heading">Marcas Transversais</h2>
+<h3 class="slide-subheading">Travessia de Pedestre</h3>
+<div class="spacer"></div>
+<p>Com objetivo de garantir o direito de ir e vir, principalmente para pessoas com algum grau de dificuldade de locomoção, as cidades estão nivelando o faixa de travessia de pedestre com a calçada.</p>
+<div class="group-horizontal"><p>Devem ser implantadas em vias que apresentem uma velocidade máxima de 40 Km/H e o local deve ser bem iluminado.
+
+Jamais pare, estacione, ultrapasse ou retorne sobre estas faixas.</p>
+<figure class="image-element"><img src="images/faixa_elevada-slim.jpg" alt="Travessia elevada pedestre marcação cego piso tátil" loading="lazy"><figcaption>Travessia de Pedestre Elevada</figcaption></figure></div>
+<details class="infobox"><summary>Faixas Elevadas de Pedestres</summary><div class="infobox-content"><div class="group-vertical"><ul class='list-element'></ul></div></div></details>
+</div>
+
+<div class="slide">
+<h3>Marcas Transversais Faixas Exclusivas</h3>
+<h2 class="slide-heading">Marcas Transversais </h2>
+<h3 class="slide-subheading">Faixas Exclusivas</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/GWjQYcy_4r4" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>A marcação poderá ser amarela, indicando que a faixa está no contrafluxo da via, ou branca, indicando que está no fluxo (no mesmo sentido).</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Tal marcação indica que você irá cruzar por uma via que possui uma faixa exclusiva para a circulação de um determinado tipo de veículo, podendo ser ônibus, veículos de carga, etc. Se for realizar a conversão à direita, faça após cruzar a marcação da via exclusiva.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Proibição de Obstrução</h3>
+<h2 class="slide-heading">Proibição </h2>
+<h3 class="slide-subheading">de Obstrução</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Código de Trânsito Brasileiro</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O CTB  prevê no item VII do Art. 182 que o condutor não deve parar nas interseções de via (cruzamentos, bifurcações, entroncamentos e confluências). Em muitos casos, o cruzamento é dotado de uma marca viária, onde o ponto comum entre as duas vias é pintado com uma caixa amarela, o que indica que naquele local o condutor não deve parar. Por tais motivos, sempre que você for cruzar uma interseção, tenha certeza que seu veículo terá espaço suficiente à frente, mesmo que o tráfego venha a congestionar. </p></div></details>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/zZwiBx793YQ" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Transversais Ciclofaixas ou Ciclovias e seus Cruzamentos Rodocicloviários</h3>
+<h2 class="slide-heading">Marcas Transversais</h2>
+<h3 class="slide-subheading">Ciclofaixas ou Ciclovias e seus Cruzamentos Rodocicloviários</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>CICLOFAIXA
+Parte da pista de rolamento destinada à circulação exclusiva de ciclos, delimitada por sinalização específica.
+
+CICLOVIA
+Pista própria destinada à circulação de ciclos, separada fisicamente do tráfego comum.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Não muito comum, porém algumas cidades possuem as chamadas CICLOVIAS. No caso de você estar cruzando por uma ciclovia, ou mesmo ciclofaixa, saiba que a preferência é do ciclista que transita por esta. Caso você não respeite tal preferência estará cometendo uma INFRAÇÃO GRAVE com penalidade de MULTA.</p></div></details>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/edpaNGY5MZM" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>Marcas Transversais Cruzamento Rodoferroviário</h3>
+<h2 class="slide-heading">Marcas Transversais </h2>
+<h3 class="slide-subheading">Cruzamento Rodoferroviário</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-sin-hor-cru-rodo.jpg" alt="Imagem" loading="lazy"></figure>
+<p>Indica ao condutor a aproximação de um cruzamento em nível com uma ferrovia, bem como o local de parada do veículo. Pode ser com barreira ou sem barreira, onde você deve parar, olhar para ambos os lados da via férrea e escutar  antes de atravessar.</p></div>
+</div>
+
+<div class="slide">
+<h3>Marcas de Canalização 1</h3>
+<h2 class="slide-heading">Marcas de</h2>
+<h3 class="slide-subheading">Canalização</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-sinalizacao-horizonta-canalizacao.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Entenda a pintura de canalização de uma via como uma espinha de peixe. Você só poderá se deslocar a favor dela, nunca contra, pois neste caso estará na contramão.</p></div>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-sinalizacao-horizonta-canalizacao-2.jpg" alt="Fluxo em sentidos opostos 
+Fluxo no mesmo sentido " loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Marcas de Canalização 2</h3>
+<h2 class="slide-heading">Marcas de</h2>
+<h3 class="slide-subheading">Canalização</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Formam as chamadas ilhas de refúgio de pedestres.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Orientam o fluxo de tráfego em uma via, evitando por exemplo que um condutor pegue a contra-mão da mesma. São áreas não utilizáveis para o deslocamento de veículo e possuem duas cores básicas, a branca que direciona fluxos de mesmo sentido e a amarela que direciona fluxos de sentidos opostos.</p></div></details>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/3zToP3LoIIk" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/3zToP3LoIIk" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<p>                 Orientando o Fluxo                       Proibindo o Retorno</p>
+</div>
+
+<div class="slide">
+<h3>Proibição Estacionamento e/ou Parada</h3>
+<h2 class="slide-heading">Proibição </h2>
+<h3 class="slide-subheading"> Estacionamento e/ou Parada</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/6QU_2qjEP6o" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>A faixa amarela ao longo da borda da via indica que é proibido parar (mesmo que por curto espaço de tempo) e/ou estacionar. O que definirá a proibição específica é a sinalização vertical, ou seja, a colocação da placa R-6a (Proibido Estacionar) ou R-6c (Proibido Parar e Estacionar).
+
+É obrigatória a colocação de placa vertical para regulamentar a proibição</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Parada de Veículos Específicos</h3>
+<h2 class="slide-heading">Parada de</h2>
+<h3 class="slide-subheading"> Veículos Específicos</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/n-U2h2Z0nbo" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Muito comum nos meios urbanos. Podemos citar as marcas que definem locais exclusivos para parada de ônibus, pintadas na via de cor amarela. Nestes locais, os demais veículos não podem estacionar ou parar, mesmo que por curto espaço de tempo.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Estacionamento Regulamentado na Via 1</h3>
+<h2 class="slide-heading">Estacionamento</h2>
+<h3 class="slide-subheading"> Regulamentado na Via</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/A3qu_9h6Plc" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Áreas de estacionamento regulamentado para um tipo específico de finalidade, tal como área de embarque e desembarque de deficientes físicos, ou então para veículos em geral, podendo ser oblíquo ou paralelo à via.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Estacionamento Regulamentado na Via 2</h3>
+<h2 class="slide-heading">Estacionamento</h2>
+<h3 class="slide-subheading"> Regulamentado na Via</h3>
+<div class="spacer"></div>
+<p>Áreas de estacionamentos regulamentados definem basicamente três coisas, sendo:</p>
+<ul class='list-element'></ul>
+<div class="group-horizontal"><figure class="image-element"><img src="images/idoso_simbolo.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Símbolo de pessoa idosa Indicação de área de estacionamento para veículos de pessoas com 60 anos ou mais</p></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Inscrições no Pavimento</h3>
+<h2 class="slide-heading">Inscrições</h2>
+<h3 class="slide-subheading">no Pavimento</h3>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/NV_k7jNG4Sw" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/NV_k7jNG4Sw" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Melhoram a percepção do condutor quanto às condições de operação da via, permitindo-lhe tomar a decisão adequada, no tempo apropriado, para as situações que  apareçam.</p></div></details>
+<p>                Setas Direcionais                       Símbolos e Legendas</p>
+</div>
+
+<div class="slide">
+<h3>Inscrições Significado das Setas</h3>
+<h2 class="slide-heading">Inscrições </h2>
+<h3 class="slide-subheading">Significado das Setas</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legi-sinal-hor-significado-setas.jpg" alt="Pedestre Fluxo para Siga em Frente à Direita Retorno à Esquerda Retorno Siga em Frente ou à Direita Siga em frente ou à Esquerda Vire à Direita Vire à Esquerda" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Inscrições Mudança de Faixa</h3>
+<h2 class="slide-heading">Inscrições </h2>
+<h3 class="slide-subheading">Mudança de Faixa</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><div class="spacer"></div>
+<p>A inscrição no pavimento de mudança obrigatória de faixa indica ao condutor com antecedência que o mesmo deve reduzir a velocidade e trocar de faixa com cuidado, sem obstruir o fluxo dos demais veículos.</p>
+<div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/7bczHiGZvO0" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>Inscrições Movimento em Curva</h3>
+<h2 class="slide-heading">Inscrições </h2>
+<h3 class="slide-subheading"> Movimento em Curva</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-sinalizacao-horizonta-em-curvas.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Tais inscrições são utilizadas em locais que possuem curva acentuada, tal como nas rotatórias, indicando também o sentido de deslocamento.</p></div>
+</div>
+
+<div class="slide">
+<h3>Inscrições Significado dos Símbolos</h3>
+<h2 class="slide-heading">Inscrições </h2>
+<h3 class="slide-subheading">Significado dos Símbolos</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/simbolos.jpg" alt="Dê a Preferência Físicos Deficientes Saúde Serviço de Bicicletas André Cruz de Santo" loading="lazy"></figure>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Símbolo de pessoa idosa - Indicação de área de estacionamento para veículos de pessoas com 60 anos ou mais.</p></div></details></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Símbolo indicativo de local de estacionamento de veículos elétricos durante o período de recarga (SIRVE</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Inscrições Ciclorrota</h3>
+<h2 class="slide-heading">Inscrições no Pavimento</h2>
+<h3 class="slide-subheading">Símbolos Experimentais</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/ciclorota_sir.jpg" alt="indicação de rota de bicicleta (ciclorrota) - SIR" loading="lazy"></figure>
+<p> Indicação de rota de bicicleta (ciclorrota) - SIR.</p></div>
+</div>
+
+<div class="slide">
+<h3>Inscrições Área de Espera</h3>
+<h2 class="slide-heading">Inscrições da  Área de Espera</h2>
+<h3 class="slide-subheading">Símbolos Experimentais</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/area_esp_moto.jpg" alt="área de espera motocicleta bicicleta" loading="lazy"><figcaption>Área de Espera</figcaption></figure>
+<div class="spacer"></div>
+<p>Acompanhados de placas educativas, os símbolos experimentais de área de espera para motocicletas e bicicletas servem para que estes tipos de veículos e seus condutores se posicionem à frente dos demais veículos parados em razão de sinal luminoso, cancela, bloqueio viário parcial ou qualquer outro obstáculo.</p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Importante citar que esta sinalização é de caráter experimental e no momento está em conflito com o art 211 do CTB, o qual cita ser uma infração grave com penalidade de multa o ato de ultrapassar veículos em fila, parados em razão de sinal luminoso, cancela, bloqueio viário parcial ou qualquer outro obstáculo, com exceção dos veículos não motorizados. Acredita-se que os agentes de trânsito serão orientados a desconsiderar este artigo quando existir a sinalização de Área de Espera.</p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Semafórica Regulamentação 1</h3>
+<h2 class="slide-heading">Sinalização Semafórica</h2>
+<h3 class="slide-subheading"> Regulamentação</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Nas vias públicas e nos imóveis é proibido colocar luzes, publicidade, inscrições, vegetação e mobiliário que possam gerar confusão, interferir na visibilidade da sinalização e comprometer a segurança do trânsito (Art. 81 do CTB). </p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Tem a função de efetuar o controle do trânsito num cruzamento ou seção da via, através de indicações luminosas, alternando o direito de passagem dos vários fluxos de veículos e/ou pedestres.</p></div></details>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/kL17Vu2zsxE" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/qeQyuY1kw2s" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<p>                     Para Veículos                                     Para Pedestre
+
+    Acrescido pela LEI Nº 14.071(13/10/2020) -  </p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>É livre o movimento de conversão à direita diante de sinal vermelho do semáforo onde houver sinalização indicativa que permita essa conversão, observados os movimentos de pedestres.</p>
+<figure class="image-element"><img src="images/legislacao-sinaliza-livre-direita.jpg" alt="Conversão libre direita" loading="lazy"></figure></div></details>
+</div>
+
+<div class="slide">
+<h3>Sinalização Semafórica Regulamentação 2</h3>
+<h2 class="slide-heading">Sinalização Semafórica </h2>
+<h3 class="slide-subheading">Regulamentação</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-sinal-semaf-regula.jpg" alt="Livre Semáforo de Direção Controlada Com Símbolo para Direção (Pedágio e Balsa )Semáforo de Duas Luzes Semáforo de Três Luzes" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Semáforo Para Controle Faixas Reversíveis</h3>
+<h2 class="slide-heading">Semáforo Para Controle</h2>
+<h3 class="slide-subheading"> Faixas Reversíveis</h3>
+<div class="spacer"></div>
+<p>São semáforos utilizados para controlar faixas de tráfego que têm sua circulação (mão de direção) invertida somente em determinados horários, normalmente nos horários de pico, para possibilitar maior escoamento do volume de tráfego, minimizando os congestionamentos.</p>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-sinal-semaf-regula-3-nova.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Semáforo para Ciclistas</h3>
+<h2 class="slide-heading">Semáforo</h2>
+<h3 class="slide-subheading"> para Ciclistas</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-semaforo-ciclista.jpg" alt="Imagem" loading="lazy"></figure>
+<p>Implementado pelo Manual Brasileiro de Sinalização de Trânsito, o semáforo para ciclista possui similaridade com os demais semáforos. No amarelo o ciclista deve parar com segurança, no vermelho aguardar a abertura do sinal e no verde seguir em frente com segurança.</p></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização Semafórica Advertência</h3>
+<h2 class="slide-heading">Sinalização Semafórica</h2>
+<h3 class="slide-subheading"> Advertência</h3>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/WbIjGVTr3XM" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<figure class="image-element"><img src="https://cursos.itt.org.br/static/assets/images/legislacao-sinalizacao-semaforica-advertencia.jpg" alt="duas luzes piscando alternadamente uma única luz interrmitente" loading="lazy"></figure></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Adverte sobre a existência de obstáculos ou situações perigosas, devendo o condutor reduzir a velocidade e adotar as medidas de precaução compatíveis com a segurança para seguir adiante.  Bastante utilizado em interseções após a passagem do horário de movimento, onde as cores vermelha e verde do semáforo são desligadas e a amarela passa a funcionar de forma intermitente (piscando).</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Nas oficinas, estacionamentos e/ou garagens de uso coletivo, suas entradas e saídas, além do rebaixamento da guia (meio-fio) da calçada, deverão ser identificadas pela instalação, em locais de fácil visibilidade e audição aos pedestres, de dispositivo que possua sinalização com luzes intermitentes na cor amarela, bem como emissão de sinal sonoro (Art nº 01 da Resolução 038/98 do CONTRAN);</p>
+<div class="group-horizontal"></div></div></details>
+</div>
+
+<div class="slide">
+<h3>Semáforo para Atravessamento</h3>
+<h2 class="slide-heading">Semáforo para Atravessamento</h2>
+<h3 class="slide-subheading">de Trilhos</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/sem_rodoferro.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Sinalização semafórica de regulamentação para proibir o direito de passagem de veículos e pedestres enquanto durar o atravessamento de trens, enquanto estiver acesso (somente cor vermelha) – Adicionado pela Resolução CONTRAN 857/2021</p></div>
+</div>
+
+<div class="slide">
+<h3>Placas de Obras</h3>
+<h2 class="slide-heading">Placas de</h2>
+<h3 class="slide-subheading">Obras</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-sinal-semaf-obras.jpg" alt="desvio a direira a 100m" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>São PLACAS temporárias, somente durante o período de obras. Com desenho idêntico a das PLACAS DE ADVERTÊNCIA, diferenciando-se apenas pela cor ALARANJADA ESCURA.</p></div>
+</div>
+
+<div class="slide">
+<h3>Gestos do Agente Pára Todos os Sentidos</h3>
+<h2 class="slide-heading">Gestos do Agente </h2>
+<h3 class="slide-subheading">Pára Todos os Sentidos</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Os veículos que se encontram na interseção não devem parar, devem continuar e desobstruir o cruzamento, parando logo após o mesmo, caso necessário. Este gesto é muito comum em situações que o Agente de Trânsito pretende oferecer passagem a um veículo de emergência em emergência, devendo os condutores pararem mais à direita da pista.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>As ordens emanadas por gestos de Agentes da Autoridade de Trânsito prevalecem sobre as regras de circulação e as normas definidas por outros sinais de trânsito.</p></div></details>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/enKZBxT_oi4" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>Gestos do Agente Parada Ortogonal</h3>
+<h2 class="slide-heading">Gestos do Agente </h2>
+<h3 class="slide-subheading">Parada Ortogonal</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Com este movimento, o agente de trânsito indica que todos os condutores que estejam em um trajeto ortogonal, ou seja, perpendicular, formando um ângulo de 90º entre seu braço estendido e a linha imaginária de direção do veículo, devem parar, independentemente do agente estar de frente ou de costas . Caso o veículo já esteja cruzando a interseção quando o agente executar o gesto, o mesmo deve completar o cruzamento.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>As ordens emanadas por gestos de Agentes da Autoridade de Trânsito prevalecem sobre as regras de circulação e as normas definidas por outros sinais de trânsito.</p></div></details>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/NuXra_yu2f4" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/NuXra_yu2f4" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<p>     Parada Ortogonal Dois Lados               Parada Ortogonal Um Lado
+</p>
+</div>
+
+<div class="slide">
+<h3>Gestos do Agente Seguir em Frente</h3>
+<h2 class="slide-heading">Gestos do Agente </h2>
+<h3 class="slide-subheading">Seguir em Frente</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Estando um ou mais veículos parados, o Agente de Trânsito poderá se valer do gesto de mão juntamente com o sinal de apito para determinar aos condutores que sigam em frente.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>As ordens emanadas por gestos de Agentes da Autoridade de Trânsito prevalecem sobre as regras de circulação e as normas definidas por outros sinais de trânsito.</p></div></details>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/y9d5JKfboRE" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>Gestos do Agente Redução de Velocidade</h3>
+<h2 class="slide-heading">Gestos do Agente </h2>
+<h3 class="slide-subheading">Redução de Velocidade</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Similar ao gesto utilizado pelos condutores, o Agente de Trânsito também pode se comunicar com os mesmos por gestos para indicar uma ordem de redução de velocidade.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>As ordens emanadas por gestos de Agentes da Autoridade de Trânsito prevalecem sobre as regras de circulação e as normas definidas por outros sinais de trânsito.</p></div></details>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/y9d5JKfboRE" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>Gestos do Agente Foco de Luz Vermelha</h3>
+<h2 class="slide-heading">Gestos do Agente </h2>
+<h3 class="slide-subheading">Foco de Luz Vermelha</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>No período noturno, caso o Agente de Trânsito tenha a intenção de parar um veículo poderá utilizar o sinal de luz. Porém o mesmo deverá utilizar o bom senso, posicionando-se preferencialmente em postos de fiscalização, pois nos dias de hoje o condutor deve preocupar-se também com assaltos e sequestros.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>As ordens emanadas por gestos de Agentes da Autoridade de Trânsito prevalecem sobre as regras de circulação e as normas definidas por outros sinais de trânsito.</p></div></details>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/n0DbG2utloc" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>Gestos do Agente Silvos de Apito</h3>
+<h2 class="slide-heading">Gestos do Agente </h2>
+<h3 class="slide-subheading">Silvos de Apito</h3>
+<p>Os silvos de apito são emitidos pelo Agente de Trânsito em conjunto com os gestos, conforme abaixo:</p>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Gestos Condutores</h3>
+<h2 class="slide-heading">Gestos</h2>
+<h3 class="slide-subheading">Condutores</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O Condutor também poderá se comunicar com os demais usuários do ambiente de trânsito pelos gestos, sendo conveniente esta prática quando notamos um certo tumulto e desordem, tal como o excesso de congestionamento ou barulho, o que prejudica a percepção dos demais condutores e pedestres, sendo o gesto de braço uma forma de alertar antecipadamente sobre sua intenção.</p></div></details>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/iPitmvfcxtU" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>Dispositivos Delimitadores</h3>
+<h2 class="slide-heading">Dispositivos</h2>
+<h3 class="slide-subheading"> Delimitadores</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/leg-disp-delimi.jpg" alt="Balizadores de Pontes,Viadutos,
+Túneis, Barreiras e DefensasTachas e TachõesCilindros Delimitadores Balizadores de BastãoPerspectivaista em VACHASACHÕES
+" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Dispositivos de Canalização</h3>
+<h2 class="slide-heading">Dispositivos de</h2>
+<h3 class="slide-subheading">Canalização</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-dispositivos-canalizacao.jpg" alt="segregadores prisma de concreto" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Servem para substituir as guias, impedindo a transposição dos veículos em determinados locais. </p></div>
+<div class="group-vertical"><figure class="image-element"><img src="https://cursos.itt.org.br/static/assets/images/legislacao-dispositivos-canalizacao-2.jpg" alt="Prisma de ConcretoSegregadores" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Dispositivos de Sinalização de Alerta 1</h3>
+<h2 class="slide-heading">Dispositivos de</h2>
+<h3 class="slide-subheading">Sinalização de Alerta</h3>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/0ZYVRjV9jA8" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Conjunto de elementos colocados ou aplicados juntos ou nos obstáculos e ao longo de curvas horizontais, com o objetivo de melhorar a percepção do condutor do veículo quanto a um possível empecilho ao seu deslocamento, a mudança brusca no alinhamento horizontal da via, ou em situação de perigo potencial. Utilizam-se as cores amarela e preta em faixas inclinadas e alternadas.</p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>Dispositivos de Sinalização de Alerta 2</h3>
+<h2 class="slide-heading">Dispositivos de</h2>
+<h3 class="slide-subheading">Sinalização de Alerta</h3>
+<div class="group-vertical"><p>Interpretação dos Marcadores de Perigo</p>
+<figure class="image-element"><img src="images/3.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Características do Pavimento</h3>
+<h2 class="slide-heading">Características </h2>
+<h3 class="slide-subheading">do Pavimento</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-dispositivos-caracterisca-do_pavimento.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>São recursos que alteram propositalmente as condições normais da pista de rolamento, quer pela sua elevação com a utilização de dispositivos físicos colocados sobre a mesma, quer pela mudança nítida das características de rugosidade do próprio pavimento. São utilizados para estimular a redução de velocidade.</p></div>
+</div>
+
+<div class="slide">
+<h3>Dispositivos de Proteção Contínua</h3>
+<h2 class="slide-heading">Características </h2>
+<h3 class="slide-subheading"> de Proteção Contínua</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-dispositivos-protecao-continua.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>São elementos colocados de forma contínua e permanente ao longo da via, feitos de metal flexível ou rígido, os quais possuem a finalidade de evitar que veículos e pedestres transponham determinado local.</p></div>
+</div>
+
+<div class="slide">
+<h3>Dispositivos Luminosos</h3>
+<h2 class="slide-heading">Dispositivos</h2>
+<h3 class="slide-subheading">Luminosos</h3>
+<div class="group-vertical"><p>Permitem melhor visualização de mensagens de advertência, educativas, de orientação, informativas  e  de  regulamentação.</p>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/legislacao-dispositivos-luminosos.jpg" alt="desvio a 500 m painel eletrônico setas luminosas" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Dispositivos Temporários</h3>
+<h2 class="slide-heading">Dispositivos</h2>
+<h3 class="slide-subheading">Temporários</h3>
+<div class="group-vertical"><p>Podem ser fixos ou móveis e são utilizados em caso de obras, emergência ou perigo.</p>
+<figure class="image-element"><img src="images/legislacao-dispositivos-temporarios-2.jpg" alt="Cilindro Móvel Balizador Tambor Fita Zebrada Conede Sentido Com Indicação Luminosos Com Elementos" loading="lazy"></figure>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><div class="group-vertical"><figure class="image-element"><img src="images/bandeirola.jpg" alt="Imagem" loading="lazy"></figure>
+<p>A bandeira sinalizadora é um dispositivo utilizado para alertar os condutores de veículos quanto à diminuição da velocidade ou parada obrigatória em intervenção temporária ou emergencial, em campanha ou em operação de trânsito. Normalmente complementa outros dispositivos auxiliares de sinalização</p></div></div></details></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização MOPP</h3>
+<h2 class="slide-heading">Sinalização para</h2>
+<h3 class="slide-subheading">M.O.P.P</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-mop.jpg" alt="Imagem" loading="lazy"></figure>
+<p>Veículos que transportam produtos perigosos devem ser devidamente identificados conforme definição da ANTT (Agência Nacional de Transportes Terrestres). A classificação desses produtos é feita com base no tipo de risco que apresentam.
+Evite sempre que possível andar muito próximo à estes  veículos, pois em caso de Sinistro de Trânsito o risco de morte é potencializado conforme a carga transportada.</p></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização MOPP Classes 1</h3>
+<h2 class="slide-heading">Sinalização MOPP</h2>
+<h3 class="slide-subheading">Classes</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-mopp-classe-01.jpg" alt="CLASSE 3 - LÍQUIDOS INFLAMÁVEIS CLASSE 2 - GASES CLASSE 1 - EXPLOSIVOS" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização MOPP Classes 2</h3>
+<h2 class="slide-heading">Sinalização MOPP</h2>
+<h3 class="slide-subheading">Classes</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/legislacao-mopp-classe-2.jpg" alt="Diversos CLASSE 9 Corrosivos CLASSE 8Radioativos CLASSE 7Tóxicos ou Infectantes CLASSE 6Oxidantes e P. Orgânico CLASSE 5" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sinalização MOPP Painel de Segurança</h3>
+<h2 class="slide-heading">Sinalização MOPP</h2>
+<h3 class="slide-subheading">Painel de Segurança</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-mopp-paineis.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Caso o número de risco iniciar com a letra "X" indica que a substância reage perigosamente com água.
+
+
+A repetição do número indica geralmente o aumento da intensidade do risco especificado.
+88 – produto extremamente corrosivo
+
+Painéis sem nenhuma inscrição podem indicar o transporte de mais de um tipo de produto perigoso sendo transportado.</p></div>
+</div>
+        </div>
+        <div class="nav-bar">
+            <a href="m02-s02-o-processo-de-habilitacao-e-de-registro.html">← Anterior</a>
+            <a href="m02-s04-normas-gerais-de-circulacao-e-conduta.html">Próxima →</a>
+        </div>
+        <footer class="footer">
+            <a href="https://cursos.itt.org.br">ITT</a> — Nosso Trânsito Multimídia — Primeira Habilitação
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condução do Veículo em Circunstâncias Adversas - M3 - CONDUÇÃO EFICIENTE E SEGURA | Nosso Trânsito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, rgba(246,241,215,0.92) 0%, rgba(235,225,170,0.85) 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .page-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .site-header {
+            background: #f9f6eb;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #DCBD32;
+        }
+        .site-header .logo img { height: 42px; width: auto; }
+        .site-header h2 { font-size: 1em; color: #1a1a1a; display: none; }
+        .course-badge {
+            background: linear-gradient(135deg, #DCBD32, #c4a82a);
+            color: #1a1a1a;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.78em;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            padding: 12px 40px;
+            background: #f9f6eb;
+            border-bottom: 1px solid #e8e0c0;
+            font-size: 0.85em;
+            color: #6b5e3e;
+        }
+        .breadcrumb a { color: #8b7a3e; text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+        .module-header {
+            padding: 32px 40px;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #3a3a3a);
+            color: white;
+            position: relative;
+        }
+        .module-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #DCBD32, #e8d44d, #DCBD32);
+        }
+        .module-header .label { font-size: 0.82em; text-transform: uppercase; letter-spacing: 2px; color: #DCBD32; font-weight: 600; margin-bottom: 6px; }
+        .module-header h1 { font-size: 1.5em; font-weight: 700; }
+        .content-body { padding: 36px 40px; }
+        .slide { margin-bottom: 48px; border-bottom: 1px solid #e8e0c0; padding-bottom: 32px; }
+        .slide:last-child { border-bottom: none; }
+        .slide-heading { color: #1a1a1a; font-size: 1.35em; margin: 1.5em 0 0.7em; padding-bottom: 8px; border-bottom: 2px solid #DCBD32; font-weight: 700; }
+        .slide-subheading { color: #3a3a3a; font-size: 1.15em; margin: 1.2em 0 0.5em; font-weight: 600; }
+        p { margin-bottom: 1em; text-align: justify; }
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        .image-element { margin: 1em 0; text-align: center; }
+        .image-element figcaption { font-size: 0.85em; color: #6b5e3e; margin-top: 6px; }
+        .video-element { margin: 1em 0; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+        .group-horizontal { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; margin: 1em 0; }
+        .group-horizontal > * { flex: 1; min-width: 200px; }
+        .group-vertical { margin: 1em 0; }
+        .grid-element { display: grid; gap: 16px; margin: 1em 0; }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        .list-element { margin: 0.5em 0 1em 1.5em; }
+        .list-element li { margin-bottom: 0.4em; }
+        .infobox { margin: 1em 0; background: #fdf8e1; border-left: 4px solid #DCBD32; border-radius: 0 8px 8px 0; }
+        .infobox summary { cursor: pointer; padding: 12px 20px; font-weight: 600; color: #6b5010; }
+        .infobox-content { padding: 0 20px 16px; }
+        .card-image { background: #f9f6eb; border-radius: 10px; padding: 16px; margin: 8px 0; text-align: center; }
+        .card-image img { max-height: 200px; border-radius: 6px; margin-bottom: 8px; }
+        .card-image h4 { color: #1a1a1a; margin-bottom: 4px; }
+        .card-detail { text-align: left; margin-top: 8px; font-size: 0.9em; }
+        .timeline { border-left: 3px solid #DCBD32; margin: 1em 0 1em 16px; padding-left: 20px; }
+        .timeline-item { margin-bottom: 16px; position: relative; }
+        .timeline-item::before { content: ''; width: 12px; height: 12px; background: #DCBD32; border-radius: 50%; position: absolute; left: -27px; top: 6px; }
+        .accordion { margin: 1em 0; }
+        .accordion-item { border: 1px solid #e8e0c0; border-radius: 8px; margin-bottom: 8px; }
+        .accordion-item summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
+        .accordion-content { padding: 0 16px 12px; }
+        .compare-slider { display: flex; gap: 16px; margin: 1em 0; }
+        .compare-slider > div { flex: 1; text-align: center; }
+        .compare-slider img { max-width: 100%; border-radius: 8px; }
+        .compare-slider span { display: block; font-size: 0.85em; color: #6b5e3e; margin-top: 4px; }
+        .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .quiz-question { margin-bottom: 12px; }
+        .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
+        .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
+        .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
+        .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .spacer { height: 20px; }
+        .nav-bar { display: flex; justify-content: space-between; padding: 16px 40px; background: #f9f6eb; border-top: 1px solid #e8e0c0; }
+        .nav-bar a { color: #8b6914; text-decoration: none; font-weight: 600; font-size: 0.9em; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .footer { background: #1a1a1a; color: #999; text-align: center; padding: 16px 40px; font-size: 0.78em; }
+        .footer a { color: #DCBD32; text-decoration: none; font-weight: 600; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .site-header, .breadcrumb, .content-body, .nav-bar, .footer { padding-left: 20px; padding-right: 20px; }
+            .module-header { padding: 24px 20px; }
+            .group-horizontal { flex-direction: column; }
+            .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="site-header">
+            <div class="logo"><img src="images/logo.png" alt="Condutor Legal"></div>
+            <span class="course-badge">Primeira Habilitação</span>
+        </header>
+        <div class="breadcrumb">
+            <a href="index.html">Início</a>
+            <span class="sep">›</span>
+            <a href="index.html">M3 - CONDUÇÃO EFICIENTE E SEGURA</a><span class="sep">›</span>Condução do Veículo em Circunstâncias Adversas
+        </div>
+        <div class="module-header">
+            <div class="label">M3 - CONDUÇÃO EFICIENTE E SEGURA</div>
+            <h1>Condução do Veículo em Circunstâncias Adversas</h1>
+        </div>
+        <div class="content-body">
+            <div class="slide">
+<h3>Condições Adversas a Via - Parte I</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">a Via</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-adversao-via.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Uma via adversa à segurança é a que possui má conservação, muitas lombadas, sem separadores, aclives e declives fortes, com serras e precipícios, pistas estreitas, sem acostamento, escorregadias, com sinalização defeituosa ou inexistente, com curvas mal projetadas, com a vegetação muito próxima a via, com pontos de acúmulo de água ou estando em obras.</p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas a Via - Parte II</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">a Via</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Veículo  - Parte I</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Veículo</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-veiculo-1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A má conservação do veículo aumenta a possibilidade de haver falha humana e culmina em Sinistro de Trânsito.
+Por isso, é essencial manter seu veículo sempre em boas condições. </p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Veículo  - Parte II</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Veículo</h3>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Um Condutor Defensivo NÃO viaja em um veículo com condições duvidosas de segurança, dá prioridade à sua segurança e de sua família.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Veículo Duas Rodas  - Parte I</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Veículo Duas Rodas</h3>
+<div class="spacer"></div>
+<p>Lembre-se, veículos de duas rodas não possuem air-bag nem pára-choque e em caso de Sinistro de Trânsito provavelmente você será projetado multiplicando diversas vezes seu peso real.</p>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Veículo Duas Rodas  - Parte II</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Veículo Duas Rodas</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-veiculo-duas-rodas.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A roupa apropriada para conduzir um veículo de duas rodas é algo muito importante, pois evita no caso de um Sinistro de Trânsito que seu condutor seja literalmente ralado pelo asfalto abrasivo e áspero.</p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Veículo Duas Rodas  - Parte III</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Veículo Duas Rodas</h3>
+<div class="spacer"></div>
+<p>Apesar de permitido pelas normas de trânsito, andar com sua motocicleta por entre as filas de veículos é algo perigoso, além de gerar nos demais condutores irritação e sentimento de competição.</p>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte I</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Condutor</h3>
+<p>
+A FALTA DE TEMPO</p>
+<div class="group-horizontal"><p>O Condutor defensivo programa seu dia e suas viagens de forma mais cuidadosa, dedicando o tempo necessário para seus deslocamentos, pois sabe que em uma manobra imprudente ou em uma correria para ganhar alguns segundos, poderá ceifar a vida de alguém ou até mesmo perder a sua. </p>
+<div class="group-vertical"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-do-condutor.jpg" alt="Imagem" loading="lazy"></figure></div></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte II</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Condutor</h3>
+<p>
+CUIDADO COM O SONO!
+
+Alguns fatores que provocam a sonolência:</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte III</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Condutor</h3>
+<p>
+O SONO É UM PERIGO!
+
+Você percebe que está com sono quando:</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte IV</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Condutor</h3>
+<p>
+PRECAUÇÕES COM RELAÇÃO AO SONO:</p>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>A Lei Federal 13.103/15 prevê que o motorista profissional deve fazer um intervalo de descanso, sendo:</p>
+<ul class='list-element'></ul></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Continuação...</p>
+<ul class='list-element'></ul></div></details>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte V</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Condutor</h3>
+<p>VISÃO E AUDIÇÃO</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/visão-audição.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O motorista conta com todos os seus sentidos para conduzir seu veículo, porém principalmente com a visão e a audição. O CTB cita que todo condutor deverá passar por uma reavaliação médica há cada dez, cinco ou três anos (conforme a idade do condutor), porém o agravamento de um problema de visão ou audição poderá ocorrer antes desse período.</p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><figure class="image-element"><img src="images/deficiente_auditivo.jpg" alt="Imagem" loading="lazy"></figure>
+<p>É obrigatória a colocação, de forma visível, do "Símbolo Internacional de Surdez" em todos os locais que possibilitem acesso, circulação e utilização por pessoas portadoras de deficiência auditiva, e em todos os serviços que forem postos à sua disposição ou que possibilitem o seu uso.</p></div></details></div>
+<p>O Símbolo Internacional de Surdêz</p>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte VI</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Condutor</h3>
+<div class="group-vertical"><p>A METAMORFÓSE</p>
+<div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/XCRq74FzZck" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>A METAMORFOSE
+
+A metamorfose é um fenômeno psicológico que ocorre com alguns condutores de forma inconsciente, onde o mesmo incorpora as características do veículo que está conduzindo.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte VII</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do condutor</h3>
+<p>
+O EXIBICIONISMO</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-exibicionismo.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O exibicionismo, é um estado psicológico de imaturidade onde o motorista sente a necessidade de chamar a atenção para sua pessoa utilizando para tal seu veículo.</p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte VIII</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do condutor</h3>
+<p>
+O Estado Emocional e as Preocupações</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/est-emocional-preoc.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O ser humano é passível de dois tipos básicos de alterações mentais, as Psíquicas (portadores de doenças como epilepsia, neuroses, etc) e as Psicológicas e Emocionais (stress, depressão, irritação, raiva, entre outras).</p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte XI</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do condutor</h3>
+<p>
+ATENÇÃO COM A EMOÇÃO!</p>
+<div class="group-horizontal"><p>Avalie sua condição  emocional antes de conduzir um veículo, caso tenha qualquer dúvida é melhor não dirigir ou então solicitar a ajuda de alguém para tal finalidade. </p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte X</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do condutor</h3>
+<p>
+O MEDO</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-medo.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O medo é comum a grande maioria dos motoristas, e em certa dosagem é até benéfico, pois preservará a cautela do condutor, porém torna-se um problema quando o condutor passa a agir de forma insegura e desordenada em função dele. </p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Condutor - Parte XI</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do condutor</h3>
+<p>
+EXCESSO DE CONFIANÇA</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-excesso-confianca.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O excesso de confiança leva a falta total de cautela à frente de um veículo, levando a manobras arriscadas, excesso de velocidade e completa imprudência. Ele está na contramão da direção defensiva, pois retira do condutor o  bom senso. </p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas do Passageiro</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">do Passageiro</h3>
+<p></p>
+<p>Em alguns casos os passageiros tornam-se nocivos à segurança, por exemplo:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-passageiro.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas - Penumbra</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">Penumbra</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/GFZGcmgOaW0" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>A Penumbra ocorre em situação de pouca luminosidade, ao final da tarde e início da noite, e no final da madrugada e início da manhã. É uma situação extremamente perigosa, pois o contorno e as cores dos objetos ficam menos definidos. A penumbra torna mais difícil reconhecer os objetos, avaliar corretamente as distâncias e, principalmente, ver e ser visto.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>A Penumbra - Como Amenizar?</h3>
+<h2 class="slide-heading">A Penumbra</h2>
+<h3 class="slide-subheading">como Amenizar</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-penumbra-amenizar.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas - Ofuscamento</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">Ofuscamento</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/5Hiz4o8hN_E" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O ofuscamento é provocado pelo excesso de luz em nossos olhos, salientando que o olho humano pode levar até 7 segundos para se recuperar de um ofuscamento, sendo assim, podemos tirar algumas conclusões: um veículo a 80 Km/h poderá percorrer até 155 metros antes que o condutor recupere a visão.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Ofuscamento - Como Amenizar?</h3>
+<h2 class="slide-heading">Ofuscamento</h2>
+<h3 class="slide-subheading">como Amenizar</h3>
+<p></p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-ofuscamento-2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas - Visibilidade</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">Visibilidade</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-visibilidade.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Hoje é uma obrigatoriedade o acionamento dos faróis baixos nas rodovias de pista simples situadas fora dos perímetros urbanos, mesmo durante o dia (caso não possua os faróis de rodagem diurna). Esta regra se faz necessária para todos os tipos de veículos, porém se torna ainda mais importante para veículos de cor escura, os quais se confundem com a cor do pavimento.</p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas a Chuva - Parte I</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">a Chuva</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/B072b7L01Ug" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>A incidência de chuva reduz a visibilidade, diminui a aderência dos pneus, principalmente nas curvas, aumenta o espaço percorrido nas frenagens e dificulta as manobras de emergência. O início da chuva torna a pista ainda mais escorregadia, devido à mistura de água com resíduos de pneus e óleos.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas a Chuva - Parte II</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">a Chuva</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas a Chuva - Parte III</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">a Chuva</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas Neblina ou Cerração - Parte I</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">Neblina ou Cerração</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-adversas-neblina.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Locais e horários de neblina e cerração são geralmente conhecidos dos usuários da via. Procure informações e evite se possível  tal situação de perigo.</p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas Neblina ou Cerração - Parte II</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">Neblina ou Cerração</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas Chuva de Granizo - Parte I</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">Chuva de Granizo</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-adversas-chuva-de-granizo.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>É uma chuva acompanhada de pedras de gelo. Além de provocar um barulho extremo que atrapalha os sentidos do condutor, poderá quebrar ou trincar o pára-brisa do veículo, prejudicando a visibilidade.</p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas Chuva de Granizo - Parte II</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">Chuva de Granizo</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas da Carga - Parte I</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">da Carga</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/8kY2j-N6udI" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Ao colocar carga em seu veículo, observe: distribuição, imobilização e amarração da mesma, como também, a conservação do compartimento de carga.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas da Carga - Parte II</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">da Carga</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas da Carga - Parte III</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">da Carga</h3>
+<div class="group-vertical"><p>Para as cargas que não ocuparem toda a carroceria no sentido longitudinal, restando espaços vazios nos painéis traseiro e frontal, devem ser utilizados, pelo transportador, além dos dispositivos de amarração, outros dispositivos diagonais que impeçam os movimentos para frente e para trás da carga</p>
+<figure class="image-element"><img src="images/amarra_carga_peq.jpg" alt="Amarração de Carga" loading="lazy"><figcaption>Clique para ampliar</figcaption></figure></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas o Trânsito - Parte I</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">o Trânsito</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-adversas-transito.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Congestionamentos, grande circulação de pedestres, tráfego intenso de veículos pesados e de transporte coletivo, entre outros, são fatores adversos.</p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas o Trânsito - Parte II</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">o Trânsito</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas o Trânsito - Parte III</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">o Trânsito</h3>
+<p></p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas o Trânsito - Parte IV</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">o Trânsito</h3>
+<p></p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas o Trânsito - Parte V</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">o Trânsito e a Poluição Sonora</h3>
+<p></p>
+<p>As vezes o condutor não percebe, porém o excesso de ruídos a sua volta, tal como buzinas e roncos de motores, impedem que o mesmo utilize sua audição de forma eficiente para a condução de seu veículo. </p>
+<p>Colabore, não buzine ou acelere sem necessidade.</p>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas o Trânsito - Parte VI</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">o Trânsito e a Poluição do Ar</h3>
+<p></p>
+<p>Algo novo e ainda em estudo é o resultado do excesso de monóxido de carbono presente no ar, o que segundo especialistas torna os reflexos dos condutores cada vez menos precisos, pois afetam diretamente os sentidos dos mesmos. Evite lugares muito poluídos e utilize filtros nas entradas de ar, quando possível.</p>
+</div>
+        </div>
+        <div class="nav-bar">
+            <a href="m03-s06-transito-em-diferentes-vias.html">← Anterior</a>
+            <a href="m03-s08-manutencao-do-veiculo.html">Próxima →</a>
+        </div>
+        <footer class="footer">
+            <a href="https://cursos.itt.org.br">ITT</a> — Nosso Trânsito Multimídia — Primeira Habilitação
+        </footer>
+    </div>
+</body>
+</html>

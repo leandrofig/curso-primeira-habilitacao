@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Sinistros de Trânsito - M1 - PRINCÍPIOS DE SEGURANÇA DO TRÂNSITO | Nosso Trânsito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, rgba(246,241,215,0.92) 0%, rgba(235,225,170,0.85) 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .page-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .site-header {
+            background: #f9f6eb;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #DCBD32;
+        }
+        .site-header .logo img { height: 42px; width: auto; }
+        .site-header h2 { font-size: 1em; color: #1a1a1a; display: none; }
+        .course-badge {
+            background: linear-gradient(135deg, #DCBD32, #c4a82a);
+            color: #1a1a1a;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.78em;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            padding: 12px 40px;
+            background: #f9f6eb;
+            border-bottom: 1px solid #e8e0c0;
+            font-size: 0.85em;
+            color: #6b5e3e;
+        }
+        .breadcrumb a { color: #8b7a3e; text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+        .module-header {
+            padding: 32px 40px;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #3a3a3a);
+            color: white;
+            position: relative;
+        }
+        .module-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #DCBD32, #e8d44d, #DCBD32);
+        }
+        .module-header .label { font-size: 0.82em; text-transform: uppercase; letter-spacing: 2px; color: #DCBD32; font-weight: 600; margin-bottom: 6px; }
+        .module-header h1 { font-size: 1.5em; font-weight: 700; }
+        .content-body { padding: 36px 40px; }
+        .slide { margin-bottom: 48px; border-bottom: 1px solid #e8e0c0; padding-bottom: 32px; }
+        .slide:last-child { border-bottom: none; }
+        .slide-heading { color: #1a1a1a; font-size: 1.35em; margin: 1.5em 0 0.7em; padding-bottom: 8px; border-bottom: 2px solid #DCBD32; font-weight: 700; }
+        .slide-subheading { color: #3a3a3a; font-size: 1.15em; margin: 1.2em 0 0.5em; font-weight: 600; }
+        p { margin-bottom: 1em; text-align: justify; }
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        .image-element { margin: 1em 0; text-align: center; }
+        .image-element figcaption { font-size: 0.85em; color: #6b5e3e; margin-top: 6px; }
+        .video-element { margin: 1em 0; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+        .group-horizontal { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; margin: 1em 0; }
+        .group-horizontal > * { flex: 1; min-width: 200px; }
+        .group-vertical { margin: 1em 0; }
+        .grid-element { display: grid; gap: 16px; margin: 1em 0; }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        .list-element { margin: 0.5em 0 1em 1.5em; }
+        .list-element li { margin-bottom: 0.4em; }
+        .infobox { margin: 1em 0; background: #fdf8e1; border-left: 4px solid #DCBD32; border-radius: 0 8px 8px 0; }
+        .infobox summary { cursor: pointer; padding: 12px 20px; font-weight: 600; color: #6b5010; }
+        .infobox-content { padding: 0 20px 16px; }
+        .card-image { background: #f9f6eb; border-radius: 10px; padding: 16px; margin: 8px 0; text-align: center; }
+        .card-image img { max-height: 200px; border-radius: 6px; margin-bottom: 8px; }
+        .card-image h4 { color: #1a1a1a; margin-bottom: 4px; }
+        .card-detail { text-align: left; margin-top: 8px; font-size: 0.9em; }
+        .timeline { border-left: 3px solid #DCBD32; margin: 1em 0 1em 16px; padding-left: 20px; }
+        .timeline-item { margin-bottom: 16px; position: relative; }
+        .timeline-item::before { content: ''; width: 12px; height: 12px; background: #DCBD32; border-radius: 50%; position: absolute; left: -27px; top: 6px; }
+        .accordion { margin: 1em 0; }
+        .accordion-item { border: 1px solid #e8e0c0; border-radius: 8px; margin-bottom: 8px; }
+        .accordion-item summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
+        .accordion-content { padding: 0 16px 12px; }
+        .compare-slider { display: flex; gap: 16px; margin: 1em 0; }
+        .compare-slider > div { flex: 1; text-align: center; }
+        .compare-slider img { max-width: 100%; border-radius: 8px; }
+        .compare-slider span { display: block; font-size: 0.85em; color: #6b5e3e; margin-top: 4px; }
+        .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .quiz-question { margin-bottom: 12px; }
+        .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
+        .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
+        .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
+        .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .spacer { height: 20px; }
+        .nav-bar { display: flex; justify-content: space-between; padding: 16px 40px; background: #f9f6eb; border-top: 1px solid #e8e0c0; }
+        .nav-bar a { color: #8b6914; text-decoration: none; font-weight: 600; font-size: 0.9em; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .footer { background: #1a1a1a; color: #999; text-align: center; padding: 16px 40px; font-size: 0.78em; }
+        .footer a { color: #DCBD32; text-decoration: none; font-weight: 600; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .site-header, .breadcrumb, .content-body, .nav-bar, .footer { padding-left: 20px; padding-right: 20px; }
+            .module-header { padding: 24px 20px; }
+            .group-horizontal { flex-direction: column; }
+            .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="site-header">
+            <div class="logo"><img src="images/logo.png" alt="Condutor Legal"></div>
+            <span class="course-badge">Primeira Habilitação</span>
+        </header>
+        <div class="breadcrumb">
+            <a href="index.html">Início</a>
+            <span class="sep">›</span>
+            <a href="index.html">M1 - PRINCÍPIOS DE SEGURANÇA DO TRÂNSITO</a><span class="sep">›</span>Os Sinistros de Trânsito
+        </div>
+        <div class="module-header">
+            <div class="label">M1 - PRINCÍPIOS DE SEGURANÇA DO TRÂNSITO</div>
+            <h1>Os Sinistros de Trânsito</h1>
+        </div>
+        <div class="content-body">
+            <div class="slide">
+<h3>Sinistros de Trânsito - Regras de Conduta I</h3>
+<h2 class="slide-heading">Sinistros de Trânsito</h2>
+<h3 class="slide-subheading">Regras de Conduta</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-acidentes-regras-conduta-1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Sinalizar o local do Sinistro de Trânsito para evitar novos.</p></div>
+<div class="group-horizontal"><p>Prestar imediato socorro à vítima, ou, não podendo fazê-lo diretamente, por justa causa (linchamento, condições físicas, etc), solicitar auxílio da autoridade pública.</p>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/legislacao-acidentes-regras-conduta-1-2.jpg" alt="Imagem" loading="lazy"></figure></div>
+<p>Não caberá prisão em flagrante, nem se exigirá fiança, se ocorrer pronto e integral socorro à vítima.</p>
+</div>
+
+<div class="slide">
+<h3>Sinistros de Trânsito - Regras de Conduta II</h3>
+<h2 class="slide-heading">Sinistros de Trânsito </h2>
+<h3 class="slide-subheading">Regras de Conduta</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-acidentes-regras-conduta-2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Ao envolver-se em Sinistro de Trânsito grave, para o qual tenha contribuído, a participação do curso de reciclagem é obrigatória.</p></div>
+<div class="group-horizontal"><p>Para veículos com tacógrafo envolvidos em Sinistros de Trânsito com vítima, somente o perito poderá fazer a leitura da velocidade.</p>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/legislacao-acidentes-regras-conduta-2-2.jpg" alt="Imagem" loading="lazy"></figure></div>
+<p>Alterar a cena do Sinistro de Trânsito antes da perícia a fim de mudar o resultado da mesma é CRIME DE TRÂNSITO.</p>
+</div>
+
+<div class="slide">
+<h3>Sinistros de Trânsito - Regras de Conduta III</h3>
+<h2 class="slide-heading">Sinistros de Trânsito </h2>
+<h3 class="slide-subheading">Regras de Conduta</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/legislacao-acidentes-regras-conduta-3.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Caso você seja parado por um agente de trânsito, com o objetivo de pedir-lhe ajuda para prestar socorro à vítima de Sinistro de Trânsito, em caso de recusa, você estará cometendo uma INFRAÇÃO GRAVE com penalidade de multa.</p></div>
+</div>
+
+<div class="slide">
+<h3>Tipos de Colisão com o veículo frente a frente</h3>
+<h2 class="slide-heading">Tipos de Colisão</h2>
+<h3 class="slide-subheading">com o veículo frente a frente</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/7txtLwcOoUk" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>A colisão frente a frente, ou seja, com um veículo que trafega em sentido contrário ao seu, é a mais violenta e, geralmente a mais grave na questão de danos pessoais e materiais. Faça  tudo  para  evitá-la!</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Tipos de Colisão com o veículo da frente</h3>
+<h2 class="slide-heading">Tipos de Colisão</h2>
+<h3 class="slide-subheading">com o veículo da frente</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/2Dw9MT3lUKc" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Ocorre quando o veículo bate contra aquele que segue, imediatamente à sua frente, no mesmo sentido. Normalmente, acontece quando não é mantida  a distância de segurança. Lembre-se, é obrigação do veículo de trás evitar a colisão com o veículo da frente.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Tipos de Colisão com o veículo de trás</h3>
+<h2 class="slide-heading">Tipos de Colisão</h2>
+<h3 class="slide-subheading">com o veículo de trás</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/OsVbAaq6zYk" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>A colisão com o veículo de trás ocorre porque o mesmo permanece com uma distância de segurança inadequada do seu veículo. Existem algumas reações que você poderá tomar para evitar este tipo de colisão. Lembre-se, é obrigação do veículo da frente evitar a colisão com o veículo de trás, isto sim é direção defensiva.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Tipos de Colisão nos Cruzamentos</h3>
+<h2 class="slide-heading">Tipos de Colisão</h2>
+<h3 class="slide-subheading">nos Cruzamentos</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/HcoIPHqa9NA" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>As interseções em "T" e em "Y", como também as confluências e entroncamentos, são considerados cruzamentos de via.</p></div></details></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Cruzamentos são locais onde a tendência de acontecer Sinistros de Trânsito é maior, portanto, quando transitar por um cruzamento, reduza a velocidade e mantenha a postura de um condutor defensivo, evitando danos, tanto físicos quanto materiais.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Tipos de Colisão entre Motociclistas e Motoristas</h3>
+<h2 class="slide-heading">Tipos de Colisão</h2>
+<h3 class="slide-subheading">entre Motociclistas e Motoristas</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ncCbsbyd94M" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Os motociclistas gozam de todos os direitos dos motoristas, porém possuem os mesmos deveres. A única coisa a ser observada é que o motorista deverá preservar a segurança do motociclista, devido o mesmo ser a parte frágil do contexto, tal como prevê nosso CTB.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Tipos de Colisão com Trem</h3>
+<h2 class="slide-heading">Tipos de Colisão</h2>
+<h3 class="slide-subheading">com Trem</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/EKGqY1eQwQs" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>As colisões com trens são catastróficas para o veículo, seu condutor e passageiros, por isso siga todas as regras de segurança para evitá-las.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Tipos de Colisão Na Curva</h3>
+<h2 class="slide-heading">Tipos de Colisão</h2>
+<h3 class="slide-subheading">na Curva</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/UnW14n1fVsM" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>As curvas das estradas são pontos de extremo perigo, principalmente para os condutores que não conduzem seus veículos sob as regras da direção defensiva.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Tipos de Colisão em Marcha à Ré</h3>
+<h2 class="slide-heading">Tipos de Colisão</h2>
+<h3 class="slide-subheading">em Marcha à Ré
+</h3>
+<div class="group-horizontal"><div class="spacer"></div>
+<p>Para realizar marcha à ré, preferencialmente solicite ajuda para guiá-lo e redobre a atenção nos retrovisores. Jamais execute a manobra em interseções e evite sair de garagens em marcha à ré.</p>
+<div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/b_ZlSh6bSzY" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>Tipos de Colisão com Objetos Fixos</h3>
+<h2 class="slide-heading">Tipos de Colisão</h2>
+<h3 class="slide-subheading">com Objetos Fixos
+</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-objeto-fixo.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>As colisões com objetos fixos estão geralmente ligadas à perda da direção por motivo do sono, excesso de velocidade ou erro de interpretação dos marcadores de perigo e marcadores de obstáculo.</p></div>
+<p>Redobre sua atenção, não dirija quando perceber a presença do sono e diminua a velocidade em pontos da estrada que ofereçam maior perigo.
+</p>
+</div>
+
+<div class="slide">
+<h3>Colisões o Ponto de Fuga</h3>
+<h2 class="slide-heading">Colisões </h2>
+<h3 class="slide-subheading">o Ponto de Fuga</h3>
+<p></p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-ponto-de-fuga.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Nem sempre a frenagem e a parada total do veículo são possíveis antes de ocorrer a colisão e o Sinistro de Trânsito, sobrando para o condutor a única opção de buscar um ponto de fuga para evitar o desastre.</p></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Fuga pela direita -  uma boa prática seria a convenção entre os condutores para que ocorrendo a possibilidade de colisão entre veículos em sentido contrário, ambos desviem pela direita sempre que possível, pois assim evitaria que escolhessem o mesmo ponto de fuga, o que resultaria em uma colisão frente à frente.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>A Ergonomia e o Mecanismo dos Sinistros - Parte I</h3>
+<h2 class="slide-heading">A Ergonomia e o</h2>
+<h3 class="slide-subheading">Mecanismo dos Sinistros de Trânsito</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/posicao_correta_pq.jpg" alt="Posição Correta ergonomia" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Ergonomia neste caso é a relação entre os equipamentos de operação do veículo e seu condutor. A forma correta de se operar um veículo exige alguns cuidados, tais como:</p></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>A Ergonomia e o Mecanismo dos Sinistros de Trânsito - Parte II</h3>
+<h2 class="slide-heading">A Ergonomia e o</h2>
+<h3 class="slide-subheading">Mecanismo dos Sinistros de Trânsito</h3>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>As regulagens de espelhos, climatização e som devem ser feitos antes de colocar o carro em movimento.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>A Ergonomia e o Mecanismo dos Sinistros - Parte III</h3>
+<h2 class="slide-heading">A Ergonomia e o</h2>
+<h3 class="slide-subheading">Mecanismo dos Sinistros de Trânsito</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-efeito-chicote.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>A Ergonomia e o Mecanismo dos Sinistros - Parte IV</h3>
+<h2 class="slide-heading">A Ergonomia e o</h2>
+<h3 class="slide-subheading">Mecanismo dos Sinistros de Trânsito</h3>
+<p></p>
+<p>Na ocorrência de um Sinistro de Trânsito os traumas são originados devido a:</p>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>As situações expostas se confirmam na maioria dos casos em que o condutor não toma os devidos cuidados, tais como:
+
+1) Usar o cinto de segurança em todos os ocupantes do veículo, inclusive no banco traseiro;
+2) Respeitar os limites de segurança (velocidade, peso, número de ocupantes, etc);
+3) Conduzir crianças de pequena estatura conforme as regras de segurança (citadas mais á frente);
+Não viajar com objetos pesados e soltos junto com os passageiros.</p></div></details>
+</div>
+        </div>
+        <div class="nav-bar">
+            <a href="m01-s01-visao-zero-e-sistemas-seguros.html">← Anterior</a>
+            <a href="m01-s03-principais-fatores-de-risco-velocidade-alcool-e-celular.html">Próxima →</a>
+        </div>
+        <footer class="footer">
+            <a href="https://cursos.itt.org.br">ITT</a> — Nosso Trânsito Multimídia — Primeira Habilitação
+        </footer>
+    </div>
+</body>
+</html>

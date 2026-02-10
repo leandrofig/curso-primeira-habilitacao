@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manobras e Domínio do Veículo - M3 - CONDUÇÃO EFICIENTE E SEGURA | Nosso Trânsito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, rgba(246,241,215,0.92) 0%, rgba(235,225,170,0.85) 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .page-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .site-header {
+            background: #f9f6eb;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #DCBD32;
+        }
+        .site-header .logo img { height: 42px; width: auto; }
+        .site-header h2 { font-size: 1em; color: #1a1a1a; display: none; }
+        .course-badge {
+            background: linear-gradient(135deg, #DCBD32, #c4a82a);
+            color: #1a1a1a;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.78em;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            padding: 12px 40px;
+            background: #f9f6eb;
+            border-bottom: 1px solid #e8e0c0;
+            font-size: 0.85em;
+            color: #6b5e3e;
+        }
+        .breadcrumb a { color: #8b7a3e; text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+        .module-header {
+            padding: 32px 40px;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #3a3a3a);
+            color: white;
+            position: relative;
+        }
+        .module-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #DCBD32, #e8d44d, #DCBD32);
+        }
+        .module-header .label { font-size: 0.82em; text-transform: uppercase; letter-spacing: 2px; color: #DCBD32; font-weight: 600; margin-bottom: 6px; }
+        .module-header h1 { font-size: 1.5em; font-weight: 700; }
+        .content-body { padding: 36px 40px; }
+        .slide { margin-bottom: 48px; border-bottom: 1px solid #e8e0c0; padding-bottom: 32px; }
+        .slide:last-child { border-bottom: none; }
+        .slide-heading { color: #1a1a1a; font-size: 1.35em; margin: 1.5em 0 0.7em; padding-bottom: 8px; border-bottom: 2px solid #DCBD32; font-weight: 700; }
+        .slide-subheading { color: #3a3a3a; font-size: 1.15em; margin: 1.2em 0 0.5em; font-weight: 600; }
+        p { margin-bottom: 1em; text-align: justify; }
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        .image-element { margin: 1em 0; text-align: center; }
+        .image-element figcaption { font-size: 0.85em; color: #6b5e3e; margin-top: 6px; }
+        .video-element { margin: 1em 0; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+        .group-horizontal { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; margin: 1em 0; }
+        .group-horizontal > * { flex: 1; min-width: 200px; }
+        .group-vertical { margin: 1em 0; }
+        .grid-element { display: grid; gap: 16px; margin: 1em 0; }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        .list-element { margin: 0.5em 0 1em 1.5em; }
+        .list-element li { margin-bottom: 0.4em; }
+        .infobox { margin: 1em 0; background: #fdf8e1; border-left: 4px solid #DCBD32; border-radius: 0 8px 8px 0; }
+        .infobox summary { cursor: pointer; padding: 12px 20px; font-weight: 600; color: #6b5010; }
+        .infobox-content { padding: 0 20px 16px; }
+        .card-image { background: #f9f6eb; border-radius: 10px; padding: 16px; margin: 8px 0; text-align: center; }
+        .card-image img { max-height: 200px; border-radius: 6px; margin-bottom: 8px; }
+        .card-image h4 { color: #1a1a1a; margin-bottom: 4px; }
+        .card-detail { text-align: left; margin-top: 8px; font-size: 0.9em; }
+        .timeline { border-left: 3px solid #DCBD32; margin: 1em 0 1em 16px; padding-left: 20px; }
+        .timeline-item { margin-bottom: 16px; position: relative; }
+        .timeline-item::before { content: ''; width: 12px; height: 12px; background: #DCBD32; border-radius: 50%; position: absolute; left: -27px; top: 6px; }
+        .accordion { margin: 1em 0; }
+        .accordion-item { border: 1px solid #e8e0c0; border-radius: 8px; margin-bottom: 8px; }
+        .accordion-item summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
+        .accordion-content { padding: 0 16px 12px; }
+        .compare-slider { display: flex; gap: 16px; margin: 1em 0; }
+        .compare-slider > div { flex: 1; text-align: center; }
+        .compare-slider img { max-width: 100%; border-radius: 8px; }
+        .compare-slider span { display: block; font-size: 0.85em; color: #6b5e3e; margin-top: 4px; }
+        .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .quiz-question { margin-bottom: 12px; }
+        .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
+        .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
+        .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
+        .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .spacer { height: 20px; }
+        .nav-bar { display: flex; justify-content: space-between; padding: 16px 40px; background: #f9f6eb; border-top: 1px solid #e8e0c0; }
+        .nav-bar a { color: #8b6914; text-decoration: none; font-weight: 600; font-size: 0.9em; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .footer { background: #1a1a1a; color: #999; text-align: center; padding: 16px 40px; font-size: 0.78em; }
+        .footer a { color: #DCBD32; text-decoration: none; font-weight: 600; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .site-header, .breadcrumb, .content-body, .nav-bar, .footer { padding-left: 20px; padding-right: 20px; }
+            .module-header { padding: 24px 20px; }
+            .group-horizontal { flex-direction: column; }
+            .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="site-header">
+            <div class="logo"><img src="images/logo.png" alt="Condutor Legal"></div>
+            <span class="course-badge">Primeira Habilitação</span>
+        </header>
+        <div class="breadcrumb">
+            <a href="index.html">Início</a>
+            <span class="sep">›</span>
+            <a href="index.html">M3 - CONDUÇÃO EFICIENTE E SEGURA</a><span class="sep">›</span>Manobras e Domínio do Veículo
+        </div>
+        <div class="module-header">
+            <div class="label">M3 - CONDUÇÃO EFICIENTE E SEGURA</div>
+            <h1>Manobras e Domínio do Veículo</h1>
+        </div>
+        <div class="content-body">
+            <div class="slide">
+<h3>Situações de Risco o Perigo nas curvas</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading"> o Perigo nas curvas</h3>
+<p>
+A DIFERENÇA ENTRE AS CURVAS:</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>O perigo nas Curvas Sobre-Esterçamento</h3>
+<h2 class="slide-heading">O perigo nas nas Curvas</h2>
+<h3 class="slide-subheading">Sobre-Esterçamento</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-sobre-estercamento.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Os carros equipados com tração atrás têm propensão a sair de traseira nas derrapagens em curvas
+Evite o travamento das rodas e a perda do resto de aderência que ainda existe dos pneus na via.
+</p></div>
+</div>
+
+<div class="slide">
+<h3>O perigo nas Curvas Subesterçamento</h3>
+<h2 class="slide-heading">O perigo nas Curvas</h2>
+<h3 class="slide-subheading">Subesterçamento</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-subestercamento.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Nos carros com tração dianteira existe a tendência do veículo perder aderência e ir reto (sair de frente), em direção oposta a da curva.
+Evite o travamento das rodas e a perda do resto de aderência que ainda existe dos pneus na via.</p></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Em veículos com freio ABS você poderá pisar firmemente no pedal de freio sem se preocupar com o travamento das rodas, já em veículos com freio convencional, tome muito cuidado com esta situação, pois o uso inadequado dos freios (excessivo) causa a perda da dirigibilidade do veículo.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco o Perigo nas Curvas e as Derrapagens</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">o Perigo nas Curvas e as Derrapagens</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/P4R08itlcFA" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul>
+<p>Quando acelera em uma curva o veículo tende a sair de frente, já quando desacelera, ele tende a sair pela traseira.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco Vícios ao volante - Parte I</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">Vícios ao volante</h3>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco Vícios ao volante - Parte II</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">Vícios ao volante</h3>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco Vícios ao volante - Parte III</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">Vícios ao volante</h3>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco a Frenagem Errada  - Parte I</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">a Frenagem Errada</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/36O3HjaJYjQ" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Evite  o travamento das rodas.
+Qualquer ação que venha a reduzir a velocidade do veículo pode ser considerada uma frenagem, tal como:</p>
+<ul class='list-element'></ul></div></details>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco a Frenagem Errada  - Parte II</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">a Frenagem de Errada</h3>
+<p></p>
+<p>Existem alguns fatores externos que influenciam na capacidade de frenagem dos pneus, é o chamado coeficiente de atrito:</p>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco a Frenagem Errada  - Parte III</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">a Frenagem Errada</h3>
+<p></p>
+<p>Para que o freio ABS (Antilock Braking System) cumpra seu objetivo é preciso pisar com toda força no pedal do freio, aproveitando a vantagem de poder movimentar o volante para desviar do obstáculo que se aproxima. O importante no ABS é apertar bem o freio, sem soltar, pois o sistema antitravamento das rodas permitirá ao motorista transpor o obstáculo e diminuir a velocidade ao mesmo tempo.</p>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco a Frenagem de Emergência</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">a Frenagem de Emergência</h3>
+<p></p>
+<p>Em uma frenagem normal o condutor terá tempo de usar freio motor com redução de marcha e se preocupar com o ponto certo de pressionamento do pedal do freio para não travar as rodas, já em uma situação de emergência a ação tem que ser imediata. O condutor precisa dar uma pancada forte no freio e, simultaneamente, apertar a embreagem (uma pancada seca equivale a 25 kg pressionando o pedal), quando infelizmente a probabilidade de se perder o controle da direção é grande, porém não existe alternativa (conforme entrevista WebMotors com o consultor  Cesar Augusto Urnhani, piloto de testes da Pirelli).</p>
+</div>
+
+<div class="slide">
+<h3>Perigo dos Grandes Centros Urbanos</h3>
+<h2 class="slide-heading">Perigo dos Grandes</h2>
+<h3 class="slide-subheading">Centros Urbanos</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-perigo-grandes-centros.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>ASSALTOS E SEQUESTROS
+Evite deixar objetos sobre bancos e painéis; evite locais desconhecidos; desacelere ao avistar um semáforo vermelho para não ter que parar no mesmo; não cole no veículo da frente; mantenha a vigilância nos espelhos; ande com os vidros fechados e as portas trancadas.</p></div>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco Evitando Assaltos Nas Rodovias</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">Evitando Assaltos Nas Rodovias</h3>
+<p></p>
+<p>Quando precisar parar, faça em lugar seguro, como em postos de gasolina ou policiais. É comum o assaltante arremessar pedras de viadutos ou passarelas, ou mesmo pedras e tábuas com objetos pontiagudos colocados na pista. Se algum objeto atingir seu pára-brisa ou um pneu estourar repentinamente nessas condições, não pare o carro, poderá ser uma armadilha preparada por assaltantes. Continue rodando em baixa velocidade por alguns quilômetros até encontrar um lugar seguro para parar.</p>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco o Deslocamento de Massa de Ar</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">o Deslocamento de Massa de Ar</h3>
+<div class="group-vertical"><div class="flash-warning">Vídeo Flash obsoleto: LIBRAS_direcao-def-desloc-de-massa-ar.flv</div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Quando um veículo desloca-se por uma via, por onde ele passa o ar tem que ceder espaço, ocorrendo o deslocamento da massa de ar. Observando que quanto maior o tamanho e a velocidade do veículo maior será a violência e a quantidade de massa de ar deslocada.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco o Baricentro do veículo</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">o Baricentro do veículo</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-baricentro-veículo.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O baricentro deverá ser entendido para nós como o centro de equilíbrio de um veículo. Na reta a tendência do centro de equilíbrio é permanecer inalterado, porém na curva o centro de equilíbrio tende a deslocar-se para o centro da curva. </p></div>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco a Aquaplanagem - Parte I</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">a Aquaplanagem</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/pOxYnAuXurE" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="spacer"></div>
+<p>As chuvas acumulam na pista camadas de água que somadas a velocidade do veículo fazem com que o mesmo venha a perder o contato com o solo, vindo a aquaplanar, o que causa a perda do controle da direção do veículo.</p></div>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco a Aquaplanagem - Parte II</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading"> a Aquaplanagem</h3>
+<p></p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco a Aquaplanagem - Parte III</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading"> a Aquaplanagem</h3>
+<p>
+Jamais execute em uma aquaplanagem:
+</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco a Aquaplanagem - Parte IV</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading"> a Aquaplanagem</h3>
+<p>
+Como agir em uma aquaplanagem:</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco a Transferência de Massa</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">a Transferência de Massa</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/asrcvPCoDtg" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>É o aumento de peso no eixo traseiro quando o veículo está acelerando, ou no eixo dianteiro quando se está freando. Evite as acelerações e freadas bruscas, principalmente se os pneus estiverem "carecas". </p></div></details>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco Enchentes e Enxurradas</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">Enchentes e Enxurradas</h3>
+<div class="group-horizontal"><p>No caso de início de enchente, espere no máximo até o nível da água atingir o batente inferior da porta e então abandone o veículo. Ao deixar o carro tome cuidado ao caminhar, para não cair em uma boca de lobo (bueiro ou galeria pluvial) aberta pela pressão da água.</p>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/direcao-defensiva-enchentes-enchurradas.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas Fumaça - Parte I</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">Fumaça</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-adversas-fumaca.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A fumaça não é um fator climático, porém possui condições desfavoráveis para a trafegabilidade da via, tanto ou mais do que a própria neblina. A fumaça geralmente ocorre em pontos bem localizados, porém na maioria das vezes não conseguimos avaliar sua extensão.</p></div>
+</div>
+
+<div class="slide">
+<h3>Condições Adversas Fumaça - Parte II</h3>
+<h2 class="slide-heading">Condições Adversas</h2>
+<h3 class="slide-subheading">Fumaça</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Situações de Risco Declives, Serras e Precipícios</h3>
+<h2 class="slide-heading">Situações de Risco</h2>
+<h3 class="slide-subheading">Declives, Serras e Precipícios</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-declives-serras.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>São pontos de extremo perigo. Evite ao máximo as ultrapassagens, aumente a distância de seguimento (segurança) e mantenha a velocidade compatível com a segurança. Antes de entrar em uma região de declives, serras e precipícios teste os freios realizando algumas frenagens.</p></div>
+</div>
+
+<div class="slide">
+<h3>O Ato de Dirigir Estudo da Área Cega  - Parte I</h3>
+<h2 class="slide-heading">O Ato de Dirigir</h2>
+<h3 class="slide-subheading">Estudo da Área Cega</h3>
+<p></p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-ponto-cego-1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A visão humana possui uma área útil de em média 124º de abertura. Caso você conduza sempre com olhar fixo para a frente e sem consultar os espelhos terá uma área cega de 236º. Importante salientar que o espelho lateral direito nem mesmo encontra-se em nossa área de visão.</p></div>
+</div>
+
+<div class="slide">
+<h3>O Ato de Dirigir Estudo da Área Cega  - Parte II</h3>
+<h2 class="slide-heading">O Ato de Dirigir</h2>
+<h3 class="slide-subheading">Estudo da Área Cega</h3>
+<p>Na verdade existem duas áreas cegas (pontos cegos), a da visão humana e a dos espelhos.</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-ponto-cego-2.jpg" alt="Imagem" loading="lazy"></figure></div>
+<ul class='list-element'></ul>
+<p>As áreas cegas da visão são eliminadas com a constante verificação dos espelhos, por meio  do movimento dos olhos ou então pelo rápido giro de cabeça.</p>
+</div>
+
+<div class="slide">
+<h3>O Ato de Dirigir O Ponto Cego dos Espelhos Grande Risco de Sinistros de Trânsito</h3>
+<h2 class="slide-heading">O Ato de Dirigir</h2>
+<h3 class="slide-subheading">o Ponto Cego dos Espelhos - Grande Risco de Sinistros de Trânsito</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/direcao-defensiva-ponto-cego-3.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Ato de Dirigir</h3>
+<h2 class="slide-heading">O Ato de Dirigir</h2>
+<h3 class="slide-subheading">Entendendo o Ponto Cego dos Espelhos</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Lea5mpgIKlg" title="O Ponto Cego" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>O Ato de Dirigir o Ponto Cego dos Espelhos como Reduzir os Riscos</h3>
+<h2 class="slide-heading">O Ato de Dirigir</h2>
+<h3 class="slide-subheading">o Ponto Cego dos Espelhos como Reduzir os Riscos</h3>
+<p>Para reduzir os riscos do ponto cego desloque seus espelhos laterais para um ângulo de abertura de em média 90 graus.</p>
+<div class="group-vertical"><figure class="image-element"><img src="images/direcao-defensiva-ponto-cego-4.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>O Ato de Dirigir o Ponto Cego</h3>
+<h2 class="slide-heading">O Ato de Dirigir o Ponto Cego</h2>
+<div class="group-horizontal"><p>Como Reduzir os Riscos
+Existem diversas ações que podem reduzir os riscos do ponto cego da visão e dos espelhos retrovisores (áreas cegas), sendo:</p>
+<figure class="image-element"><img src="images/ponto-cego.jpg" alt="Imagem" loading="lazy"></figure></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor  - Parte I</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor Operação</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto2.jpg" alt="Controle Seta, Luz e Buzina Manete da Embreagem Alavanca
+de câmbio Torneira Gasolina e Afogador Pedal de partida e pedal de freiotraseiro Manete do freio dianteiro e manoplado acelerador" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor  - Parte II</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-condicoes-veiculo-duas-rodas.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A motocicleta, bem como a motoneta e os ciclomotores possuem diversos atrativos em relação aos veículos de quatro rodas, tal como mobilidade, fácil estacionamento, baixo custo de aquisição e baixo consumo de combustível. Porém, a maior desvantagem é a falta de proteção na hora de um Sinistro de Trânsito, tornando-se a prática da DIREÇÃO DEFENSIVA uma grande aliada do condutor.</p></div>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor  - Parte III</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>VER E SER VISTO</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-12.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Evite o ponto cego. Veja o rosto do motorista no retrovisor, pois assim você garante estar fora da zona de perigo</p>
+<figure class="image-element"><img src="images/direcao-defensiva-moto-12a.jpg" alt="Imagem" loading="lazy"></figure></div>
+<div class="group-horizontal"><p>Utilize capacete e roupas de cores claras e ande sempre com a luz baixa acesa</p>
+<figure class="image-element"><img src="images/capacete1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Sinalize com antecedência sua intenção de manobra e utilize os retrovisores com eficiência e freqüência</p></div>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor  - Parte IV</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>
+VER E SER VISTO</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-12a.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>É muito comum acionar a chave da seta indicadora de direção e esquecer a mesma ligada. Tome cuidado, pois tal descuido poderá causar um Sinistro de Trânsito.</p></div>
+<p>Por ser um veículo pequeno e ágil, o uso da buzina deve servir para alertar os demais condutores de sua presença, sempre em toques breves. Não exite em usar, pois isto poderá evitar um Sinistro de Trânsito.</p>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor  - Parte V</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>
+CRUZAMENTOS E CORREDORES</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor  - Parte VI</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>
+CONDUÇÃO DE PASSAGEIROS</p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O passageiro deverá ser orientado a:</p>
+<ul class='list-element'></ul></div></details>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-12b.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A condução de crianças menores de dez anos ou que não possam cuidar de sua segurança e integridade é proibido (alterado pela Lei 14.071, de 13/10/2020);</p></div>
+<div class="spacer"></div>
+<p>A motocicleta deverá possuir pedaleira de apoio dos pés, alça de segurança do passageiro e estar com os pneus com a calibragem adequada ao peso transportado.</p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O passageiro deverá ser orientado a:</p>
+<ul class='list-element'></ul></div></details>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor  - Parte VII</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>
+CONDUÇÃO DE CARGAS</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-14.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A condução de carga por motocicletas, motonetas e ciclomotores se dará de duas formas:
+
+TRANSPORTE DE CARGAS PARTICULARES
+Realizado por motocicletas, motonetas e ciclomotores;
+
+TRANSPORTE DE CARGAS REMUNERADO
+Realizado apenas por motocicletas e motonetas.
+</p></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Para o transporte de carga não remunerado (particular) o piloto deverá tomar certos cuidados:
+
+1) Não ultrapassar o limite de carga (peso) da moto especificado no manual;
+2) A carga não poderá ultrapassar a largura do guidão da motocicleta e a altura do piloto, bem como não poderá ultrapassar o comprimento do veículo;
+3) Os volumes deverão estar bem afixados no bagageiro, no baú de pequenos volumes ou  sobre o banco com o uso de aranhas (rede elástica). Menos comum porém também utilizado, os volumes podem ser acondicionados em bolsas laterais (alforjes).</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Para o transporte de carga remunerado existem regras e legislação específica do CONTRAN, incluindo o curso de formação para a atividade profissional de transporte de cargas e passageiros.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>O Ato de Dirigir a Distância de segurança  Parte I</h3>
+<h2 class="slide-heading">O Ato de Dirigir</h2>
+<h3 class="slide-subheading">a Distância de segurança</h3>
+<p>PARA MOTOCICLETAS</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/dir-def-ato-de-dirigir-dist-segu-2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Dependerá diretamente do tipo de pavimento, do estado de conservação de seus pneus e das condições atmosféricas do dia.</p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Aqui surge um problema do trânsito urbano, onde infelizmente neste caso um outro condutor provavelmente irá ultrapassar sua motocicleta e se colocar entre você e o outro veículo. Uma forma de solucionar este problema é se posicionar na pista ocupando seu espaço como um veículo de quatro rodas e se mesmo assim o outro condutor lhe ultrapassar, reduza a velocidade e retome a mesma distância de segurança que você mantinha do outro veículo, ou seja, uma distância que caiba mais quatro veículos. Em caso de mal tempo redobre esta distância de segurança.</p></div></details></div>
+<div class="spacer"></div>
+<p>A distância média de frenagem de uma motocicleta, sem carga ou passageiro, a uma velocidade de 60 km/h, em um dia seco e sobre um pavimento firme é de 16 metros, o que significa que você deve deixar um espaço que caiba em torno de quatro veículos de passeio entre sua motocicleta e o veículo que se desloca logo à frente (dados extraídos da revista Motociclismo). </p>
+</div>
+
+<div class="slide">
+<h3>O Ato de Dirigir a Distância de segurança  Parte II</h3>
+<h2 class="slide-heading">O Ato de Dirigir</h2>
+<h3 class="slide-subheading">a Distância de segurança</h3>
+<p>
+Lateral para Motocicletas</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-dist-seg-lateral-moto.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Uma distância de segurança lateral adequada é aquela que permite uma manobra evasiva, ou seja, em torno de três a quatro vezes a largura de sua motocicleta, contando com o baú ou grelha de carga, caso existam.</p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Lembramos que com a nova legislação um equipamento de segurança que passará a ser obrigatório é o protetor de pernas, o conhecido mata-cachorro, o qual dificultará a passagem entre a fila de veículos.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Este é um ponto polêmico, pois devido a necessidade de mobilidade e os congestionamentos dos centros urbanos, se deslocar entre as filas de veículos em movimento ou parados em um sinal luminoso é algo bem comum para o dia-a-dia do motociclista, porém as estatísticas não deixam dúvidas, esta prática é um dos principais fatores que levam ao Sinistro de Trânsito, pois um pequeno erro de cálculo levará o motociclista ao chão.</p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte I</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>
+SITUAÇÕES DE RISCO</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-16a.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O motociclista possui a preferência, porém em muitos casos não é respeitada. Dê preferência à sua segurança e aguarde, se for o caso.</p></div>
+<div class="group-horizontal"><p>Mesmo na preferencial se deve reduzir a velocidade e olhar para garantir que nenhum condutor imprudente esteja avançando.</p>
+<figure class="image-element"><img src="images/direcao-defensiva-moto-16b.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte II</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>
+SITUAÇÕES DE RISCO</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-15a.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Para não ocorrer esta situação, evite o ponto cego, não ultrapasse e use a buzina se necessário.</p></div>
+<div class="group-horizontal"><p>Preferencialmente evite as conversões à esquerda, mas se tiver que fazer, saiba que deverá esperar a pista estar livre.</p>
+<figure class="image-element"><img src="images/direcao-defensiva-moto-15b.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte III</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>A ESTABILIDADE NAS CURVAS</p>
+<p>Existem três formas básicas de entrar em uma curva, sendo:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-17.jpg" alt="Imagem" loading="lazy"></figure>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Com esta técnica a motocicleta permanece na vertical e o motociclista com o corpo inclinado para dentro da curva. Usada principalmente em dias de chuva e em pistas com pavimento solto (areia, brita, etc), pois assim é mantido maior contato dos pneus com o solo, evitando ao máximo as derrapagens.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Esta é a forma que proporciona maior estabilidade ao motociclista, porém deve ser aplicada em condições adequadas, ou seja, pista seca, sem areia ou cobertura solta e escorregadia, em baixa velocidade e em curvas abertas.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>É uma técnica que deve ser usada somente por motociclistas experientes, permitindo realizar curvas fechadas em maior velocidade, ou ainda utilizada em manobras evasivas para evitar Sinistros de Trânsito. Nela o motociclista mantem seu corpo o mais horizontal possível, fazendo um pêndulo com o joelho e aumentando a inclinação da motocicleta.</p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte IV</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>SUPERFÍCIES IRREGULARES - COMO AGIR ?</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-18.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Em primeiro lugar, você deve determinar se é possível passar por cima do obstáculo, isso dependerá do estilo de sua motocicleta, sua velocidade e o tamanho do obstáculo.
+Caso você determine que seja possível, levante-se ligeiramente do assento, mantenha os joelhos flexionados e firmes contra o tanque de gasolina ou assento, desloque o seu peso para trás, acelere um pouco para aliviar a carga sobre a roda dianteira e passe por cima do obstáculo. 
+Lembre-se que sua motocicleta deverá estar totalmente na vertical.
+</p></div>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte V</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>ACIONAMENTO DOS FREIOS</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte VI</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>A FRENAGEM SEGURA</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-20.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A forma mais segura de se frear uma motocicleta é estando a mesma totalmente na vertical (sem inclinação), usando os dois freios ao mesmo tempo (da frente e de trás) conjuntamente com o freio motor. Ao frear pressione suas perna sobre o tanque evitando que o peso de seu corpo também seja todo travado somente pelos braços no guidão da motocicleta, sobrecarregando assim a parte dianteira. Um dos principais cuidados que devemos ter é evitar o travamento das rodas, pois isso fatalmente levará ao Sinistro de Trânsito.</p></div>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte VII</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>DERRAPAGENS - COMO AGIR ?</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/direcao-defensiva-moto-21.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O travamento da roda traseira acontece com maior frequência, já que durante a frenagem, o peso da motocicleta e piloto é transferido da roda traseira para a dianteira. O travamento da roda dianteira se dá principalmente pelo acionamento demasiado do freio dianteiro.
+Em caso de travamento de rodas, libere o acionamento dos freios e volte a acioná-los mais suavemente. 
+
+A precaução é a melhor forma de evitar uma derrapagem</p></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>1) Mantenha uma boa distância de segurança para evitar a necessidade de freadas bruscas. Estando com carga ou passageiros essa distância deve ser pelo menos duplicada;
+2) Conserve seus pneus com banda de rodagem e bem calibrados;
+3) Nas rotatórias tome cuidado com pontos de acúmulo de areia e conduza sempre em velocidade moderada;
+4) Não use embreagem, mas sim mantenha a aceleração;
+5) Segure firme o guidão e vire-o ligeiramente no sentido da derrapagem para melhorar a aderência dos pneus.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte VIII</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>ACIONAMENTO DOS FREIOS</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte IX</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>ULTRAPASSAGENS E PASSAGENS</p>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Uma ultrapassagem forçada poderá resultar em uma colisão frontal, sendo esta a pior situação para o motociclista, e na grande maioria dos casos fatal.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte X</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>DICAS ÚTEIS DE PILOTAGEM</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Motocicleta, Motoneta e Ciclomotor - Parte XI</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>DICAS ÚTEIS DE PILOTAGEM</p>
+<ul class='list-element'></ul>
+</div>
+        </div>
+        <div class="nav-bar">
+            <a href="m03-s03-equipamentos-de-uso-obrigatorio-condutor-e-passageiros.html">← Anterior</a>
+            <a href="m03-s05-velocidade-e-percepcao-de-risco.html">Próxima →</a>
+        </div>
+        <footer class="footer">
+            <a href="https://cursos.itt.org.br">ITT</a> — Nosso Trânsito Multimídia — Primeira Habilitação
+        </footer>
+    </div>
+</body>
+</html>

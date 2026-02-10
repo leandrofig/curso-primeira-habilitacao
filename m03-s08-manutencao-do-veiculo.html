@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manutenção do Veículo - M3 - CONDUÇÃO EFICIENTE E SEGURA | Nosso Trânsito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, rgba(246,241,215,0.92) 0%, rgba(235,225,170,0.85) 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .page-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .site-header {
+            background: #f9f6eb;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #DCBD32;
+        }
+        .site-header .logo img { height: 42px; width: auto; }
+        .site-header h2 { font-size: 1em; color: #1a1a1a; display: none; }
+        .course-badge {
+            background: linear-gradient(135deg, #DCBD32, #c4a82a);
+            color: #1a1a1a;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.78em;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            padding: 12px 40px;
+            background: #f9f6eb;
+            border-bottom: 1px solid #e8e0c0;
+            font-size: 0.85em;
+            color: #6b5e3e;
+        }
+        .breadcrumb a { color: #8b7a3e; text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+        .module-header {
+            padding: 32px 40px;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #3a3a3a);
+            color: white;
+            position: relative;
+        }
+        .module-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #DCBD32, #e8d44d, #DCBD32);
+        }
+        .module-header .label { font-size: 0.82em; text-transform: uppercase; letter-spacing: 2px; color: #DCBD32; font-weight: 600; margin-bottom: 6px; }
+        .module-header h1 { font-size: 1.5em; font-weight: 700; }
+        .content-body { padding: 36px 40px; }
+        .slide { margin-bottom: 48px; border-bottom: 1px solid #e8e0c0; padding-bottom: 32px; }
+        .slide:last-child { border-bottom: none; }
+        .slide-heading { color: #1a1a1a; font-size: 1.35em; margin: 1.5em 0 0.7em; padding-bottom: 8px; border-bottom: 2px solid #DCBD32; font-weight: 700; }
+        .slide-subheading { color: #3a3a3a; font-size: 1.15em; margin: 1.2em 0 0.5em; font-weight: 600; }
+        p { margin-bottom: 1em; text-align: justify; }
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        .image-element { margin: 1em 0; text-align: center; }
+        .image-element figcaption { font-size: 0.85em; color: #6b5e3e; margin-top: 6px; }
+        .video-element { margin: 1em 0; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+        .group-horizontal { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; margin: 1em 0; }
+        .group-horizontal > * { flex: 1; min-width: 200px; }
+        .group-vertical { margin: 1em 0; }
+        .grid-element { display: grid; gap: 16px; margin: 1em 0; }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        .list-element { margin: 0.5em 0 1em 1.5em; }
+        .list-element li { margin-bottom: 0.4em; }
+        .infobox { margin: 1em 0; background: #fdf8e1; border-left: 4px solid #DCBD32; border-radius: 0 8px 8px 0; }
+        .infobox summary { cursor: pointer; padding: 12px 20px; font-weight: 600; color: #6b5010; }
+        .infobox-content { padding: 0 20px 16px; }
+        .card-image { background: #f9f6eb; border-radius: 10px; padding: 16px; margin: 8px 0; text-align: center; }
+        .card-image img { max-height: 200px; border-radius: 6px; margin-bottom: 8px; }
+        .card-image h4 { color: #1a1a1a; margin-bottom: 4px; }
+        .card-detail { text-align: left; margin-top: 8px; font-size: 0.9em; }
+        .timeline { border-left: 3px solid #DCBD32; margin: 1em 0 1em 16px; padding-left: 20px; }
+        .timeline-item { margin-bottom: 16px; position: relative; }
+        .timeline-item::before { content: ''; width: 12px; height: 12px; background: #DCBD32; border-radius: 50%; position: absolute; left: -27px; top: 6px; }
+        .accordion { margin: 1em 0; }
+        .accordion-item { border: 1px solid #e8e0c0; border-radius: 8px; margin-bottom: 8px; }
+        .accordion-item summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
+        .accordion-content { padding: 0 16px 12px; }
+        .compare-slider { display: flex; gap: 16px; margin: 1em 0; }
+        .compare-slider > div { flex: 1; text-align: center; }
+        .compare-slider img { max-width: 100%; border-radius: 8px; }
+        .compare-slider span { display: block; font-size: 0.85em; color: #6b5e3e; margin-top: 4px; }
+        .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .quiz-question { margin-bottom: 12px; }
+        .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
+        .quiz-correct { border-color: #22C55E; background: #dcfce7; font-weight: 600; }
+        .quiz-feedback { margin-top: 8px; font-size: 0.9em; color: #3a3a3a; }
+        .flash-warning { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; padding: 12px; border-radius: 8px; margin: 1em 0; }
+        .app-launcher { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
+        .spacer { height: 20px; }
+        .nav-bar { display: flex; justify-content: space-between; padding: 16px 40px; background: #f9f6eb; border-top: 1px solid #e8e0c0; }
+        .nav-bar a { color: #8b6914; text-decoration: none; font-weight: 600; font-size: 0.9em; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .footer { background: #1a1a1a; color: #999; text-align: center; padding: 16px 40px; font-size: 0.78em; }
+        .footer a { color: #DCBD32; text-decoration: none; font-weight: 600; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .site-header, .breadcrumb, .content-body, .nav-bar, .footer { padding-left: 20px; padding-right: 20px; }
+            .module-header { padding: 24px 20px; }
+            .group-horizontal { flex-direction: column; }
+            .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="site-header">
+            <div class="logo"><img src="images/logo.png" alt="Condutor Legal"></div>
+            <span class="course-badge">Primeira Habilitação</span>
+        </header>
+        <div class="breadcrumb">
+            <a href="index.html">Início</a>
+            <span class="sep">›</span>
+            <a href="index.html">M3 - CONDUÇÃO EFICIENTE E SEGURA</a><span class="sep">›</span>Manutenção do Veículo
+        </div>
+        <div class="module-header">
+            <div class="label">M3 - CONDUÇÃO EFICIENTE E SEGURA</div>
+            <h1>Manutenção do Veículo</h1>
+        </div>
+        <div class="content-body">
+            <div class="slide">
+<h3>Mecânica Básica Obrigações do Condutor</h3>
+<h2 class="slide-heading">Mecânica Básica</h2>
+<h3 class="slide-subheading">Obrigações do Condutor</h3>
+<div class="spacer"></div>
+<p>É obrigação de todo o condutor conhecer seu veículo nos seguintes aspectos:</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Mecânica Básica o Painel do veículo - Parte I</h3>
+<h2 class="slide-heading">Mecânica Básica </h2>
+<h3 class="slide-subheading">o Painel do veículo</h3>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<div class="group-vertical"><figure class="image-element"><img src="images/painel1.jpg" alt="Baixo nível Combustível Pisca Alerta Indicadore Pós AcionadosRegulagem de farol Luzes Posição LigadasFarol Baixo Ligado Farol Alto Ligado Óleo Lubrificante Baixa pressão acionado Afogador Acionadoreio de Mão Pára-Brisa Limpador de traseiro Avaria no ABS motor Superaquecimento Defeituoso freio Fraseiro Desembaçador Ignição varia Sistema A Desembaçador
+Pára-Brisa Insuficiente Recarga Vidro Traseiro Limpa/Lavador ventilador Pára-Brisa Lavador de" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Mecânica Básica o Painel do veículo - Parte II</h3>
+<h2 class="slide-heading">Mecânica Básica </h2>
+<h3 class="slide-subheading">o Painel do veículo</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/painel2.jpg" alt="Baixo nível Combustível Pisca Alerta Indicadore Pós AcionadosRegulagem de farol Luzes Posição LigadasFarol Baixo Ligado Farol Alto Ligado Óleo Lubrificante Baixa pressão acionado Afogador Acionadoreio de Mão Pára-Brisa Limpador de traseiro Avaria no ABS motor Superaquecimento Defeituoso freio Fraseiro Desembaçador Ignição varia Sistema A Desembaçador
+Pára-Brisa Insuficiente Recarga Vidro Traseiro Limpa/Lavador ventilador Pára-Brisa Lavador de" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Mecânica Básica o Painel do veículo - Parte III</h3>
+<h2 class="slide-heading">Mecânica Básica </h2>
+<h3 class="slide-subheading">o Painel do veículo</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/painel3.jpg" alt="Baixo nível Combustível Pisca Alerta Indicadore Pós AcionadosRegulagem de farol Luzes Posição LigadasFarol Baixo Ligado Farol Alto Ligado Óleo Lubrificante Baixa pressão acionado Afogador Acionadoreio de Mão Pára-Brisa Limpador de traseiro Avaria no ABS motor Superaquecimento Defeituoso freio Fraseiro Desembaçador Ignição varia Sistema A Desembaçador
+Pára-Brisa Insuficiente Recarga Vidro Traseiro Limpa/Lavador ventilador Pára-Brisa Lavador de" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Mecânica Básica o Painel do veículo IV</h3>
+<h2 class="slide-heading">Mecânica Básica </h2>
+<h3 class="slide-subheading">o Painel do veículo</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/mecanica-painel-veiculo-2.jpg" alt="Imagem" loading="lazy"></figure>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Indica a temperatura de funcionamento do motor. Fique sempre atento neste indicador, pois um motor funcionando acima da temperatura indicada em breve deixará você ‘’na mão’’.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Registra a distância percorrida pelo veículo, geralmente medido em quilômetros e metros e a partir do último ‘’zeramento’’ do odômetro.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Indica a velocidade que está sendo praticada no momento pelo veículo e em alguns casos as rotações por minuto do motor (RPM).</p></div></details></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Dispositivo que mede as rotações por minuto de um motor ou de um eixo, em geral utilizado para fornecer informações sobre a velocidade de um veículo; conta-giros, conta-voltas, taquímetro</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Indica a quantidade de combustível existente no tanque, bem como o limite da reserva, a qual ao ser alcançada deve-se procurar um posto de abastecimento com urgência.</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Registra a distância total e acumulada percorrida pelo veículo, geralmente medida em quilômetros e metros.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Mecânica Básica a Carroceria</h3>
+<h2 class="slide-heading">Mecânica Básica </h2>
+<h3 class="slide-subheading">a Carroceria</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-carroceria.jpg" alt="monobloco" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Os veículos de passeio atuais não utilizam o antigo chassi, mas sim a carroceria monobloco, a qual possui o assoalho do veículo já incorporado ao restante da lataria.</p></div>
+<div class="group-vertical"><figure class="image-element"><img src="images/mecanica-carroceria-b.jpg" alt="chassi" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Os chassis são utilizados ainda em veículos de médio e grande porte, tais como caminhões, ônibus, vans e picapes.</p></div>
+</div>
+
+<div class="slide">
+<h3>O Motor  Principais Peças</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Principais Peças</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/mec-motor-principais-pecas.jpg" alt="DENTADA VÁLVULAS CORREIA VÁLVULA COMANDO CILINDRO VELA IGNIÇÃO PISTÃO BIELA MANIVELA ÁRVORE DE VOLANTE" loading="lazy"></figure>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>A árvore de manivela  é também  popularmente conhecida como girabrequim ou virabrequim.</p></div></details></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Curiosidade:A maior e mais pesada peça do motor é o bloco</p></div></details>
+</div>
+
+<div class="slide">
+<h3>O Motor Ciclos de Funcionamento - Parte I</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Ciclos de Funcionamento</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ChqN7xqUMWU" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Os motores à gasolina e a álcool possuem 4 tempos: admissão, compressão, expansão e descarga e utilizam uma vela para emissão da centelha . Os motores do ciclo diesel utilizam a própria compressão do motor para iniciar  a  combustão.</p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>O Motor Ciclos de Funcionamento - Parte II</h3>
+<h2 class="slide-heading">O Motor </h2>
+<h3 class="slide-subheading">Ciclos de Funcionamento</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-ciclos-de-funcionamento-2a.jpg" alt="Imagem" loading="lazy"></figure>
+<figure class="image-element"><img src="images/mecanica-ciclos-de-funcionamento-2b.jpg" alt="Imagem" loading="lazy"></figure></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-ciclos-de-funcionamento-2c.jpg" alt="Imagem" loading="lazy"></figure>
+<figure class="image-element"><img src="images/mecanica-ciclos-de-funcionamento-2d.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>O Motor</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">e Suas Peças Fixas e Móveis</h3>
+<div class="group-vertical"><div class="spacer"></div>
+<div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/kddGoC85kYc" title="Peças Fixas e Móveis" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+</div>
+
+<div class="slide">
+<h3>O Motor Que Utiliza Diesel</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Que Utiliza Diesel</h3>
+<div class="spacer"></div>
+<p>Os motores do ciclo diesel utilizam a alta compressão do ar dentro do cilindro do motor para iniciar a combustão, alcançando em média 600º C.
+Ao injetar o óleo diesel e após a compressão, este entra instantaneamente em combustão, sem a necessidade de velas de ignição, distribuidor e bobina.</p>
+</div>
+
+<div class="slide">
+<h3>O Motor Que Utiliza Diesel</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Automóvel híbrido e elétrico</h3>
+<p>Um automóvel híbrido é um automóvel que tem um motor de combustão interna, normalmente a gasolina, e um motor eléctrico que permite manter o motor de combustão funcionando a baixas rotações, ou em certos momentos não funcionando, e, desse modo, reduzir o consumo de combustível e a emissão de poluentes. 
+Quais são as diferenças entre o carro elétrico e o híbrido? 
+A principal diferença entre os dois tipos é o motor. Enquanto o carro elétrico é movido totalmente a energia elétrica, o modelo híbrido usa o motor de energia elétrica para potencializar a performance do veículo e diminuir a emissão de gases CO2.
+
+</p>
+</div>
+
+<div class="slide">
+<h3>O Motor - Sistema de Arrefecimento - Parte I</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Sistema de Arrefecimento</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ISr6XY1DL3o" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Como o calor produzido no interior do motor gera temperaturas altíssimas, é necessário um sistema de resfriamento. Basicamente, ar, água e óleo resfriam o motor, retirando o calor e dissipando-o no ambiente.</p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>O Motor - Sistema de Arrefecimento - Parte II</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Sistema de Arrefecimento</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/mecanica-motor-sistema-arrefecimento-2.jpg" alt="RADIADOR RESERVATÓRIO DENTADA CORREIA D’ÁGUA BOMBA TERMOSTÁTICA VÁLVULA" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>O Motor - Sistema de Lubrificação - Parte I</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Sistema de Lubrificação</h3>
+<div class="group-vertical"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/9HyBNyNtNc0" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Ao sistema de lubrificação cabe a tarefa de reduzir o atrito entre as peças e levar o óleo para refrigerar o motor, durante todo o seu funcionamento. </p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>O Motor - Sistema de Lubrificação - Parte II</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Sistema de Lubrificação</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/mec-motor-sistema-lubrific-2.jpg" alt="BOMBA FILTRO CÁRTER TUBULAÇÕES GALERIAS" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>O Motor - Sistema de Alimentação - Parte I</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Sistema de Alimentação</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-motor-sistema-alimentacao-1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O sistema de alimentação tem basicamente as funções de armazenar o combustível e fornecer a mistura adequada de ar-combustível (em média 15 partes de ar por uma de combustível) para a queima e a geração da força motriz.</p></div>
+</div>
+
+<div class="slide">
+<h3>O Motor - Sistema de Alimentação - Parte II</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Sistema de Alimentação</h3>
+<div class="group-vertical"><figure class="image-element"><img src="images/mec-motor-ciclo-alim-2.jpg" alt="Tanque sistema de injeçao bomba filtro" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>O Motor - Sistema de Alimentação Carburado - Parte III</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Sistema de Alimentação Carburado</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-motor-sistema-alimentacao-caburador.jpg" alt="Imagem" loading="lazy"></figure>
+<p>Até 1980 o carburador era o único responsável pela eficiência da mistura, quando então surgiu o sistema de injeção eletrônica, o qual controla o processo de formação da mistura e pulverização na câmara de combustão por meio de um microprocessador. Para os veículos de duas rodas o carburador ainda é utilizado quase que na totalidade.</p></div>
+</div>
+
+<div class="slide">
+<h3>O Motor - Sistema de Alimentação - Parte IV</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Sistema de Alimentação</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-motor-sistema-alimentacao-4.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Sua função é "cheirar" os gases que saem pelo escape, com isso ela vai informar ao Módulo da Injeção Eletrônica se a mistura está rica ou pobre.  A mistura está POBRE, quando temos mais Oxigênio, que o ideal e RICA, quando temos mais combustível. O ideal são 15 partes de oxigênio para uma de combustível (gasolina)</p></div>
+</div>
+
+<div class="slide">
+<h3>O Motor - Sistema de Descarga - Parte I</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Sistema de Descarga</h3>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/5GaBPblNUgQ" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O sistema de descarga tem a finalidade de conduzir os gases oriundos da queima da mistura ar-combustível para fora do motor, bem como eliminar parte dos ruídos e gases tóxicos expelidos diretamente no meio ambiente.</p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>O Motor - Sistema de Descarga - Parte II</h3>
+<h2 class="slide-heading">O Motor</h2>
+<h3 class="slide-subheading">Sistema de Descarga</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-motor-sistema-descarga.jpg" alt="CATALISADOR ESCAPAMENTO TUBO DE ESCAPE SILENCIOSO" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas -  Sistema de Transmissão - Parte I</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading"> Sistema de Transmissão</h3>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/U-1grQAqhjw" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Responsável pela transmissão da energia produzida no motor até as rodas, para que o carro se movimente. Existem diversos tipos de transmissão, podendo ser mecânica ou automática, com tração dianteira, traseira ou integral.</p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas -  Sistema de Transmissão - Parte II</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading"> Sistema de Transmissão</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mec-motor-sistema-trans.jpg" alt="SEMI-EIXOS CAIXA DE MUDANÇAS COIFAS JUNTAS  HOMOCINÉTICAS MEMBRANA  DO PLATÔ DISCO EMBREAGEM" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas - Sistema de Direção - Parte I</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading">Sistema de Direção</h3>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vPPjYlJURaE" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Ao girar o volante, a força produzida é transmitida às rodas por um conjunto de mecanismos. Em caso de direção servoassistida (hidráulica), a força utilizada pelo condutor é menor, pois existe um sistema de pressão de óleo que auxilia no movimento. </p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas - Sistema de Direção - Parte II</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading"> Sistema de Direção</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-sistema-direcao-2.jpg" alt="CREMALHEIRA PINHÃO TRANSMISSÃO ÁRVORE DEVOLANTE DE DIREÇÃO" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas - Sistema Suspensão I</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading">Sistema Suspensão</h3>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/MMj5k2H3FgI" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O Sistema de Suspensão tem por função absorver as irregularidades da via, sem que sejam transmitidas totalmente ao veículo, bem como proporcionar maior estabilidade e segurança ao mesmo.</p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas - Sistema Suspensão II</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading">Sistema Suspensão</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-sistema-suspensao.jpg" alt="amortecedores e buchas barra estabilizadora molas" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas - Sistema de Freios - Parte I</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading">Sistema de Freios</h3>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/1H-K3xcby9E" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Tem por finalidade parar ou reduzir a velocidade do veículo, ou ainda manter o veículo imóvel quando estacionado.
+Na maioria dos veículos os freios dianteiros são com discos e os traseiros com tambores. O funcionamento dos freios se baseia basicamente no atrito da parte fixa com a parte móvel do freio, ou seja, das pinças (freio à disco) ou sapata (freio à tambor) com o disco (freio à disco) ou tambor (freio à tambor).</p></div></details></div>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas - Sistema de Freios - Parte II</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading">Sistema de Freios</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-sistema-freio-2.jpg" alt="reservatório de fluído cilindro mestre servofreio pinças pedal de freio sapatas" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas - Sistema de Freios - Parte III</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading">Sistema de Freios</h3>
+<div class="spacer"></div>
+<p>MULTIPLICANDO A CAPACIDADE DOS FREIOS:
+
+Sistema ABS (Anti-lock Brake System) - evitam o travamento das rodas;
+Sistema BAS (Brake Assit System) – compensa a força aplicada ao pedal do freio;
+Sistema EBD (Eletronic Brake force Distribution) – trabalha junto com o ABS para dosar a capacidade de frenagem conforme a necessidade de cada eixo.</p>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas - Sistema Elétrico - Parte I</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading">Sistema Elétrico</h3>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/1H-K3xcby9E" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O Sistema Elétrico tem como finalidade três importantes tarefas dentro do conjunto do veículo, ou seja, dar a partida e iniciar o primeiro ciclo de combustão, fornecer a centelha para a explosão da mistura ar-combustível (com exceção dos veículos à diesel), recarregar a bateria para permitir uma nova partida e o funcionamento de todos os dispositivos elétricos e eletrônicos do veículo, inclusive os faróis e demais luzes.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas - Sistema Elétrico - Parte II</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading">Sistema Elétrico</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-sistema-eletrico-2.jpg" alt="bateria bobina chave de ignição distribuidor velas de ignição" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Demais Sistemas - Sistema de Rodagem</h3>
+<h2 class="slide-heading">Demais Sistemas</h2>
+<h3 class="slide-subheading">Sistema de Rodagem</h3>
+<div class="group-horizontal"><p>O Sistema de Rodagem composto pelo cubo de roda, roda e pneu tem por finalidade permitir o contato do veículo com a via.</p>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/mecanica-sistema-rodagem-1.jpg" alt="cubo de roda pneu roda" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Sistema de Rodagem - Tipos de Pneus</h3>
+<h2 class="slide-heading">Sistema de Rodagem </h2>
+<h3 class="slide-subheading">Tipos de Pneus</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-sistema-rodagem-tipos-pneu.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Existem basicamente dois tipos de pneus, os Diagonais e os Radiais. Quando o veículo realiza uma curva com pneu radial, a superfície de contato com o solo é constante, já com o diagonal o contato varia com a incidência das forças aplicadas sobre o veículo, tornando-o menos estável.</p></div>
+</div>
+
+<div class="slide">
+<h3>Sistema de Rodagem - O Indicador de Desgaste</h3>
+<h2 class="slide-heading">Sistema de Rodagem </h2>
+<h3 class="slide-subheading">o Indicador de Desgaste</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-sistema-rodagem-indicativo.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O Indicador de Desgaste do Rastro, simbolizado pelas iniciais "TWI" ou um triângulo, localizado no ponto onde existirá uma saliência no sulco do pneu, serve para alertar quando o mesmo chegar no seu limite mínimo de 1,6 mm de banda de rodagem, devendo ser substituído.</p></div>
+</div>
+
+<div class="slide">
+<h3>Sistema de Rodagem - Comportamento nas Curvas</h3>
+<h2 class="slide-heading">Sistema de Rodagem </h2>
+<h3 class="slide-subheading">Comportamento nas Curvas</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-sistema-rodagem-comportamento-curvas.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>O pneu de um veículo deve ser adquirido levando-se em consideração a tabela de carga e de velocidade máxima, bem como o tipo de carcaça, ou seja, radial ou convencional (diagonal). Dê preferência para os pneus radiais.</p></div>
+</div>
+
+<div class="slide">
+<h3>Sistema de Rodagem - Troca de Pneus</h3>
+<h2 class="slide-heading">Sistema de Rodagem</h2>
+<h3 class="slide-subheading">Troca de Pneus</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><div class="video-element"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/NfpT7APk47Q" title="Vídeo" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>
+<p>Uma dúvida muito comum entre os motoristas é:
+Estando com quatro pneus meia vida em seu veículo e caso vá instalar apenas dois pneus novos, onde devem ser instalados estes pneus novos?
+
+</p></div>
+</div>
+
+<div class="slide">
+<h3>Sistema de Rodagem - Rodizio de Pneus</h3>
+<h2 class="slide-heading">Sistema de Rodagem</h2>
+<h3 class="slide-subheading">Rodízio de Pneus</h3>
+<div class="group-vertical"><p>O rodízio de pneus é essencial para garantir desgaste uniforme, prolongar a vida útil dos pneus e melhorar a segurança. A forma de realizar o rodízio varia com o tipo de tração do veículo: </p>
+<figure class="image-element"><img src="images/rodizio_small.jpg" alt="Imagem" loading="lazy"></figure></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><ul class='list-element'></ul></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>A frequência recomendada para o rodízio é a cada 8.000 a 10.000 km, conforme o manual do fabricante. Além disso, é importante manter os pneus balanceados e alinhados para garantir melhor desempenho e segurança. </p></div></details>
+</div>
+
+<div class="slide">
+<h3>Sistema de Rodagem - Tipo de Desgastes</h3>
+<h2 class="slide-heading">Sistema de Rodagem</h2>
+<h3 class="slide-subheading">Desgastes nos Pneus</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/desgaste-pneu.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Veículos de Duas Rodas - O Motor</h3>
+<h2 class="slide-heading">Veículos de Duas Rodas </h2>
+<h3 class="slide-subheading">o Motor</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-duas-rodas-motor.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Existem basicamente dois tipos de motores, o de quatro tempos e o de dois tempos, o qual realiza o ciclo completo de admissão, compressão, expansão e escape em apenas dois movimentos do pistão.</p></div>
+</div>
+
+<div class="slide">
+<h3>Veículos de Duas Rodas - A Transmissão</h3>
+<h2 class="slide-heading">Veículos de Duas Rodas </h2>
+<h3 class="slide-subheading">a Transmissão</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-duas-rodas-transmissao.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A grande maioria das motos utiliza para o sistema de transmissão a relação correia, coroa e pinhão.</p></div>
+</div>
+
+<div class="slide">
+<h3>Veículos de Duas Rodas - O Arrefecimento</h3>
+<h2 class="slide-heading">Veículos de Duas Rodas </h2>
+<h3 class="slide-subheading">o Arrefecimento</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-duas-rodas-arrefecimento.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>A grande maioria das motos utiliza para o sistema de arrefecimento, responsável pela dissipação de calor, apenas aletas e a circulação de ar por entre elas.</p></div>
+</div>
+
+<div class="slide">
+<h3>Veículos de Duas Rodas - Os Freios</h3>
+<h2 class="slide-heading">Veículos de Duas Rodas </h2>
+<h3 class="slide-subheading">os Freios</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/freio1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/freio2.jpg" alt="Imagem" loading="lazy"></figure></div>
+<p>As motos podem ter três sistemas de freio, o de tambor, o de  disco e o ABS (Antiblockier-Bremssystem)</p>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Até 2019 todas as motocicletas deverão sair de fábrica com freios ABS.
+É comum nas motocicletas com freio ABS que ao serem acionados seja percebido na alavanca uma pequena trepidação.
+</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Inspeção Diária</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading">Ciclomotor</h3>
+<p>INSPEÇÃO DIÁRIA</p>
+<div class="group-horizontal"><ul class='list-element'></ul>
+<figure class="image-element"><img src="images/nova1.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>INspeção Periódica - Parte I</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta e</h2>
+<h3 class="slide-subheading"> Ciclomotor</h3>
+<p>INSPEÇÃO PERIÓDICA</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/motoneta9-1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Folga da embreagem  de no máximo um centímetro;</p>
+<figure class="image-element"><img src="images/motoneta9-3.jpg" alt="Imagem" loading="lazy"></figure></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/motoneta9-2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Estado e lubrificação dos cabos de embreagem e freio dianteiro;</p>
+<div class="spacer"></div>
+<p>Folga dos freios dianteiro e traseiro no máximo
+De um centímetro cada um;</p></div>
+</div>
+
+<div class="slide">
+<h3>INspeção Periódica - Parte II</h3>
+<h2 class="slide-heading">Motocicleta, Motoneta </h2>
+<h3 class="slide-subheading"> e Ciclomotor</h3>
+<p>INSPEÇÃO PERIÓDICA</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/nivel-oleo.jpg" alt="Imagem" loading="lazy"></figure>
+<p>Nível do óleo do motor e eletrólito (água) da bateria;</p></div>
+<div class="group-horizontal"><p>Calibragem e estado dos pneus e das lonas, pastilhas e fluído de freio (À disco)</p>
+<figure class="image-element"><img src="images/calibragem.jpg" alt="Imagem" loading="lazy"></figure></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/lubrificacao-pq.jpg" alt="Imagem" loading="lazy"></figure>
+<p>Lubrificação e folga da corrente de transmissão;</p></div>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Classes de Fogo</h3>
+<h2 class="slide-heading">Extintores de Incêndio</h2>
+<h3 class="slide-subheading">Classes de Fogo</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/a-b-c.jpg" alt="Imagem" loading="lazy"></figure>
+<p>
+Ocorrem em materiais sólidos como papel, madeira, tecidos,  borrachas e plásticos;
+
+
+
+Ocorrem em líquidos inflamáveis como gasolina, óleo, álcool e querosene;
+
+
+
+Inicia-se em equipamentos elétricos energizados como baterias e parte elétrica do carro;</p></div>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio para Veículos</h3>
+<h2 class="slide-heading">Extintores de Incêndio</h2>
+<h3 class="slide-subheading">para Veículos</h3>
+<div class="group-horizontal"><p>Os extintores utilizados nos veículos automotores devem ser do tipo ABC.
+Nos veículos de pequeno porte ele é de uso facultativo, já nos do tipo caminhão, caminhão-trator, micro-ônibus, ônibus, veículos destinados ao transporte de produtos inflamáveis, líquidos, gasosos e
+para todo veículo utilizado no transporte coletivo de passageiros é de uso obrigatório.
+</p>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/mecanica-uso-extintores-veiculos.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Substituição</h3>
+<h2 class="slide-heading">Extintores de Incêndio</h2>
+<h3 class="slide-subheading">Substituição</h3>
+<div class="spacer"></div>
+<p>Segundo a resolução CONTRAN 536 e 556, após 1º de outubro de 2015 todos os extintores deverão ser do tipo ABC, sendo FACULTATIVO para  automóveis, utilitários, camionetas, caminhonetes e triciclos de cabine fechada e obrigatórios para  caminhão, caminhão-trator, micro-ônibus, ônibus, veículos destinados ao transporte de produtos inflamáveis, líquidos, gasosos e para todo veículo utilizado no transporte coletivo de passageiros.
+</p>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Substituição e Recarga - Parte I</h3>
+<h2 class="slide-heading">Extintores de Incêndio</h2>
+<h3 class="slide-subheading">Substituição e Recarga</h3>
+<div class="grid-element grid-cols-2"></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Deve ser uma preocupação do condutor vistoriar periodicamente seu extintor, com objetivo de averiguar sua carcaça, indicador de pressão e validades (carcaça e agente químico).</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Para automóveis, utilitários, camionetas, caminhonetes e triciclos de cabine fechada o uso é facultativo, porém caso seja utilizado deve estar em dia com os prazos de validade.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Substituição e Recarga - Parte II</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">Substituição e Recarga</h3>
+<p>Ocorrendo a situação de vencimento da validade da carcaça (teste hidrostático), vencimento da validade do agente químico ou uso do extintor, o condutor deverá seguir uma das situações a seguir:</p>
+<div class="group-vertical"><figure class="image-element"><img src="images/mecanica-extintor-tabela-2.jpg" alt="Trocar por novo Trocar por novoTrocar por novoTeste Hidrost.VencidoApós Uso e Descarga Total ou ParcialApós Uso e Descarga Total ou Parcial Após Uso e Descarga Total ou ParcialValidade Ag.
+Quimico Vencida Para automóveis, utilitários, camionetas, caminhonetes, caminhão, caminhão trator, triciclo automotor de cabine fechada, reboques e semi-reboques com capacidade de carga útil maior que seis toneladas:" loading="lazy"></figure></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Carga Acima de 1 Kg - Permite regarga
+Carga Abaixo de 1 Kg - Trocar por novo</p></div></details>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Veículos do tipo automóveis, utilitários, camionetas, caminhonetes e triciclos de cabine fechada não sofrerão fiscalização para avaliação do extintor de incêndio</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Substituição e Recarga - Parte III</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">Substituição e Recarga</h3>
+<p>Ocorrendo a situação de vencimento da validade da carcaça (teste hidrostático), vencimento da validade do agente químico ou uso do extintor, o condutor deverá seguir uma das situações a seguir:</p>
+<div class="group-vertical"><figure class="image-element"><img src="images/mecanica-extintor-tabela-3.jpg" alt="Aprovação em teste hidrostáticoTrocar por novoRenovação
+da carga Permite
+recargaTeste Hidrost.VencidoCom Defeito ou IrregularidadesApós Uso e Descarga Total ou ParcialValidade Ag.
+Quimico Vencida Para ônibus, micro-ônibus, veículos de transporte inflamável líquido ou gasoso:" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Condições de Uso - Parte I</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">Condições de Uso</h3>
+<p>Confira com frequência seu extintor:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-extintor-condicoes-uso-1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Se o ponteiro indicador de pressão está na FAIXA VERDE</p>
+<figure class="image-element"><img src="images/mecanica-extintor-condicoes-uso-2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Se a carcaça está em bom estado, sem pontos de ferrugem e amassada;</p></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-extintor-condicoes-uso-3.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Se o lacre de inviolabilidade permanece intacto;</p></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Estando o ponteiro indicador de pressão na faixa VERMELHA, a recarga ou substituição do extintor deve ser de imediato.</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Condições de Uso - Parte II</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">Condições de Uso</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-extintor-condicoes-uso-2-1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Se o bico da válvula permanece desobstruído;</p>
+<figure class="image-element"><img src="images/mecanica-extintor-condicoes-uso-2-2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Se as datas-limite de garantia, validade da carga e teste hidrostático estão dentro do prazo;</p></div>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-extintor-condicoes-uso-2-3.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Se as instruções de operação estão visíveis;</p></div>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Usar como referência a data de fabricação impressa no fundo da carcaça.</p></div></details>
+<p>Caso contrário, deverá ser submetido à manutenção ou substituído por um novo.</p>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Condições de Uso - Parte III</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">Condições de Uso</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-extintor-condicoes-uso-3-1.jpg" alt="Selo de extintor manuteção" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Presença do selo e certificação do organismo credenciado pelo INMETRO</p></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-extintor-condicoes-uso-3-2.jpg" alt="Selo de extintor novo" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Melhor do que Combater é Prevenir - Parte I</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">Melhor do que Combater é Prevenir</h3>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O isolamento do cano de escape e o catalisador sofrem grande aquecimento e em contato com objetos de fácil ignição podem provocar um incêndio. Por tal motivo não estacione seu carro em locais com grama e folhagens secas que atinja a altura do veículo, pois a probabilidade de um princípio de incêndio é grande;</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Melhor do que Combater é Prevenir - Parte II</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">Melhor do que Combater é Prevenir</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Como Combater - Parte I</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">como Combater</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Como Combater - Parte II</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">como Combater</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-extintor-como-combater-1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Se detectado vazamento de combustível juntamente com a presença de labaredas, isole a área e preferencialmente aguarde o socorro especializado para o combate do incêndio.</p></div>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Como Combater - Parte III</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">como Combater</h3>
+<div class="spacer"></div>
+<p>Caso mesmo com labaredas e presença de vazamento de combustível você queira combater o princípio de incêndio, siga os seguintes passos:</p>
+<ul class='list-element'></ul>
+<div class="group-horizontal"><p>Posicione-se a favor do vento e aproxime-se do foco de incêndio de forma progressiva e cautelosa. Tome cuidado com vazamento de combustível;</p>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/mecanica-extintor-como-combater-2.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Como Combater - Parte IV</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">como Combater</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><p>Se o foco for no motor, abra uma brecha no capô e borrife o primeiro jato com o mesmo entre aberto. Saiba que o extintor deverá estar o mais em pé possível, nunca deitado ou com a válvula para baixo;</p>
+<div class="spacer"></div>
+<figure class="image-element"><img src="images/mecanica-extintor-como-combater-3.jpg" alt="Imagem" loading="lazy"></figure></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-extintor-como-combater-4-1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Dirija o jato para a base do fogo e varra toda a extensão das chamas.</p></div>
+<div class="group-horizontal"><p>Termine apenas depois de se assegurar de que o incêndio não se reacenderá.</p>
+<figure class="image-element"><img src="images/mecanica-extintor-como-combater-4-3.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Observações</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">Observações</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Extintores de Incêndio - Combate em GNV</h3>
+<h2 class="slide-heading">Extintores de Incêndio </h2>
+<h3 class="slide-subheading">Combate em GNV</h3>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>O grande problema do incêndio em veículos com cilindro de GNV é que o gás está armazenado sob alta pressão (200 bar ou 200Kgf/cm2). Ocorrendo seu aquecimento, existe a possibilidade do mesmo se tornar uma bomba de grande potencial;</p></div></details>
+</div>
+
+<div class="slide">
+<h3>Manutenção Preventiva - Por Que Realizar?</h3>
+<h2 class="slide-heading">Manutenção Preventiva </h2>
+<h3 class="slide-subheading">Por Que Realizar?</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-preventiva.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Além de ser muito mais barata do que a corretiva, a manutenção preventiva aumenta sensivelmente a segurança dos usuários. Estima-se que a manutenção preventiva proporciona uma economia de em média 80% para o proprietário na hora da manutenção corretiva do um veículo.</p></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Sistema de Alimentação</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Sistema de Alimentação</h3>
+<div class="spacer"></div>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-sistema-alimentacao.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<p>Substitua o filtro regularmente de acordo com as recomendações do fabricante. A presença exagerada de impurezas ocasiona a perda de potência e falhas no funcionamento do motor. Os filtros de combustível não admitem limpeza, sendo necessária a sua substituição. nos prazos recomendados.</p></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica do Motor - Parte I</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">do Motor</h3>
+<p>                                                     Água do Radiador:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/radiador-3.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica do Motor - Parte II</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">do Motor</h3>
+<p>                                                          Correias:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica do Motor - Parte III</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">do Motor</h3>
+<p> Filtro de Ar:</p>
+<div class="group-horizontal"><div class="spacer"></div>
+<ul class='list-element'></ul>
+<figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-3pq.jpg" alt="Imagem" loading="lazy"></figure></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica do Motor - Parte IV</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">do Motor</h3>
+<p>                                                       Nível do Óleo:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-4.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica do Motor - Parte V</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">do Motor</h3>
+<p>                                                       Substituição do Óleo:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-4.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica do Motor - Parte VI</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">do Motor</h3>
+<p>                                                                  Velas de Ignição:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-5.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Sistema Elétrico - Parte I</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Sistema Elétrico</h3>
+<p>                                                     Bateria:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-motor-7.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Sistema Elétrico - Parte II</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Sistema Elétrico</h3>
+<p>                                                     Fusíveis:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-sistema-eletrico-2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Sistema Elétrico - Parte III</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Sistema Elétrico</h3>
+<div class="spacer"></div>
+<p>                                        Iluminação e Sinalização:</p>
+<div class="group-vertical"><figure class="image-element"><img src="images/mecanica-manutencao-básica-sistema-eletrico-3.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Direção, Rodas e Pneus  - Parte I</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Direção, Rodas e Pneus</h3>
+<p>
+Balanceamento de Rodas:
+
+Realize sempre que:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-direcão-rodas-pneus_1.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Direção, Rodas e Pneus  - Parte II</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Direção, Rodas e Pneus</h3>
+<p>
+Alinhamento de Direção:
+Realize sempre que:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-direcão-rodas-pneus_2.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+<div class="spacer"></div>
+<p>Atenção: antes de alinhar verifique a calibragem dos pneus.</p>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Direção, Rodas e Pneus  - Parte III</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Direção, Rodas e Pneus</h3>
+<p>
+                                                        Pneus:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-básica-direcão-rodas-pneus-f.jpg" alt="Imagem" loading="lazy"></figure>
+<div class="spacer"></div>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Freios, Transmissão e Suspensão - Parte I</h3>
+<h2 class="slide-heading">Manutenção Básica </h2>
+<h3 class="slide-subheading">Freios, Transmissão e Suspensão</h3>
+<p>Transmissão:</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Freios, Transmissão e Suspensão - Parte II</h3>
+<h2 class="slide-heading">Manutenção Básica </h2>
+<h3 class="slide-subheading">Freios, Transmissão e Suspensão</h3>
+<p>Suspensão:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mec-man-bas-fre-tra-su-2.jpg" alt="Imagem" loading="lazy"></figure>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Freios, Transmissão e Suspensão - Parte III</h3>
+<h2 class="slide-heading">Manutenção Básica </h2>
+<h3 class="slide-subheading">Freios, Transmissão e Suspensão</h3>
+<p>Freios:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mec-man-bas-fre-tra-su-3.jpg" alt="Imagem" loading="lazy"></figure>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Veículos de Duas Rodas e sua Manutenção  - Parte I</h3>
+<h2 class="slide-heading">Veículos de Duas Rodas </h2>
+<h3 class="slide-subheading">e sua Manutenção</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Veículos de Duas Rodas e sua Manutenção  - Parte II</h3>
+<h2 class="slide-heading">Veículos de Duas Rodas </h2>
+<h3 class="slide-subheading">e sua Manutenção</h3>
+<div class="spacer"></div>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Segurança nas Tarefas</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Segurança nas Tarefas</h3>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Principais Eventualidades - Parte I</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Principais Eventualidades</h3>
+<p>
+MOTOR NÃO “VIRA”</p>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Principais Eventualidades - Parte II</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Principais Eventualidades</h3>
+<p>
+MOTOR “VIRA” MAS NÃO “PEGA”</p>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Principais Eventualidades - Parte III</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Principais Eventualidades</h3>
+<p>
+MOTOR “FALHANDO” OU “PUXANDO” POUCO</p>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Principais Eventualidades - Parte IV</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Principais Eventualidades</h3>
+<p>
+MOTOR ESQUENTANDO MUITO</p>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Principais Eventualidades - Parte V</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Principais Eventualidades</h3>
+<p>
+FREIOS FALHANDO</p>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Principais Eventualidades - Parte VI</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Principais Eventualidades</h3>
+<p>
+DIREÇÃO TREPIDANDO OU “PUXANDO”</p>
+<div class="grid-element grid-cols-2"></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Regiões Alagadas</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Regiões Alagadas</h3>
+<p>A regra geral é:</p>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-regiao-alagada.jpg" alt="Imagem" loading="lazy"></figure>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Manutenção Básica - Uso de Guincho</h3>
+<h2 class="slide-heading">Manutenção Básica</h2>
+<h3 class="slide-subheading">Uso de Guincho</h3>
+<div class="group-horizontal"><figure class="image-element"><img src="images/mecanica-manutencao-uso-de-guincho.jpg" alt="Imagem" loading="lazy"></figure>
+<ul class='list-element'></ul></div>
+</div>
+
+<div class="slide">
+<h3>Check-List para Viagem  Parte I</h3>
+<h3 class="slide-subheading">Check-List para Viagem</h3>
+<p>Lista do Veículo:</p>
+<ul class='list-element'></ul>
+</div>
+
+<div class="slide">
+<h3>Check-List para Viagem  Parte II</h3>
+<h2 class="slide-heading">Check-List para Viagem</h2>
+<ul class='list-element'></ul>
+<p>Itens diversos:</p>
+<ul class='list-element'></ul>
+<details class="infobox"><summary>Info</summary><div class="infobox-content"><p>Confira ainda:Vacinas em dia e cartão (se a viagem for para local com algum tipo de controle epidêmico).
+
+Alguma quantidade de dinheiro para uma emergência
+
+IMPORTANTE: toda troca de peça antes de uma viagem deve ser feita com pelo menos 3 dias de antecedência, permitindo rodar de 200 a 300 km na cidade antes da viagem, pois este é o tempo de ‘’amaciamento’’ da peça, evitando assim surpresas na estrada.</p></div></details>
+</div>
+        </div>
+        <div class="nav-bar">
+            <a href="m03-s07-conducao-do-veiculo-em-circunstancias-adversas.html">← Anterior</a>
+            <a href="m04-s01-relacao-do-transito-com-a-saude.html">Próxima →</a>
+        </div>
+        <footer class="footer">
+            <a href="https://cursos.itt.org.br">ITT</a> — Nosso Trânsito Multimídia — Primeira Habilitação
+        </footer>
+    </div>
+</body>
+</html>

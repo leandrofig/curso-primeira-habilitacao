@@ -102,10 +102,38 @@
         .accordion-item { border: 1px solid #e8e0c0; border-radius: 8px; margin-bottom: 8px; }
         .accordion-item summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
         .accordion-content { padding: 0 16px 12px; }
-        .compare-slider { display: flex; gap: 16px; margin: 1em 0; }
-        .compare-slider > div { flex: 1; text-align: center; }
-        .compare-slider img { max-width: 100%; border-radius: 8px; }
-        .compare-slider span { display: block; font-size: 0.85em; color: #6b5e3e; margin-top: 4px; }
+        .compare-slider-wrap { margin: 1.5em 0; }
+        .compare-slider-container {
+            position: relative; overflow: hidden; border-radius: 10px;
+            cursor: col-resize; user-select: none; -webkit-user-select: none;
+            background: #e8e0c0;
+        }
+        .cs-img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+        .cs-after { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .cs-before-clip {
+            position: absolute; top: 0; left: 0; height: 100%;
+            overflow: hidden; z-index: 1;
+        }
+        .cs-before-clip .cs-img { width: 100vw; max-width: none; position: absolute; top: 0; left: 0; }
+        .cs-handle {
+            position: absolute; top: 0; bottom: 0; z-index: 2;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            transform: translateX(-50%); pointer-events: none;
+        }
+        .cs-handle-line { flex: 1; width: 3px; background: #fff; box-shadow: 0 0 6px rgba(0,0,0,0.4); }
+        .cs-handle-circle {
+            width: 40px; height: 40px; border-radius: 50%; background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; align-items: center;
+            justify-content: center; font-size: 18px; color: #6b5e3e; flex-shrink: 0;
+        }
+        .cs-label {
+            position: absolute; top: 12px; z-index: 3; padding: 4px 12px;
+            background: rgba(0,0,0,0.55); color: #fff; font-size: 0.78em;
+            font-weight: 700; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .cs-label-before { left: 12px; }
+        .cs-label-after { right: 12px; }
+        .cs-caption { text-align: center; font-size: 0.85em; color: #6b5e3e; margin-top: 8px; }
         .quiz-mcq { background: #f0fdf4; border-left: 4px solid #22C55E; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1em 0; }
         .quiz-question { margin-bottom: 12px; }
         .quiz-option { padding: 8px 12px; margin: 4px 0; background: white; border-radius: 6px; border: 1px solid #e8e0c0; }
@@ -188,5 +216,36 @@
             <a href="https://cursos.itt.org.br">ITT</a> — Nosso Trânsito Multimídia — Primeira Habilitação
         </footer>
     </div>
+    <script>
+    (function(){
+      document.querySelectorAll('.compare-slider-container').forEach(function(container){
+        var clip = container.querySelector('.cs-before-clip');
+        var handle = container.querySelector('.cs-handle');
+        var beforeImg = clip.querySelector('.cs-img');
+        var dragging = false;
+        function setPosition(pct){
+          pct = Math.max(0, Math.min(100, pct));
+          clip.style.width = pct + '%';
+          handle.style.left = pct + '%';
+        }
+        function resizeBeforeImg(){
+          beforeImg.style.width = container.offsetWidth + 'px';
+        }
+        function getPercent(e){
+          var rect = container.getBoundingClientRect();
+          var x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+          return (x / rect.width) * 100;
+        }
+        container.addEventListener('mousedown', function(e){ dragging = true; setPosition(getPercent(e)); e.preventDefault(); });
+        container.addEventListener('touchstart', function(e){ dragging = true; setPosition(getPercent(e)); }, {passive: true});
+        window.addEventListener('mousemove', function(e){ if(dragging) setPosition(getPercent(e)); });
+        window.addEventListener('touchmove', function(e){ if(dragging) setPosition(getPercent(e)); }, {passive: true});
+        window.addEventListener('mouseup', function(){ dragging = false; });
+        window.addEventListener('touchend', function(){ dragging = false; });
+        window.addEventListener('resize', resizeBeforeImg);
+        resizeBeforeImg();
+      });
+    })();
+    </script>
 </body>
 </html>
